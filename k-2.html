@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Blueprint / El Plano · K–2</title><meta name="description" content="Mississippi ELA blueprints, practice and supports for grades K–2, in English and Spanish.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>:root{--navy:#1E2761;--deep:#131A45;--gold:#C9A227;--gold-l:#E8CE6E;--paper:#F6F9FE;--rule:#C7D6EF;--margin:#D4574E;--ink:#17204D;--mute:#56608A;--line:rgba(255,255,255,.82);--gc:#C9A227;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#E9EEF8;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:99}
+h1,h2,h3,h4{font-family:var(--serif);margin:0;line-height:1.1;font-weight:600}p{margin:0}
+
+/* language switching */
+body[data-lang="en"] .es,body[data-lang="en"] [lang="es"].h1-es{display:none!important}
+body[data-lang="es"] .en{display:none!important}
+body[data-lang="es"] h1 [lang="en"]{display:none}
+.bi{display:grid;gap:10px 28px}
+body[data-lang="both"] .bi{grid-template-columns:1fr 1fr}
+body[data-lang="both"] .bi .es{color:var(--mute);border-left:2px solid var(--gold);padding-left:14px}
+body[data-lang="both"] .inl .es::before{content:" / ";opacity:.6}
+.hd span{display:block}
+body[data-lang="both"] .hd .es{font-style:italic;font-weight:400;font-size:.62em;color:var(--mute);margin-top:.25em}
+@media (max-width:760px){body[data-lang="both"] .bi{grid-template-columns:1fr}}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:8px clamp(12px,3vw,28px);background:var(--deep);color:#fff;border-bottom:3px solid var(--gold)}
+.bar-brand{font-family:var(--serif);font-weight:600;text-decoration:none;white-space:nowrap;font-size:17px}.bar-brand span{color:var(--gold-l);font-style:italic;font-weight:400}
+.tabs{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs a{position:relative;min-width:36px;height:36px;display:grid;place-items:center;text-decoration:none;font-weight:700;font-size:14px;border-radius:6px 6px 0 0;background:rgba(255,255,255,.08);border-bottom:4px solid var(--gc)}
+.tabs a.t-on::after{content:"";position:absolute;top:4px;right:4px;width:5px;height:5px;border-radius:50%;background:var(--gold-l)}
+.tabs a:hover,.tabs a.here{background:var(--gc);color:#fff}
+.lang{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;flex:none}
+.lang button{all:unset;cursor:pointer;padding:6px 12px;font:600 12.5px var(--sans);color:#fff}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--deep)}
+@media (max-width:700px){html{scroll-padding-top:112px}.bar{flex-wrap:wrap}.bar-brand{flex:1}.tabs{order:3;width:100%;margin:0}.tabs a{flex:1}}
+
+/* blueprint surface */
+.cover,.sheet{background-color:var(--navy);background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* cover */
+.cover{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:end;padding:clamp(48px,9vw,120px) clamp(20px,6vw,88px) clamp(40px,6vw,80px)}
+.issue{font-size:14px;color:var(--gold-l);font-weight:500;margin-bottom:clamp(20px,4vw,48px)}
+.cover h1{font-size:clamp(64px,13vw,184px);font-weight:800;letter-spacing:-.035em;line-height:.86}
+.cover h1 span{display:block}.cover h1 .h1-es{font-style:italic;font-weight:400;color:var(--gold);font-size:.6em;letter-spacing:-.02em;margin-top:.12em}
+body[data-lang="es"] .cover h1 .h1-es{font-size:1em;font-weight:800;font-style:normal;color:#fff}
+.cover-dek{margin-top:clamp(24px,4vw,44px);max-width:70ch;font-size:clamp(16px,1.5vw,19px)}
+.cover .bi .es{color:#C9D2F2!important}
+.motto{font-family:var(--serif);font-style:italic;color:var(--gold);margin-top:28px;font-size:18px}
+.cover-plan{font-size:13px;color:var(--line)}
+.cp-dim,.dim{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--gold-l);font-size:12.5px}
+.cp-dim>span,.dim>span{flex:1;height:1px;background:var(--gold-l);position:relative}
+.cp-dim>span::before,.dim>span::before{content:"";position:absolute;top:-5px;width:1px;height:11px;background:var(--gold-l)}
+.cp-dim>span:first-child::before,.dim>span:first-child::before{left:0}.cp-dim>span:last-child::before,.dim>span:last-child::before{right:0}
+.cp-dim em,.dim em{font-style:normal;text-align:center}
+.cp-rooms{display:flex;height:clamp(150px,20vw,230px);border:3px solid var(--line)}
+.cp-rooms div{flex-basis:0;padding:10px;border-right:2px solid var(--line);min-width:0}.cp-rooms div:last-child{border:0}
+.cp-rooms b,.cp-annex b{display:block;font:800 clamp(22px,3vw,40px) var(--serif);color:#fff}
+.cp-annex{border:3px solid var(--line);border-top:0;width:46%;padding:8px 10px}.cp-annex b{display:inline;font-size:22px;margin-right:6px}
+@media (max-width:860px){.cover{grid-template-columns:1fr}}
+
+/* letter + contents */
+.letter{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,72px);padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff}
+.letter h2,.howto h2,.colophon h2{font-size:clamp(28px,3.4vw,44px);margin-bottom:24px}
+.letter .bi{margin-bottom:18px}.letter .bi:first-of-type p.en::first-letter,body[data-lang="es"] .letter .bi:first-of-type p.es::first-letter{font:800 3.6em/.8 var(--serif);float:left;padding:.08em .1em 0 0;color:var(--navy)}
+.toc{list-style:none;margin:0;padding:0;align-self:start;border-top:3px solid var(--navy)}
+.toc a{display:grid;grid-template-columns:52px 1fr;align-items:baseline;gap:0 8px;padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.toc b{grid-row:span 2;font:800 34px/1 var(--serif);color:var(--gc)}.toc span{font-weight:600}.toc i{font-style:normal;font-size:13px;color:var(--mute)}
+.toc a:hover span{text-decoration:underline}
+@media (max-width:900px){.letter{grid-template-columns:1fr}}
+
+.howto{padding:clamp(40px,6vw,80px) clamp(20px,6vw,88px);background:var(--paper);border-top:1px solid var(--rule)}
+.how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 56px}
+.how h3{font-size:21px;margin-bottom:8px;padding-top:14px;border-top:3px solid var(--gold)}
+@media (max-width:900px){.how-grid{grid-template-columns:1fr}}
+
+/* grade spreads */
+.grade{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff;border-top:10px solid var(--gc)}
+.grade:nth-of-type(even){background:var(--paper)}
+.g-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,44px);align-items:center;margin-bottom:clamp(24px,4vw,44px)}
+.g-num{font:800 clamp(110px,19vw,260px)/.8 var(--serif);color:var(--gc);letter-spacing:-.05em}
+.g-title h2{font-size:clamp(30px,4.2vw,56px);margin:10px 0 14px}
+.dek{font-size:clamp(16px,1.4vw,18.5px);max-width:none}
+.badge{display:inline-block;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px}
+.badge.on{background:var(--navy);color:#fff}.badge.off{border:1.5px dashed var(--mute);color:var(--mute)}
+@media (max-width:640px){.g-head{grid-template-columns:1fr}.g-num{font-size:120px}}
+
+.g-plan{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start;margin-bottom:clamp(28px,4vw,48px)}
+.g-plan .facts{grid-column:1}.g-plan .insight{grid-column:2;grid-row:1/span 2}
+.sheet{margin:0;padding:clamp(16px,2.5vw,28px);border-radius:4px;position:relative;box-shadow:0 0 0 1px var(--deep),6px 6px 0 var(--gc)}
+.plan{display:flex;min-height:380px;border:3px solid var(--line)}
+.room{flex-basis:0;min-width:0;display:flex;flex-direction:column;border-right:3px solid var(--line)}.room:last-child{border-right:0}
+.room-h{padding:10px 12px;border-bottom:2px solid var(--line);background:rgba(19,26,69,.55)}
+.room-n{font:600 clamp(14px,1.35vw,18px)/1.2 var(--serif)}.room-n .inl span,.sub-t .inl span{display:block}
+body[data-lang="both"] .room-n .es,body[data-lang="both"] .sub-t .es{font-style:italic;font-weight:400;opacity:.78;font-size:.9em}
+body[data-lang="both"] .room .inl .es::before,body[data-lang="both"] .froom .inl .es::before{content:none}
+.room-p{font:800 clamp(20px,2.4vw,32px)/1.1 var(--serif);color:var(--gold-l);margin-top:4px}
+.subs{flex:1;display:flex;flex-direction:column}
+.sub{flex-basis:0;padding:8px 12px;border-bottom:1px dashed rgba(255,255,255,.5);display:flex;flex-direction:column;justify-content:space-between;gap:4px;font-size:13px}
+.sub:last-child{border-bottom:0}.sub-m{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}.sub-m b{color:var(--gold-l);font-size:14px}
+.std{font-size:12px;letter-spacing:.01em;opacity:.85;font-variant-numeric:tabular-nums}
+.annex{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;border:3px solid var(--line);border-top:0;width:min(100%,520px);padding:10px 12px;background:rgba(201,162,39,.16)}
+.annex b{display:block;font:600 16px var(--serif)}.annex-m{color:var(--gold-l);font-weight:600;font-size:14px}
+.sheet figcaption{margin-top:12px;font-size:12.5px;opacity:.75}
+.stamp{display:inline-block;margin-bottom:14px;padding:5px 12px;border:2px solid var(--gold-l);color:var(--gold-l);font-weight:600;font-size:13px;transform:rotate(-1.5deg)}
+.fplan{display:grid;grid-template-columns:repeat(6,1fr);border:3px solid var(--line)}
+.froom{grid-column:span 2;padding:14px;min-height:120px;border-right:2px solid var(--line);border-bottom:2px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.froom:nth-child(n+4){grid-column:span 3;border-bottom:0}.froom:nth-child(3),.froom:nth-child(5){border-right:0}
+.froom .room-n .inl span{display:block}
+@media (max-width:720px){.sheet figcaption{display:none}.plan{flex-direction:column;min-height:0}.room{border-right:0;border-bottom:3px solid var(--line);flex:none}.room:last-child{border-bottom:0}.sub{flex:none}
+ .fplan{grid-template-columns:1fr}.froom,.froom:nth-child(n+4){grid-column:auto;border-right:0;border-bottom:2px solid var(--line);min-height:0}.froom:last-child{border-bottom:0}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px 0 0;border-top:3px solid var(--navy)}
+.facts div{padding:12px 14px 0 0}.facts dt{font-size:13px;color:var(--mute);line-height:1.3}.facts dd{margin:4px 0 0;font:800 clamp(30px,3.4vw,46px)/1 var(--serif);color:var(--navy)}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}}
+.insight{border-left:6px solid var(--gc);padding:4px 0 4px 20px}.insight h3{font-size:22px;margin-bottom:12px}
+.insight .bi{grid-template-columns:1fr!important;font-size:17px}
+@media (max-width:1000px){.g-plan{grid-template-columns:1fr}.g-plan .insight{grid-column:1;grid-row:auto}}
+
+.g-cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,3vw,44px);align-items:start}
+@media (max-width:1000px){.g-cols{grid-template-columns:1fr}}
+.paper{background:#FFFEF9 radial-gradient(circle at 22px 50%,#E9EEF8 0 9px,transparent 10px) 0 0/44px 33.33% repeat-y;border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 10px 24px -18px rgba(23,32,77,.5);padding:28px clamp(18px,3vw,36px) 28px 72px;position:relative}
+.grade .paper{background-color:#FFFEF9}
+.paper::before{content:"";position:absolute;top:0;bottom:0;left:54px;width:2px;background:var(--margin);opacity:.7}
+.paper h3,.side h3{font-size:26px;margin-bottom:14px}
+.notes{list-style:none;margin:0;padding:0}.notes li{padding:14px 0;border-bottom:1px solid var(--rule)}
+.chip{display:inline-block;font-size:12.5px;font-weight:700;color:var(--navy);background:color-mix(in srgb,var(--gc) 18%,#fff);border:1px solid color-mix(in srgb,var(--gc) 55%,#fff);border-radius:4px;padding:2px 8px;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.wr{margin-top:22px;padding:16px 18px;background:var(--navy);color:#fff}.wr h4{font-size:19px;margin-bottom:8px;color:var(--gold-l)}
+.wr .hd .es{color:#C9D2F2!important}.wr .bi .es{color:#C9D2F2!important}
+@media (max-width:560px){.paper{padding-left:48px;background-image:none}.paper::before{left:32px}}
+.side{display:grid;gap:32px}
+.sm{font-size:14px;color:var(--mute);margin:-6px 0 12px}
+.cogs{list-style:none;margin:0;padding:0;border-top:2px solid var(--navy)}
+.cogs li{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule);font-weight:500}
+.cogs li span:last-child{font-family:var(--serif);font-style:italic;font-size:17px}
+.cogs i{height:2px;background:var(--gc);position:relative}.cogs i::before,.cogs i::after{content:"";position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--gc)}.cogs i::before{left:-2px}.cogs i::after{right:-2px}
+.cogs li span:last-child{padding-left:12px}
+.fn{font-size:13px;color:var(--mute);margin-top:10px}
+.vids{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.vid{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;padding:12px;background:#fff;border:1px solid var(--rule);border-left:5px solid var(--gc)}
+.vid-ic{width:48px;height:36px;border-radius:8px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.vid-t{font-weight:600;line-height:1.3}.vid-l{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px;font-size:14px}
+.vid-l a{color:var(--navy);text-underline-offset:3px}.vid-l a:hover{color:var(--gc)}
+body[data-lang="en"] .vid-l a[lang="es"],body[data-lang="es"] .vid-l a[lang="en"]{display:none}
+
+.colophon{padding:clamp(40px,6vw,80px) clamp(20px,6vw,88px);background:var(--deep);color:#E6EAFA}
+.colophon .bi{margin-bottom:16px;font-size:15px;max-width:1100px}.colophon .bi .es,.colophon .hd .es{color:#AEB9E6!important}
+.links{display:flex;gap:24px;margin-top:24px}.links a{color:var(--gold-l)}
+
+@media print{.bar,.skip{display:none}body{background:#fff;font-size:11pt}.grade{break-before:page;padding:24px 0}.cover{min-height:90vh}.vid-l a::after{content:""}.sheet{box-shadow:none}}
+
+/* teach section */
+.teach{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff;border-top:10px solid var(--gold)}
+.teach h2{font-size:clamp(30px,4vw,54px);margin-bottom:24px;max-width:22ch}
+.teach-lede{font-size:clamp(17px,1.5vw,20px);margin-bottom:40px}
+.sub-h{font-size:clamp(24px,2.6vw,34px);margin:56px 0 24px}
+.bands{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.band{background:var(--paper);border:1px solid var(--rule);padding:24px;position:relative}
+.band-k{font:800 44px/1 var(--serif);color:var(--gold);margin-bottom:6px}
+.band h3{font-size:21px;margin-bottom:12px}.band .bi{grid-template-columns:1fr!important;font-size:15px}
+@media (max-width:900px){.bands{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--rule)}
+.tbl table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-weight:600}
+.tbl td{padding:10px 14px;border-top:1px solid var(--rule);vertical-align:top}.tbl td:nth-child(2){font-family:var(--serif);font-style:italic}
+.tbl tr:nth-child(even) td{background:var(--paper)}
+.tbl td .inl span{display:block}body[data-lang="both"] .tbl td .inl .es::before{content:none}body[data-lang="both"] .tbl td .inl .es{color:var(--mute)}
+.accom{margin-top:48px;padding:24px;background:var(--navy);color:#fff}.accom h3{font-size:22px;margin-bottom:12px;color:var(--gold-l)}
+.accom .bi .es,.accom .hd .es{color:#C9D2F2!important}
+.tabs a.t-teach{min-width:auto;padding:0 12px;border-bottom-color:var(--gold);font-size:13px;white-space:nowrap}
+.tabs a.t-teach:hover{background:var(--gold);color:var(--deep)}
+@media (max-width:700px){.tabs a{flex:none}}
+
+/* practice */
+.practice{margin-top:clamp(32px,4vw,56px);padding-top:clamp(24px,3vw,40px);border-top:3px solid var(--navy)}
+.pr-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.pr-head h3{font-size:clamp(24px,2.6vw,32px)}
+.score{font:600 15px var(--sans);color:var(--mute);white-space:nowrap;padding:6px 14px;border:2px solid var(--gc);border-radius:999px}.score b{font:800 22px var(--serif);color:var(--navy)}
+.pr-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+@media (max-width:1000px){.pr-grid{grid-template-columns:1fr}}
+.passage{background:#fff;border:1px solid var(--rule);border-top:6px solid var(--gc);padding:clamp(20px,2.5vw,32px);position:sticky;top:72px}
+@media (max-width:1000px){.passage{position:static}}
+.passage .kind{font-size:13px;color:var(--mute);font-weight:600;margin-bottom:6px}
+.passage h4{font-size:clamp(24px,2.4vw,30px);margin-bottom:16px}
+.passage>p:not(.kind):not(.pnote){font-family:var(--serif);font-size:clamp(17px,1.35vw,19px);line-height:1.7;margin-bottom:.9em;max-width:62ch}
+#gK .passage>p:not(.kind):not(.pnote),#g1 .passage>p:not(.kind):not(.pnote),#g2 .passage>p:not(.kind):not(.pnote){font-size:clamp(20px,1.8vw,24px);line-height:1.8}
+.gloss{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding-top:16px;border-top:1px dashed var(--rule)}
+.gloss div{display:flex;gap:6px;font-size:14px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:3px 10px}
+.gloss dt{font-weight:600}.gloss dd{margin:0;font-family:var(--serif);font-style:italic;color:var(--mute)}
+.pnote{font-size:13px;color:var(--mute);margin-top:12px}
+.qs{list-style:none;margin:0;padding:0;display:grid;gap:28px}
+.stem{font-weight:600;font-size:17px;line-height:1.4}.stem-es{font-family:var(--serif);font-style:italic;color:var(--mute);margin-top:4px}
+.opts{display:grid;gap:8px;margin-top:12px}
+.opt{all:unset;box-sizing:border-box;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;width:100%;padding:10px 12px;border:1.5px solid var(--rule);border-radius:6px;background:#fff;cursor:pointer;font:400 15.5px/1.45 var(--sans);color:var(--ink)}
+.opt b{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--navy);display:grid;place-items:center;font-size:13px;color:var(--navy)}
+.opt:hover{border-color:var(--navy)}.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.q.done .opt{cursor:default}.q.done .opt:hover{border-color:var(--rule)}
+.opt.ok{border-color:#1E7A46!important;background:#E8F5EC}.opt.ok b{background:#1E7A46;border-color:#1E7A46;color:#fff}
+.opt.no{border-color:#B3261E!important;background:#FBEAE9}.opt.no b{background:#B3261E;border-color:#B3261E;color:#fff}
+.why{display:none;margin-top:12px;padding:12px 14px;border-left:4px solid var(--gc);background:var(--paper);font-size:15px}
+.q.done .why{display:block}.why .bi{grid-template-columns:1fr!important}
+.verdict{font-weight:700;margin-bottom:4px}.key{display:none;font-weight:700;margin-bottom:4px}
+.tmove{margin-top:clamp(24px,3vw,40px);padding:20px 24px;background:color-mix(in srgb,var(--gc) 10%,#fff);border:1px solid color-mix(in srgb,var(--gc) 45%,#fff)}
+.tmove h4{font-size:20px;margin-bottom:10px}
+@media print{.passage{position:static}.why{display:block}.key{display:block}.verdict{display:none}.score{display:none}.practice{break-before:page}}
+
+/* text to speech */
+.tts{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font:600 13px var(--sans);color:var(--navy);background:#fff;border:1.5px solid var(--navy);border-radius:999px;padding:5px 12px;float:right;margin:0 0 8px 12px}
+.tts:hover,.tts.on{background:var(--navy);color:#fff}.tts:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.tts-s{padding:5px 7px}.q .tts-s{margin-top:-2px}
+.teach>.tts,.howto>.tts,.letter-in>.tts{margin-top:6px}
+.no-tts .tts,.no-tts .player{display:none!important}
+.speaking{background:rgba(201,162,39,.28)!important;box-shadow:0 0 0 4px rgba(201,162,39,.28);border-radius:2px}
+.sheet .speaking,.accom .speaking,.wr .speaking{background:rgba(232,206,110,.3)!important}
+.player{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;gap:6px;padding:8px;background:var(--deep);border:2px solid var(--gold);border-radius:999px;box-shadow:0 8px 24px rgba(19,26,69,.35)}
+.player[hidden]{display:none}
+.player button{all:unset;cursor:pointer;font:600 13px var(--sans);color:#fff;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12)}
+.player button:hover{background:rgba(255,255,255,.25)}.player button[aria-pressed="true"]{background:var(--gold);color:var(--deep)}
+.player button:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+/* special ed */
+.sped{border-top-color:#1F9488}
+.two-box{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+@media (max-width:900px){.two-box{grid-template-columns:1fr}}
+.box{background:var(--paper);border:1px solid var(--rule);border-top:6px solid #1F9488;padding:24px}
+.box h3{font-size:22px;margin-bottom:14px}.box h4{font-size:18px;margin:22px 0 10px}
+.plain{list-style:none;margin:0;padding:0}.plain li{padding:12px 0;border-top:1px solid var(--rule)}.plain li:first-child{border-top:0;padding-top:0}
+.plain .bi{grid-template-columns:1fr!important;font-size:15.5px}
+.ask li{font-weight:600}.ask .es{font-weight:400}
+@media print{.tts,.player{display:none!important}}
+
+/* ===== site additions ===== */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:30;pointer-events:none}.progress i{display:block;height:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0)}
+.tabs.pages a{min-width:auto;padding:0 12px;font-size:13.5px;white-space:nowrap;border-bottom-color:rgba(255,255,255,.25)}
+.tabs.pages a.here,.tabs.pages a:hover{background:var(--gold);color:var(--deep);border-bottom-color:var(--gold)}
+body[data-lang="both"] .tabs.pages .inl .es{display:none}
+.band-hero{display:block;padding-bottom:0}.band-hero .cover-in{max-width:1100px;padding-bottom:clamp(28px,4vw,48px)}
+.band-hero h1{font-size:clamp(72px,12vw,160px)}.band-hero h1{letter-spacing:-.02em}
+.band-t{font-size:clamp(26px,3.2vw,42px);margin-top:12px;color:var(--gold-l)}.band-hero .band-t .es{color:#C9D2F2!important}
+.t-h1{font-size:clamp(44px,7vw,96px)!important;letter-spacing:-.03em}.t-h1 .es{color:var(--gold)!important}
+.gstrip{display:flex;gap:6px;flex-wrap:wrap;margin:0 calc(-1*clamp(20px,6vw,88px));padding:12px clamp(20px,6vw,88px);background:rgba(19,26,69,.6);border-top:1px solid rgba(255,255,255,.2)}
+.gstrip a{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:#fff;padding:8px 14px;border-radius:6px;border-bottom:4px solid var(--gc,var(--gold));background:rgba(255,255,255,.08);font-size:14px;font-weight:500}
+.gstrip a b{font:800 22px/1 var(--serif)}.gstrip a:hover,.gstrip a.here{background:var(--gc,var(--gold));color:#fff}
+.gstrip a:not([style]):hover{color:var(--deep)}
+.sec-h{margin-bottom:8px}.how-grid.three{grid-template-columns:repeat(3,1fr)}@media (max-width:1000px){.how-grid.three{grid-template-columns:1fr}}
+.inside{background:#fff}
+/* ladder */
+.ladder{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:var(--navy);color:#fff;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px}
+.ladder h2{font-size:clamp(30px,4vw,54px);margin-bottom:20px;max-width:24ch}.ladder .hd .es,.ladder .bi .es{color:#C9D2F2!important}
+.ld-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.ld-tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:10px 16px;border:1.5px solid rgba(255,255,255,.45);border-radius:8px;font:600 15px var(--sans);display:flex;flex-direction:column;gap:2px}
+.ld-tabs button small{font-weight:400;font-size:12px;opacity:.75}.ld-tabs button .inl .es{font-weight:400}
+.ld-tabs button[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:var(--deep)}.ld-tabs button:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+.rungs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column-reverse;gap:6px}.rungs[hidden]{display:none}
+.rungs li{margin-left:calc(var(--i)*2.4%);transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .5s;transition-delay:calc(var(--i)*35ms)}
+.rungs.reveal:not(.in) li{opacity:0;transform:translateY(14px)}
+.rungs a{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:#fff;border-left:8px solid var(--gc);padding:10px 16px 10px 0;border-radius:0 6px 6px 0}
+.ladder .rungs .bi .es{color:var(--mute)!important}
+.rungs a b{font:800 28px/1 var(--serif);color:var(--gc);text-align:center}.rungs a:hover{background:var(--gold-l)}.rungs .bi{font-size:15px;gap:4px 24px}
+@media (max-width:760px){.rungs li{margin-left:0}}
+/* sheet reveal */
+.sheet.reveal .room,.sheet.reveal .froom,.sheet.reveal .annex{transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.sheet.reveal:not(.in) .room,.sheet.reveal:not(.in) .froom,.sheet.reveal:not(.in) .annex{opacity:0;transform:scale(.96)}
+.sheet.reveal .room:nth-child(2),.sheet.reveal .froom:nth-child(2){transition-delay:.12s}.sheet.reveal .room:nth-child(3),.sheet.reveal .froom:nth-child(3){transition-delay:.24s}
+.sheet.reveal .froom:nth-child(4){transition-delay:.36s}.sheet.reveal .froom:nth-child(5),.sheet.reveal .annex{transition-delay:.48s}
+.lanes.reveal .lane{transition:opacity .5s,transform .5s}.lanes.reveal:not(.in) .lane{opacity:0;transform:translateY(12px)}
+.lanes.reveal .lane:nth-child(2){transition-delay:.08s}.lanes.reveal .lane:nth-child(3){transition-delay:.16s}.lanes.reveal .lane:nth-child(4){transition-delay:.24s}
+/* practice additions */
+.pr-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.reset,.printbtn,.check{all:unset;box-sizing:border-box;cursor:pointer;font:600 13px var(--sans);color:var(--navy);border:1.5px solid var(--navy);border-radius:999px;padding:6px 14px;background:#fff}
+.reset:hover,.printbtn:hover{background:var(--navy);color:#fff}.reset:focus-visible,.printbtn:focus-visible,.check:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.printbtn{float:right;margin-left:12px}
+.check{margin-top:14px;background:var(--navy);color:#fff;padding:9px 18px;font-size:14px}.check[disabled]{opacity:.4;cursor:not-allowed}.qx.done .check{display:none}
+.dok{margin-left:6px;background:#fff!important;border-color:var(--rule)!important;color:var(--mute)!important}.kind-chip{margin-left:6px;background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important}
+.part+.part{margin-top:18px;padding-top:16px;border-top:1px dashed var(--rule)}
+.opt.sel{border-color:var(--navy);background:#EEF2FB}.opt.sel b{background:var(--navy);color:#fff}
+.qx.done .opt{cursor:default}.qx.done .why{display:block}
+.qx[data-id] .part[data-n="2"] .opt b{border-radius:6px}
+.paired{margin-top:clamp(28px,4vw,48px);padding-top:clamp(24px,3vw,40px);border-top:1px dashed var(--navy)}
+.supports{margin-top:clamp(28px,4vw,48px);display:grid;gap:24px}
+.lanes-wrap h4,.wprompt h4,.family h4{font-size:22px;margin-bottom:6px}
+.lanes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+@media (max-width:1000px){.lanes{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.lanes{grid-template-columns:1fr}}
+.lane{background:#fff;border:1px solid var(--rule);border-top:6px solid var(--lc);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.lane-0{--lc:#D7263D}.lane-1{--lc:#DB9A12}.lane-2{--lc:#2F7FC1}.lane-3{--lc:#3F9B55}
+.lane-h{display:flex;flex-direction:column;gap:2px}.lane-h b{font:600 18px var(--serif)}.lane-h span{font-size:12px;color:var(--mute);font-weight:600}
+.lane-d{font-size:13px;color:var(--mute)}.lane-d .inl span{display:block}body[data-lang="both"] .lane-d .inl .es::before{content:none}body[data-lang="both"] .lane-d .inl .es{font-style:italic}
+.lane-t{font-size:15px;font-weight:500;border-top:1px dashed var(--rule);padding-top:8px;margin-top:auto}
+.sup-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media (max-width:900px){.sup-2{grid-template-columns:1fr}}
+.wprompt,.family{background:#fff;border:1px solid var(--rule);padding:20px 24px}.wprompt{border-left:6px solid var(--navy)}.family{border-left:6px solid var(--gold)}
+.wprompt .bi,.family .bi{grid-template-columns:1fr!important}.wprompt .chip{margin:6px 0 10px}.wprompt .sm{margin:12px 0 0}
+.fam{margin:10px 0 0;padding-left:22px}.fam li{padding:6px 0}.fam li::marker{font:800 18px var(--serif);color:var(--gold)}
+.after{margin-top:28px}
+/* teachers */
+.sample{margin-top:40px}.sample .band-k{font:800 30px/1 var(--serif);color:var(--gold);margin-bottom:6px}.sample .two-box{margin-top:14px}
+.resp{font-family:var(--serif);font-size:16.5px;line-height:1.65;background:#fff;border:1px solid var(--rule);padding:14px 16px;margin:10px 0 16px}
+.box.dev{border-top-color:#DB9A12}.box h4{clear:none}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;background:var(--paper);border:1px solid var(--rule);padding:clamp(18px,3vw,32px);margin-bottom:12px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.c-row{display:grid;grid-template-columns:1fr;gap:4px;margin-bottom:16px;position:relative}.c-row label{font-weight:600;font-size:15px}
+.c-row input[type=range]{width:100%;accent-color:var(--navy)}.c-row output{position:absolute;right:0;top:0;font:800 18px var(--serif);color:var(--navy)}
+.c-row select{font:600 16px var(--sans);padding:8px 10px;border:1.5px solid var(--navy);border-radius:6px;background:#fff;color:var(--ink)}
+.cb{margin-bottom:16px}.cb-l{display:flex;justify-content:space-between;gap:12px;font-size:14px;flex-wrap:wrap}.cb-l span{color:var(--mute)}
+.cb-track{height:22px;background:#fff;border:1.5px solid var(--navy);border-radius:4px;overflow:hidden;margin:4px 0;transition:width .4s}.cb-track i{display:block;height:100%;background:var(--navy);transition:width .3s}
+.cb.top .cb-track{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,39,.35)}.cb.top .cb-track i{background:var(--gold)}.cb-n{font-size:13px;color:var(--mute)}.cb.top .cb-n{color:var(--ink);font-weight:600}
+.c-total{font-weight:600;margin-top:20px}.c-msg{margin-top:8px;padding:12px 14px;background:#fff;border-left:5px solid var(--gold)}
+.agenda{list-style:none;margin:0;padding:0;border-top:3px solid var(--navy)}.agenda li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.ag-t{font:800 20px/1.2 var(--serif);color:var(--gold)}.agenda h4{font-size:20px;margin-bottom:8px}@media (max-width:600px){.agenda li{grid-template-columns:1fr;gap:6px}}
+@media (max-width:700px){.tabs.pages a{flex:none}}
+@media (prefers-reduced-motion:reduce){.reveal *{transition:none!important;opacity:1!important;transform:none!important}}
+@media print{.progress,.gstrip,.reset,.printbtn,.check,.ld-tabs{display:none!important}.rungs[hidden]{display:flex!important}.rungs li{margin-left:0}
+ .reveal *{opacity:1!important;transform:none!important}
+ body.print-one .cover,body.print-one main>*:not(.print-me){display:none!important}.ladder{background:#fff;color:var(--ink)}.ladder .bi .es,.ladder .hd .es{color:var(--mute)!important}}
+</style>
+</head>
+<body data-lang="both" data-page="k-2.html">
+<a class="skip" href="#main">Skip to content / Saltar al contenido</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<nav class="bar" aria-label="Magazine navigation / Navegación">
+  <a class="bar-brand" href="index.html">The Blueprint <span>/ El Plano</span></a>
+  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg here" aria-current="page">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="teachers.html" class="pg"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
+  <div class="lang" role="group" aria-label="Language / Idioma">
+    <button data-set="en" aria-pressed="false">EN</button><button data-set="both" aria-pressed="true">EN + ES</button><button data-set="es" aria-pressed="false">ES</button>
+  </div>
+</nav>
+<div id="top"></div>
+<header class="cover band-hero"><div class="cover-in"><p class="issue"><span class="inl "><span class="en" lang="en">The Blueprint · grade band</span><span class="es" lang="es">El Plano · banda de grados</span></span></p>
+  <h1><span class="band-n">K–2</span></h1><h2 class="hd band-t"><span class="en" lang="en">Foundations</span><span class="es" lang="es">Los cimientos</span></h2><div class="bi cover-dek"><p class="en" lang="en">No state ELA test yet. These are the years that decide whether grade 3 goes well: sounds, print, decoding, fluency, and retelling.</p><p class="es" lang="es">Todavía no hay examen estatal de ELA. Estos son los años que deciden si 3.er grado sale bien: sonidos, letra impresa, decodificación, fluidez y volver a contar.</p></div></div>
+  <nav class="gstrip" aria-label="Grades / Grados"><a href="#gK" style="--gc:#D7263D"><b>K</b><span><span class="inl "><span class="en" lang="en">Kindergarten ELA</span><span class="es" lang="es">ELA de kínder</span></span></span></a><a href="#g1" style="--gc:#EE6C2B"><b>1</b><span><span class="inl "><span class="en" lang="en">Grade 1 ELA</span><span class="es" lang="es">ELA de 1.er grado</span></span></span></a><a href="#g2" style="--gc:#DB9A12"><b>2</b><span><span class="inl "><span class="en" lang="en">Grade 2 ELA</span><span class="es" lang="es">ELA de 2.º grado</span></span></span></a></nav></header>
+<main id="main">
+
+<section class="grade" id="gK" style="--gc:#D7263D">
+  <header class="g-head">
+    <div class="g-num" aria-hidden="true">K</div>
+    <div class="g-title">
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><div class="badge off"><span class="inl "><span class="en" lang="en">Not MAAP tested</span><span class="es" lang="es">Sin examen MAAP</span></span></div>
+      <h2 class="hd "><span class="en" lang="en">Kindergarten ELA</span><span class="es" lang="es">ELA de kínder</span></h2>
+      <div class="bi dek"><p class="en" lang="en">Where the building starts: print, sounds, letters, and stories heard aloud. There is no MAAP test here, but Mississippi checks readiness at the start and end of the year.</p><p class="es" lang="es">Donde empieza el edificio: la letra impresa, los sonidos, las letras y los cuentos leídos en voz alta. Aquí no hay examen MAAP, pero Mississippi mide la preparación al inicio y al final del año.</p></div>
+    </div>
+  </header>
+  <div class="g-plan">
+    
+<figure class="sheet sheet-focus">
+  <div class="stamp"><span class="inl "><span class="en" lang="en">No MAAP ELA test this year</span><span class="es" lang="es">Sin examen MAAP de ELA este año</span></span></div>
+  <div class="dim"><span></span><em><span class="inl "><span class="en" lang="en">Classroom focus map · kindergarten standards</span><span class="es" lang="es">Mapa de enfoque del aula · estándares de kínder</span></span></em><span></span></div>
+  <div class="fplan"><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Print concepts</span><span class="es" lang="es">Conceptos de la letra impresa</span></span></div><span class="std">RF.K.1</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Phonological awareness</span><span class="es" lang="es">Conciencia fonológica</span></span></div><span class="std">RF.K.2</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Letters and sounds</span><span class="es" lang="es">Letras y sonidos</span></span></div><span class="std">RF.K.3</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Stories: characters, setting, events</span><span class="es" lang="es">Cuentos: personajes, escenario, sucesos</span></span></div><span class="std">RL.K.1–3</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Draw, dictate, write</span><span class="es" lang="es">Dibujar, dictar, escribir</span></span></div><span class="std">W.K.1–3</span></div></div>
+</figure>
+    <aside class="insight"><h3 class="hd "><span class="en" lang="en">What the plan tells us</span><span class="es" lang="es">Lo que nos dice el plano</span></h3><div class="bi "><p class="en" lang="en">This is a classroom focus map, not a state blueprint. Mississippi kindergartners take a readiness assessment in fall and spring; ask your school which dates apply.</p><p class="es" lang="es">Este es un mapa de enfoque, no un plano estatal. En Mississippi los niños de kínder toman una evaluación de preparación en otoño y primavera; pregunta en tu escuela por las fechas.</p></div></aside>
+  </div>
+  <div class="g-cols">
+    <div class="paper tts-scope">
+      <button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+      <h3 class="hd "><span class="en" lang="en">Review notes</span><span class="es" lang="es">Notas de repaso</span></h3>
+      <ul class="notes"><li><span class="chip">RF.K.1</span><div class="bi "><p class="en" lang="en">Print goes left to right, top to bottom, page by page. Words are separated by spaces. Name every upper- and lowercase letter.</p><p class="es" lang="es">La letra impresa va de izquierda a derecha, de arriba abajo, página por página. Las palabras se separan con espacios. Nombra todas las letras mayúsculas y minúsculas.</p></div></li><li><span class="chip">RF.K.2</span><div class="bi "><p class="en" lang="en">Play with sounds before letters: rhyme, clap syllables, and pull apart the first, middle, and last sound in three-sound words like cat.</p><p class="es" lang="es">Juega con los sonidos antes que con las letras: rima, da palmadas por sílaba y separa el primer sonido, el del medio y el último en palabras de tres sonidos como cat.</p></div></li><li><span class="chip">RF.K.3</span><div class="bi "><p class="en" lang="en">Each consonant has a main sound, and the five vowels have long and short sounds. English vowels do not behave like Spanish vowels, so practice them by ear.</p><p class="es" lang="es">Cada consonante tiene un sonido principal y las cinco vocales tienen sonidos largos y cortos. Las vocales del inglés no se comportan como las del español, así que practícalas de oído.</p></div></li><li><span class="chip">RL.K.1 – RL.K.3</span><div class="bi "><p class="en" lang="en">With prompting and support, ask and answer questions about key details, retell familiar stories, and identify characters, settings, and major events.</p><p class="es" lang="es">Con ayuda y apoyo, haz y responde preguntas sobre detalles clave, vuelve a contar cuentos conocidos e identifica personajes, escenarios y sucesos principales.</p></div></li><li><span class="chip">RL.K.6 / RI.K.5</span><div class="bi "><p class="en" lang="en">Name the author and the illustrator and say what each one does. Find the front cover, back cover, and title page.</p><p class="es" lang="es">Nombra al autor y al ilustrador y di qué hace cada uno. Encuentra la portada, la contraportada y la página del título.</p></div></li><li><span class="chip">L.K.5</span><div class="bi "><p class="en" lang="en">Sort objects into categories such as shapes and foods, and match opposites.</p><p class="es" lang="es">Clasifica objetos en categorías como figuras y alimentos, y relaciona los opuestos.</p></div></li></ul>
+      <div class="wr"><h4 class="hd "><span class="en" lang="en">Writing</span><span class="es" lang="es">Escritura</span></h4><div class="bi "><p class="en" lang="en">Kindergarten writing is a mix of drawing, dictating, and writing to give an opinion (W.K.1), share information (W.K.2), or tell about an event (W.K.3). Talking through the idea in Spanish first counts as planning.</p><p class="es" lang="es">En kínder se escribe combinando dibujo, dictado y escritura para dar una opinión (W.K.1), compartir información (W.K.2) o contar un suceso (W.K.3). Conversar primero la idea en español cuenta como planificación.</p></div></div>
+    </div>
+    <div class="side">
+      <div class="bridge"><h3 class="hd "><span class="en" lang="en">Word bridge</span><span class="es" lang="es">Puente de palabras</span></h3>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Cognates you already own in Spanish.</span><span class="es" lang="es">Cognados que ya conoces en español.</span></span></p>
+        <ul class="cogs"><li><span lang="en">letter</span><i aria-hidden="true"></i><span lang="es">letra</span></li><li><span lang="en">syllable</span><i aria-hidden="true"></i><span lang="es">sílaba</span></li><li><span lang="en">rhyme</span><i aria-hidden="true"></i><span lang="es">rima</span></li><li><span lang="en">author</span><i aria-hidden="true"></i><span lang="es">autor</span></li><li><span lang="en">illustrator</span><i aria-hidden="true"></i><span lang="es">ilustrador</span></li><li><span lang="en">title</span><i aria-hidden="true"></i><span lang="es">título</span></li><li><span lang="en">vowel</span><i aria-hidden="true"></i><span lang="es">vocal</span></li><li><span lang="en">consonant</span><i aria-hidden="true"></i><span lang="es">consonante</span></li></ul></div>
+      <div class="shelf"><h3 class="hd "><span class="en" lang="en">Video shelf</span><span class="es" lang="es">Videoteca</span></h3><ul class="vids"><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Letter sounds</span><span class="es" lang="es">Los sonidos de las letras</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=letter+sounds+phonics+kindergarten" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=sonidos+de+las+letras+en+ingl%C3%A9s+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Rhyming words</span><span class="es" lang="es">Palabras que riman</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=rhyming+words+for+kindergarten" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=palabras+que+riman+para+ni%C3%B1os+k%C3%ADnder" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Characters and setting</span><span class="es" lang="es">Personajes y escenario</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=characters+and+setting+kindergarten+story+elements" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=personajes+y+escenario+de+un+cuento+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Parts of a book</span><span class="es" lang="es">Las partes de un libro</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=parts+of+a+book+author+illustrator+kindergarten" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=partes+de+un+libro+autor+ilustrador+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li></ul></div>
+    </div>
+  </div>
+  
+  <div class="practice" data-grade="gK">
+    <div class="pr-head"><h3 class="hd "><span class="en" lang="en">Practice passage and questions</span><span class="es" lang="es">Pasaje de práctica y preguntas</span></h3>
+      <div class="pr-tools"><p class="score" data-total="3"><b>0</b> / 3</p><button type="button" class="reset"><span class="inl "><span class="en" lang="en">Start over</span><span class="es" lang="es">Empezar de nuevo</span></span></button></div></div>
+    <div class="pr-grid">
+      <article class="passage tts-scope" lang="en"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+        <p class="kind"><span class="inl "><span class="en" lang="en">Story · read it aloud together</span><span class="es" lang="es">Cuento · léanlo juntos en voz alta</span></span></p><h4>Pepa’s Red Boots</h4><p>Pepa has new red boots. It rains and rains. Pepa runs outside. She jumps in a big puddle. Splash!</p><p>Mud gets on her boots. Pepa is sad. Mama gets a wet rag. Wipe, wipe, wipe. The boots are red again.</p><p>Pepa smiles and jumps one more time.</p>
+        <dl class="gloss"><div><dt lang="en">boots</dt><dd lang="es">botas</dd></div><div><dt lang="en">puddle</dt><dd lang="es">charco</dd></div><div><dt lang="en">mud</dt><dd lang="es">lodo</dd></div><div><dt lang="en">rag</dt><dd lang="es">trapo</dd></div></dl>
+        <p class="pnote es" lang="es">El pasaje y las opciones están en inglés, igual que en el examen.</p></article>
+      <ol class="qs"><li class="q tts-scope" data-id="gK-0" data-ans="1"><span class="chip">RL.K.3</span><span class="chip dok">DOK 1</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">1. Who is the story mostly about?</p><p class="stem-es es" lang="es">¿De quién trata principalmente el cuento?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>Mama</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>Pepa</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>a dog</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>a teacher</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: B</p><div class="bi "><p class="en" lang="en">Pepa is the main character. She is in almost every sentence.</p><p class="es" lang="es">Pepa es el personaje principal. Aparece en casi todas las oraciones.</p></div></div></li><li class="q tts-scope" data-id="gK-1" data-ans="2"><span class="chip">RL.K.1</span><span class="chip dok">DOK 1</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">2. Why is Pepa sad?</p><p class="stem-es es" lang="es">¿Por qué está triste Pepa?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>The rain stops.</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>She loses a boot.</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>Mud gets on her boots.</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>Mama goes away.</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: C</p><div class="bi "><p class="en" lang="en">The story says, “Mud gets on her boots. Pepa is sad.”</p><p class="es" lang="es">El cuento dice: “Mud gets on her boots. Pepa is sad.”</p></div></div></li><li class="q tts-scope" data-id="gK-2" data-ans="0"><span class="chip">RF.K.2</span><span class="chip dok">DOK 1</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">3. Which word rhymes with red?</p><p class="stem-es es" lang="es">¿Qué palabra rima con red?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>bed</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>rag</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>run</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>rain</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: A</p><div class="bi "><p class="en" lang="en">Red and bed end with the same sound, -ed.</p><p class="es" lang="es">Red y bed terminan con el mismo sonido, -ed.</p></div></div></li></ol>
+    </div>
+    
+    <div class="supports">
+      <div class="lanes-wrap tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Four lanes, one passage</span><span class="es" lang="es">Cuatro carriles, un pasaje</span></h4>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Same text and same standard for everyone. Only the support changes.</span><span class="es" lang="es">El mismo texto y el mismo estándar para todos. Solo cambia el apoyo.</span></span></p><div class="lanes"><div class="lane lane-0"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Newcomer</span><span class="es" lang="es">Recién llegado</span></span></b><span>ELPA21 Level 1</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Point, match, draw, or answer with a word. Spanish is welcome.</span><span class="es" lang="es">Señalar, relacionar, dibujar o responder con una palabra. El español es bienvenido.</span></span></p><p class="lane-t" lang="en">Point to Pepa. Point to the boots. Show me sad. Show me happy.</p></div><div class="lane lane-1"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Emerging</span><span class="es" lang="es">Emergente</span></span></b><span>ELPA21 Levels 1–2</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Complete a short sentence frame with a word bank.</span><span class="es" lang="es">Completar un marco de oración corto con un banco de palabras.</span></span></p><p class="lane-t" lang="en">Pepa is ___ because ___ gets on her boots. (sad / happy · mud / rain)</p></div><div class="lane lane-2"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Progressing</span><span class="es" lang="es">En progreso</span></span></b><span>ELPA21 Levels 3–4</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Answer in full sentences with evidence and a reason.</span><span class="es" lang="es">Responder con oraciones completas, evidencia y una razón.</span></span></p><p class="lane-t" lang="en">First Pepa ___. Then ___. Last, ___.</p></div><div class="lane lane-3"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Challenge</span><span class="es" lang="es">Desafío</span></span></b><span>ELPA21 Levels 4–5 and proficient</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Extend the thinking: compare, evaluate, or create.</span><span class="es" lang="es">Ampliar el pensamiento: comparar, evaluar o crear.</span></span></p><p class="lane-t" lang="en">Tell a new ending. What if Mama had no rag?</p></div></div></div>
+      <div class="sup-2">
+        <div class="wprompt tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Writing task</span><span class="es" lang="es">Tarea de escritura</span></h4><span class="chip">W.K.3</span><div class="bi "><p class="en" lang="en">Draw Pepa at the puddle. Then tell or write what happens first, next, and last.</p><p class="es" lang="es">Dibuja a Pepa en el charco. Luego cuenta o escribe qué pasa primero, después y al final.</p></div><p class="sm"><span class="inl "><span class="en" lang="en">Classroom writing task aligned to this grade’s standards.</span><span class="es" lang="es">Tarea de escritura para el aula alineada con los estándares de este grado.</span></span></p></div>
+        <div class="family tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">For families: three things to do at home</span><span class="es" lang="es">Para las familias: tres cosas para hacer en casa</span></h4><ol class="fam"><li><div class="bi "><p class="en" lang="en">Read aloud every day in any language. Stop and ask: who is in the story? Where are they?</p><p class="es" lang="es">Lean en voz alta todos los días en cualquier idioma. Hagan una pausa y pregunten: ¿quién está en el cuento? ¿Dónde están?</p></div></li><li><div class="bi "><p class="en" lang="en">Play with rhymes in the car: gato, pato, zapato; cat, hat, bat.</p><p class="es" lang="es">Jueguen con rimas en el carro: gato, pato, zapato; cat, hat, bat.</p></div></li><li><div class="bi "><p class="en" lang="en">Point out letters on signs, boxes, and labels, and say their sounds.</p><p class="es" lang="es">Señalen letras en letreros, cajas y etiquetas, y digan sus sonidos.</p></div></li></ol></div>
+      </div>
+      <aside class="tmove tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Teaching this to a bilingual student</span><span class="es" lang="es">Cómo enseñárselo a un estudiante bilingüe</span></h4><div class="bi "><p class="en" lang="en">Act it out first. Let children name boots, puddle, and mud in Spanish, then attach the English word to the same picture. Meaning first, label second.</p><p class="es" lang="es">Primero actúenlo. Deja que los niños nombren botas, charco y lodo en español y luego une la palabra en inglés a la misma imagen. Primero el significado, después la etiqueta.</p></div></aside>
+    </div>
+  </div>
+</section>
+<section class="grade" id="g1" style="--gc:#EE6C2B">
+  <header class="g-head">
+    <div class="g-num" aria-hidden="true">1</div>
+    <div class="g-title">
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><div class="badge off"><span class="inl "><span class="en" lang="en">Not MAAP tested</span><span class="es" lang="es">Sin examen MAAP</span></span></div>
+      <h2 class="hd "><span class="en" lang="en">Grade 1 ELA</span><span class="es" lang="es">ELA de 1.er grado</span></h2>
+      <div class="bi dek"><p class="en" lang="en">The year children crack the code. Decoding, fluency, and retelling with key details are the load-bearing walls for everything that follows.</p><p class="es" lang="es">El año en que los niños descifran el código. La decodificación, la fluidez y volver a contar con detalles clave son los muros de carga de todo lo que sigue.</p></div>
+    </div>
+  </header>
+  <div class="g-plan">
+    
+<figure class="sheet sheet-focus">
+  <div class="stamp"><span class="inl "><span class="en" lang="en">No MAAP ELA test this year</span><span class="es" lang="es">Sin examen MAAP de ELA este año</span></span></div>
+  <div class="dim"><span></span><em><span class="inl "><span class="en" lang="en">Classroom focus map · grade 1 standards</span><span class="es" lang="es">Mapa de enfoque del aula · estándares de 1.er grado</span></span></em><span></span></div>
+  <div class="fplan"><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Decoding and word patterns</span><span class="es" lang="es">Decodificación y patrones de palabras</span></span></div><span class="std">RF.1.3</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Blending and segmenting sounds</span><span class="es" lang="es">Unir y separar sonidos</span></span></div><span class="std">RF.1.2</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Fluency</span><span class="es" lang="es">Fluidez</span></span></div><span class="std">RF.1.4</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Retelling and the central message</span><span class="es" lang="es">Volver a contar y el mensaje central</span></span></div><span class="std">RL.1.2</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Stories and information books</span><span class="es" lang="es">Cuentos y libros informativos</span></span></div><span class="std">RL.1.5 · RI.1.5</span></div></div>
+</figure>
+    <aside class="insight"><h3 class="hd "><span class="en" lang="en">What the plan tells us</span><span class="es" lang="es">Lo que nos dice el plano</span></h3><div class="bi "><p class="en" lang="en">This is a classroom focus map, not a state blueprint. Schools track first grade reading with district screeners rather than a MAAP test.</p><p class="es" lang="es">Este es un mapa de enfoque, no un plano estatal. Las escuelas siguen la lectura de primer grado con evaluaciones de diagnóstico del distrito, no con un examen MAAP.</p></div></aside>
+  </div>
+  <div class="g-cols">
+    <div class="paper tts-scope">
+      <button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+      <h3 class="hd "><span class="en" lang="en">Review notes</span><span class="es" lang="es">Notas de repaso</span></h3>
+      <ul class="notes"><li><span class="chip">RF.1.2</span><div class="bi "><p class="en" lang="en">Tell long vowel sounds from short ones, blend sounds into a word, and break a word into its sounds.</p><p class="es" lang="es">Distingue los sonidos vocálicos largos de los cortos, une sonidos para formar una palabra y separa una palabra en sus sonidos.</p></div></li><li><span class="chip">RF.1.3</span><div class="bi "><p class="en" lang="en">Learn the patterns: consonant digraphs like sh and ch, the silent final e, vowel teams, and endings such as -s, -ed, and -ing.</p><p class="es" lang="es">Aprende los patrones: dígrafos como sh y ch, la e final muda, los equipos de vocales y terminaciones como -s, -ed e -ing.</p></div></li><li><span class="chip">RL.1.2 / RL.1.3</span><div class="bi "><p class="en" lang="en">Retell a story with its key details and say the central message or lesson. Describe characters, settings, and major events.</p><p class="es" lang="es">Vuelve a contar un cuento con sus detalles clave y di el mensaje central o la lección. Describe personajes, escenarios y sucesos principales.</p></div></li><li><span class="chip">RL.1.4 / RL.1.6</span><div class="bi "><p class="en" lang="en">Find words that suggest feelings or appeal to the senses, and identify who is telling the story at different points.</p><p class="es" lang="es">Encuentra palabras que sugieren sentimientos o apelan a los sentidos, e identifica quién cuenta la historia en distintos momentos.</p></div></li><li><span class="chip">RL.1.5 / RI.1.5</span><div class="bi "><p class="en" lang="en">Know the difference between books that tell stories and books that give information. Use headings, tables of contents, and glossaries.</p><p class="es" lang="es">Conoce la diferencia entre libros que cuentan historias y libros que dan información. Usa encabezados, índices y glosarios.</p></div></li><li><span class="chip">L.1.4 / L.1.5</span><div class="bi "><p class="en" lang="en">One root, many forms: look, looks, looked, looking. Verbs have shades of meaning: look, peek, glance, stare, glare.</p><p class="es" lang="es">Una raíz, muchas formas: look, looks, looked, looking. Los verbos tienen matices: look, peek, glance, stare, glare.</p></div></li></ul>
+      <div class="wr"><h4 class="hd "><span class="en" lang="en">Writing</span><span class="es" lang="es">Escritura</span></h4><div class="bi "><p class="en" lang="en">First graders write opinions with a reason (W.1.1), informative pieces with facts (W.1.2), and narratives with two or more events in order (W.1.3), each with a sense of closure.</p><p class="es" lang="es">En primer grado se escriben opiniones con una razón (W.1.1), textos informativos con datos (W.1.2) y narraciones con dos o más sucesos en orden (W.1.3), cada uno con un cierre.</p></div></div>
+    </div>
+    <div class="side">
+      <div class="bridge"><h3 class="hd "><span class="en" lang="en">Word bridge</span><span class="es" lang="es">Puente de palabras</span></h3>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Cognates you already own in Spanish.</span><span class="es" lang="es">Cognados que ya conoces en español.</span></span></p>
+        <ul class="cogs"><li><span lang="en">fluency</span><i aria-hidden="true"></i><span lang="es">fluidez</span></li><li><span lang="en">central message</span><i aria-hidden="true"></i><span lang="es">mensaje central</span></li><li><span lang="en">detail</span><i aria-hidden="true"></i><span lang="es">detalle</span></li><li><span lang="en">glossary</span><i aria-hidden="true"></i><span lang="es">glosario</span></li><li><span lang="en">information</span><i aria-hidden="true"></i><span lang="es">información</span></li><li><span lang="en">senses</span><i aria-hidden="true"></i><span lang="es">sentidos</span></li><li><span lang="en">lesson</span><i aria-hidden="true"></i><span lang="es">lección</span></li><li><span lang="en">event</span><i aria-hidden="true"></i><span lang="es">evento</span></li></ul></div>
+      <div class="shelf"><h3 class="hd "><span class="en" lang="en">Video shelf</span><span class="es" lang="es">Videoteca</span></h3><ul class="vids"><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Silent e and long vowels</span><span class="es" lang="es">La e muda y las vocales largas</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=silent+e+long+vowels+first+grade+phonics" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=vocales+largas+y+cortas+en+ingl%C3%A9s+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Digraphs: sh, ch, th</span><span class="es" lang="es">Dígrafos: sh, ch, th</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=digraphs+sh+ch+th+first+grade" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=d%C3%ADgrafos+en+ingl%C3%A9s+sh+ch+th+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Retelling a story</span><span class="es" lang="es">Cómo volver a contar un cuento</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=retelling+a+story+first+grade+key+details" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=c%C3%B3mo+recontar+un+cuento+inicio+desarrollo+final" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Fiction and nonfiction</span><span class="es" lang="es">Ficción y no ficción</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=fiction+vs+nonfiction+first+grade" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=diferencia+entre+ficci%C3%B3n+y+no+ficci%C3%B3n+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li></ul></div>
+    </div>
+  </div>
+  
+  <div class="practice" data-grade="g1">
+    <div class="pr-head"><h3 class="hd "><span class="en" lang="en">Practice passage and questions</span><span class="es" lang="es">Pasaje de práctica y preguntas</span></h3>
+      <div class="pr-tools"><p class="score" data-total="4"><b>0</b> / 4</p><button type="button" class="reset"><span class="inl "><span class="en" lang="en">Start over</span><span class="es" lang="es">Empezar de nuevo</span></span></button></div></div>
+    <div class="pr-grid">
+      <article class="passage tts-scope" lang="en"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+        <p class="kind"><span class="inl "><span class="en" lang="en">Informational text</span><span class="es" lang="es">Texto informativo</span></span></p><h4>A Frog Grows Up</h4><p>A frog starts as a tiny egg in the water. A tadpole comes out of the egg. It has a long tail and no legs. It swims like a fish.</p><p>Next, the tadpole grows back legs. Then it grows front legs. Its tail gets shorter and shorter.</p><p>Last, it is a frog. Now it can hop on land and swim in the pond.</p>
+        <dl class="gloss"><div><dt lang="en">tadpole</dt><dd lang="es">renacuajo</dd></div><div><dt lang="en">tail</dt><dd lang="es">cola</dd></div><div><dt lang="en">pond</dt><dd lang="es">estanque</dd></div><div><dt lang="en">hop</dt><dd lang="es">saltar</dd></div></dl>
+        <p class="pnote es" lang="es">El pasaje y las opciones están en inglés, igual que en el examen.</p></article>
+      <ol class="qs"><li class="q tts-scope" data-id="g1-0" data-ans="3"><span class="chip">RI.1.2</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">1. What is the main topic of this text?</p><p class="stem-es es" lang="es">¿Cuál es el tema principal de este texto?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>how fish swim</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>what frogs eat</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>where ponds are</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>how a frog grows</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: D</p><div class="bi "><p class="en" lang="en">Every part tells a step in how a frog grows from an egg.</p><p class="es" lang="es">Cada parte cuenta un paso de cómo crece una rana desde el huevo.</p></div></div></li><li class="q tts-scope" data-id="g1-1" data-ans="0"><span class="chip">RI.1.3</span><span class="chip dok">DOK 1</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">2. What happens right after the tadpole grows back legs?</p><p class="stem-es es" lang="es">¿Qué pasa justo después de que al renacuajo le crecen las patas traseras?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>It grows front legs.</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>It turns into an egg.</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>Its tail gets longer.</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>It hops on land.</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: A</p><div class="bi "><p class="en" lang="en">The words Next and Then show the order: back legs, then front legs.</p><p class="es" lang="es">Las palabras Next y Then muestran el orden: patas traseras y luego delanteras.</p></div></div></li><li class="q tts-scope" data-id="g1-2" data-ans="1"><span class="chip">RL.1.5</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">3. What kind of text is this?</p><p class="stem-es es" lang="es">¿Qué tipo de texto es este?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>a make-believe story</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>a text that gives information</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>a poem</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>a play</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: B</p><div class="bi "><p class="en" lang="en">It gives true facts about frogs. It has no characters or made-up events.</p><p class="es" lang="es">Da datos reales sobre las ranas. No tiene personajes ni sucesos inventados.</p></div></div></li><li class="q tts-scope" data-id="g1-3" data-ans="2"><span class="chip">RF.1.3</span><span class="chip dok">DOK 1</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">4. Which word has a long vowel sound and a silent e?</p><p class="stem-es es" lang="es">¿Qué palabra tiene un sonido vocálico largo y una e muda?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>legs</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>frog</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>like</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>swim</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: C</p><div class="bi "><p class="en" lang="en">In like, the final e is silent and makes the i say its name.</p><p class="es" lang="es">En like, la e final es muda y hace que la i suene como su nombre.</p></div></div></li></ol>
+    </div>
+    
+    <div class="supports">
+      <div class="lanes-wrap tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Four lanes, one passage</span><span class="es" lang="es">Cuatro carriles, un pasaje</span></h4>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Same text and same standard for everyone. Only the support changes.</span><span class="es" lang="es">El mismo texto y el mismo estándar para todos. Solo cambia el apoyo.</span></span></p><div class="lanes"><div class="lane lane-0"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Newcomer</span><span class="es" lang="es">Recién llegado</span></span></b><span>ELPA21 Level 1</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Point, match, draw, or answer with a word. Spanish is welcome.</span><span class="es" lang="es">Señalar, relacionar, dibujar o responder con una palabra. El español es bienvenido.</span></span></p><p class="lane-t" lang="en">Put four picture cards in order: egg, tadpole, tadpole with legs, frog.</p></div><div class="lane lane-1"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Emerging</span><span class="es" lang="es">Emergente</span></span></b><span>ELPA21 Levels 1–2</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Complete a short sentence frame with a word bank.</span><span class="es" lang="es">Completar un marco de oración corto con un banco de palabras.</span></span></p><p class="lane-t" lang="en">First it is an ___. Next it is a ___. Last it is a ___.</p></div><div class="lane lane-2"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Progressing</span><span class="es" lang="es">En progreso</span></span></b><span>ELPA21 Levels 3–4</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Answer in full sentences with evidence and a reason.</span><span class="es" lang="es">Responder con oraciones completas, evidencia y una razón.</span></span></p><p class="lane-t" lang="en">A tadpole changes because it grows ___ and its tail gets ___.</p></div><div class="lane lane-3"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Challenge</span><span class="es" lang="es">Desafío</span></span></b><span>ELPA21 Levels 4–5 and proficient</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Extend the thinking: compare, evaluate, or create.</span><span class="es" lang="es">Ampliar el pensamiento: comparar, evaluar o crear.</span></span></p><p class="lane-t" lang="en">How is a frog’s life like a butterfly’s life? How is it different?</p></div></div></div>
+      <div class="sup-2">
+        <div class="wprompt tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Writing task</span><span class="es" lang="es">Tarea de escritura</span></h4><span class="chip">W.1.2</span><div class="bi "><p class="en" lang="en">Write about how a frog grows. Name your topic, give two facts from the text, and end with a closing sentence.</p><p class="es" lang="es">Escribe sobre cómo crece una rana. Nombra tu tema, da dos datos del texto y termina con una oración de cierre.</p></div><p class="sm"><span class="inl "><span class="en" lang="en">Classroom writing task aligned to this grade’s standards.</span><span class="es" lang="es">Tarea de escritura para el aula alineada con los estándares de este grado.</span></span></p></div>
+        <div class="family tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">For families: three things to do at home</span><span class="es" lang="es">Para las familias: tres cosas para hacer en casa</span></h4><ol class="fam"><li><div class="bi "><p class="en" lang="en">Listen to your child read for ten minutes a day. Praise effort before accuracy.</p><p class="es" lang="es">Escuche a su hijo leer diez minutos al día. Elogie el esfuerzo antes que la exactitud.</p></div></li><li><div class="bi "><p class="en" lang="en">After a story, ask your child to retell it: first, next, last.</p><p class="es" lang="es">Después de un cuento, pídale que lo vuelva a contar: primero, después, al final.</p></div></li><li><div class="bi "><p class="en" lang="en">Ask: is this book a story, or does it teach us something?</p><p class="es" lang="es">Pregunte: ¿este libro es un cuento o nos enseña algo?</p></div></li></ol></div>
+      </div>
+      <aside class="tmove tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Teaching this to a bilingual student</span><span class="es" lang="es">Cómo enseñárselo a un estudiante bilingüe</span></h4><div class="bi "><p class="en" lang="en">Draw the four stages and label them in both languages. Sequence words (first, next, then, last) map neatly onto primero, después, luego, por último.</p><p class="es" lang="es">Dibuja las cuatro etapas y rotúlalas en los dos idiomas. Las palabras de secuencia (first, next, then, last) corresponden a primero, después, luego, por último.</p></div></aside>
+    </div>
+  </div>
+</section>
+<section class="grade" id="g2" style="--gc:#DB9A12">
+  <header class="g-head">
+    <div class="g-num" aria-hidden="true">2</div>
+    <div class="g-title">
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><div class="badge off"><span class="inl "><span class="en" lang="en">Not MAAP tested</span><span class="es" lang="es">Sin examen MAAP</span></span></div>
+      <h2 class="hd "><span class="en" lang="en">Grade 2 ELA</span><span class="es" lang="es">ELA de 2.º grado</span></h2>
+      <div class="bi dek"><p class="en" lang="en">The last year before the state test. Second graders move from learning to read toward reading to learn, and they meet fables, folktales, and morals.</p><p class="es" lang="es">El último año antes del examen estatal. En segundo grado se pasa de aprender a leer a leer para aprender, y aparecen las fábulas, los cuentos populares y las moralejas.</p></div>
+    </div>
+  </header>
+  <div class="g-plan">
+    
+<figure class="sheet sheet-focus">
+  <div class="stamp"><span class="inl "><span class="en" lang="en">No MAAP ELA test this year</span><span class="es" lang="es">Sin examen MAAP de ELA este año</span></span></div>
+  <div class="dim"><span></span><em><span class="inl "><span class="en" lang="en">Classroom focus map · grade 2 standards</span><span class="es" lang="es">Mapa de enfoque del aula · estándares de 2.º grado</span></span></em><span></span></div>
+  <div class="fplan"><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Who, what, where, when, why, how</span><span class="es" lang="es">Quién, qué, dónde, cuándo, por qué, cómo</span></span></div><span class="std">RL.2.1 · RI.2.1</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Fables, folktales and morals</span><span class="es" lang="es">Fábulas, cuentos populares y moralejas</span></span></div><span class="std">RL.2.2</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Main topic and text features</span><span class="es" lang="es">Tema principal y elementos del texto</span></span></div><span class="std">RI.2.2 · RI.2.5</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Vowel teams, prefixes, suffixes</span><span class="es" lang="es">Equipos de vocales, prefijos, sufijos</span></span></div><span class="std">RF.2.3</span></div><div class="froom"><div class="room-n"><span class="inl "><span class="en" lang="en">Two versions of one story</span><span class="es" lang="es">Dos versiones de un mismo cuento</span></span></div><span class="std">RL.2.9</span></div></div>
+</figure>
+    <aside class="insight"><h3 class="hd "><span class="en" lang="en">What the plan tells us</span><span class="es" lang="es">Lo que nos dice el plano</span></h3><div class="bi "><p class="en" lang="en">This is a classroom focus map, not a state blueprint. Next spring&#x27;s grade 3 test splits almost evenly between stories and informational text, so read both every week.</p><p class="es" lang="es">Este es un mapa de enfoque, no un plano estatal. El examen de 3.er grado de la próxima primavera se divide casi por igual entre cuentos y texto informativo, así que lee ambos cada semana.</p></div></aside>
+  </div>
+  <div class="g-cols">
+    <div class="paper tts-scope">
+      <button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+      <h3 class="hd "><span class="en" lang="en">Review notes</span><span class="es" lang="es">Notas de repaso</span></h3>
+      <ul class="notes"><li><span class="chip">RL.2.1 / RI.2.1</span><div class="bi "><p class="en" lang="en">Ask and answer who, what, where, when, why, and how to show you understand the key details.</p><p class="es" lang="es">Haz y responde preguntas de quién, qué, dónde, cuándo, por qué y cómo para demostrar que entiendes los detalles clave.</p></div></li><li><span class="chip">RL.2.2</span><div class="bi "><p class="en" lang="en">Recount fables and folktales from diverse cultures and determine their central message, lesson, or moral.</p><p class="es" lang="es">Vuelve a contar fábulas y cuentos populares de diversas culturas y determina su mensaje central, lección o moraleja.</p></div></li><li><span class="chip">RL.2.3 / RL.2.6</span><div class="bi "><p class="en" lang="en">Describe how characters respond to major events and challenges. Characters have different points of view; use a different voice for each when reading dialogue aloud.</p><p class="es" lang="es">Describe cómo responden los personajes a los sucesos y desafíos importantes. Los personajes tienen distintos puntos de vista; usa una voz diferente para cada uno al leer el diálogo en voz alta.</p></div></li><li><span class="chip">RL.2.5</span><div class="bi "><p class="en" lang="en">A story has a structure: the beginning introduces it and the ending concludes the action.</p><p class="es" lang="es">Un cuento tiene estructura: el principio lo presenta y el final concluye la acción.</p></div></li><li><span class="chip">RI.2.2 / RI.2.5</span><div class="bi "><p class="en" lang="en">Identify the main topic of a multiparagraph text and the focus of each paragraph. Use captions, bold print, subheadings, glossaries, and indexes.</p><p class="es" lang="es">Identifica el tema principal de un texto de varios párrafos y el enfoque de cada párrafo. Usa pies de foto, negritas, subtítulos, glosarios e índices.</p></div></li><li><span class="chip">L.2.4 / L.2.5</span><div class="bi "><p class="en" lang="en">A prefix changes meaning: happy, unhappy. Compound words combine meanings: birdhouse. Compare toss, throw, and hurl.</p><p class="es" lang="es">Un prefijo cambia el significado: happy, unhappy. Las palabras compuestas combinan significados: birdhouse. Compara toss, throw y hurl.</p></div></li></ul>
+      <div class="wr"><h4 class="hd "><span class="en" lang="en">Writing</span><span class="es" lang="es">Escritura</span></h4><div class="bi "><p class="en" lang="en">Second graders write opinions with reasons and linking words such as because and also (W.2.1), informative pieces with facts and definitions (W.2.2), and narratives with details about actions, thoughts, and feelings (W.2.3).</p><p class="es" lang="es">En segundo grado se escriben opiniones con razones y conectores como because y also (W.2.1), textos informativos con datos y definiciones (W.2.2) y narraciones con detalles de acciones, pensamientos y sentimientos (W.2.3).</p></div></div>
+    </div>
+    <div class="side">
+      <div class="bridge"><h3 class="hd "><span class="en" lang="en">Word bridge</span><span class="es" lang="es">Puente de palabras</span></h3>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Cognates you already own in Spanish.</span><span class="es" lang="es">Cognados que ya conoces en español.</span></span></p>
+        <ul class="cogs"><li><span lang="en">fable</span><i aria-hidden="true"></i><span lang="es">fábula</span></li><li><span lang="en">moral</span><i aria-hidden="true"></i><span lang="es">moraleja</span></li><li><span lang="en">culture</span><i aria-hidden="true"></i><span lang="es">cultura</span></li><li><span lang="en">prefix</span><i aria-hidden="true"></i><span lang="es">prefijo</span></li><li><span lang="en">suffix</span><i aria-hidden="true"></i><span lang="es">sufijo</span></li><li><span lang="en">paragraph</span><i aria-hidden="true"></i><span lang="es">párrafo</span></li><li><span lang="en">version</span><i aria-hidden="true"></i><span lang="es">versión</span></li><li><span lang="en">index</span><i aria-hidden="true"></i><span lang="es">índice</span></li></ul></div>
+      <div class="shelf"><h3 class="hd "><span class="en" lang="en">Video shelf</span><span class="es" lang="es">Videoteca</span></h3><ul class="vids"><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Fables and their morals</span><span class="es" lang="es">Las fábulas y sus moralejas</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=fables+and+morals+second+grade+lesson" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=qu%C3%A9+es+una+f%C3%A1bula+y+su+moraleja+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Main topic of a text</span><span class="es" lang="es">El tema principal de un texto</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=main+topic+second+grade+informational+text" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=idea+principal+de+un+texto+para+ni%C3%B1os+de+primaria" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Text features</span><span class="es" lang="es">Elementos del texto</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=text+features+second+grade+captions+glossary" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=elementos+del+texto+informativo+t%C3%ADtulos+subt%C3%ADtulos+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li><li class="vid"><div class="vid-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+<div class="vid-b"><div class="vid-t"><span class="inl "><span class="en" lang="en">Prefixes and suffixes</span><span class="es" lang="es">Prefijos y sufijos</span></span></div>
+<div class="vid-l"><a href="https://www.youtube.com/results?search_query=prefixes+and+suffixes+second+grade" target="_blank" rel="noopener" lang="en">Find videos in English</a><a href="https://www.youtube.com/results?search_query=prefijos+y+sufijos+para+ni%C3%B1os" target="_blank" rel="noopener" lang="es">Buscar videos en español</a></div></div></li></ul></div>
+    </div>
+  </div>
+  
+  <div class="practice" data-grade="g2">
+    <div class="pr-head"><h3 class="hd "><span class="en" lang="en">Practice passage and questions</span><span class="es" lang="es">Pasaje de práctica y preguntas</span></h3>
+      <div class="pr-tools"><p class="score" data-total="4"><b>0</b> / 4</p><button type="button" class="reset"><span class="inl "><span class="en" lang="en">Start over</span><span class="es" lang="es">Empezar de nuevo</span></span></button></div></div>
+    <div class="pr-grid">
+      <article class="passage tts-scope" lang="en"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+        <p class="kind"><span class="inl "><span class="en" lang="en">Fable, retold</span><span class="es" lang="es">Fábula, versión nueva</span></span></p><h4>The Crow and the Pitcher</h4><p>A thirsty crow flew over a dry field. At last she saw a tall pitcher beside a well. She looked inside. There was water at the bottom, but her beak could not reach it.</p><p>The crow pushed the pitcher. It was too heavy to tip. She did not give up. She picked up a small stone and dropped it in. Plink! She dropped another, and another. Little by little, the water rose.</p><p>At last the crow could drink. “A little at a time gets the job done,” she said, and she flew away.</p>
+        <dl class="gloss"><div><dt lang="en">crow</dt><dd lang="es">cuervo</dd></div><div><dt lang="en">pitcher</dt><dd lang="es">jarra</dd></div><div><dt lang="en">thirsty</dt><dd lang="es">con sed</dd></div><div><dt lang="en">stone</dt><dd lang="es">piedra</dd></div></dl>
+        <p class="pnote es" lang="es">El pasaje y las opciones están en inglés, igual que en el examen.</p></article>
+      <ol class="qs"><li class="q tts-scope" data-id="g2-0" data-ans="2"><span class="chip">RL.2.2</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">1. What is the moral of this fable?</p><p class="stem-es es" lang="es">¿Cuál es la moraleja de esta fábula?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>Never drink from a pitcher.</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>Always ask others for help.</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>Small steps can solve a big problem.</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>Crows are stronger than they look.</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: C</p><div class="bi "><p class="en" lang="en">The crow solves her problem one stone at a time, and she says so at the end.</p><p class="es" lang="es">El cuervo resuelve su problema piedra por piedra, y lo dice al final.</p></div></div></li><li class="q tts-scope" data-id="g2-1" data-ans="0"><span class="chip">RL.2.3</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">2. How does the crow respond when she cannot tip the pitcher?</p><p class="stem-es es" lang="es">¿Cómo responde el cuervo cuando no puede inclinar la jarra?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>She tries a new plan.</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>She flies away thirsty.</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>She breaks the pitcher.</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>She waits for rain.</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: A</p><div class="bi "><p class="en" lang="en">“She did not give up.” She starts dropping stones instead.</p><p class="es" lang="es">“She did not give up.” El cuervo empieza a echar piedras.</p></div></div></li><li class="q tts-scope" data-id="g2-2" data-ans="3"><span class="chip">RL.2.5</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">3. What does the ending of the story do?</p><p class="stem-es es" lang="es">¿Qué hace el final del cuento?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>It introduces the crow.</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>It describes the dry field.</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>It starts a new problem.</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>It shows how the problem is solved.</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: D</p><div class="bi "><p class="en" lang="en">The beginning introduces the problem. The ending concludes the action: she drinks.</p><p class="es" lang="es">El principio presenta el problema. El final concluye la acción: el cuervo bebe.</p></div></div></li><li class="q tts-scope" data-id="g2-3" data-ans="1"><span class="chip">L.2.4</span><span class="chip dok">DOK 2</span><button type="button" class="tts tts-s" aria-label="Listen / Escuchar"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+<p class="stem" lang="en">4. In this story, what is a pitcher?</p><p class="stem-es es" lang="es">En este cuento, ¿qué es un pitcher?</p>
+<div class="opts" lang="en"><button type="button" class="opt" data-i="0"><b>A</b><span>a baseball player</span></button><button type="button" class="opt" data-i="1"><b>B</b><span>a container for water</span></button><button type="button" class="opt" data-i="2"><b>C</b><span>a kind of bird</span></button><button type="button" class="opt" data-i="3"><b>D</b><span>a heavy stone</span></button></div>
+<div class="why" aria-live="polite"><p class="verdict"></p><p class="key"><span class="inl "><span class="en" lang="en">Answer</span><span class="es" lang="es">Respuesta</span></span>: B</p><div class="bi "><p class="en" lang="en">Pitcher has two meanings. The clue is “water at the bottom.”</p><p class="es" lang="es">Pitcher tiene dos significados. La pista es “water at the bottom.”</p></div></div></li></ol>
+    </div>
+    
+    <div class="supports">
+      <div class="lanes-wrap tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Four lanes, one passage</span><span class="es" lang="es">Cuatro carriles, un pasaje</span></h4>
+        <p class="sm"><span class="inl "><span class="en" lang="en">Same text and same standard for everyone. Only the support changes.</span><span class="es" lang="es">El mismo texto y el mismo estándar para todos. Solo cambia el apoyo.</span></span></p><div class="lanes"><div class="lane lane-0"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Newcomer</span><span class="es" lang="es">Recién llegado</span></span></b><span>ELPA21 Level 1</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Point, match, draw, or answer with a word. Spanish is welcome.</span><span class="es" lang="es">Señalar, relacionar, dibujar o responder con una palabra. El español es bienvenido.</span></span></p><p class="lane-t" lang="en">Act it out with a cup, water, and pebbles. Name: crow, water, stone.</p></div><div class="lane lane-1"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Emerging</span><span class="es" lang="es">Emergente</span></span></b><span>ELPA21 Levels 1–2</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Complete a short sentence frame with a word bank.</span><span class="es" lang="es">Completar un marco de oración corto con un banco de palabras.</span></span></p><p class="lane-t" lang="en">The crow wants ___. The problem is ___.</p></div><div class="lane lane-2"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Progressing</span><span class="es" lang="es">En progreso</span></span></b><span>ELPA21 Levels 3–4</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Answer in full sentences with evidence and a reason.</span><span class="es" lang="es">Responder con oraciones completas, evidencia y una razón.</span></span></p><p class="lane-t" lang="en">The crow solves the problem by ___. The moral is ___ because ___.</p></div><div class="lane lane-3"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Challenge</span><span class="es" lang="es">Desafío</span></span></b><span>ELPA21 Levels 4–5 and proficient</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Extend the thinking: compare, evaluate, or create.</span><span class="es" lang="es">Ampliar el pensamiento: comparar, evaluar o crear.</span></span></p><p class="lane-t" lang="en">Tell another story, from any country, that teaches the same moral.</p></div></div></div>
+      <div class="sup-2">
+        <div class="wprompt tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Writing task</span><span class="es" lang="es">Tarea de escritura</span></h4><span class="chip">W.2.1</span><div class="bi "><p class="en" lang="en">Was the crow smart? Write your opinion. Give two reasons from the story and use the word because.</p><p class="es" lang="es">¿Fue listo el cuervo? Escribe tu opinión. Da dos razones del cuento y usa la palabra because.</p></div><p class="sm"><span class="inl "><span class="en" lang="en">Classroom writing task aligned to this grade’s standards.</span><span class="es" lang="es">Tarea de escritura para el aula alineada con los estándares de este grado.</span></span></p></div>
+        <div class="family tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">For families: three things to do at home</span><span class="es" lang="es">Para las familias: tres cosas para hacer en casa</span></h4><ol class="fam"><li><div class="bi "><p class="en" lang="en">Tell the fables and family stories you grew up with, then ask: what is the lesson?</p><p class="es" lang="es">Cuente las fábulas e historias de familia con las que usted creció y pregunte: ¿cuál es la lección?</p></div></li><li><div class="bi "><p class="en" lang="en">Ask who, what, where, when, why, and how about anything you read or watch together.</p><p class="es" lang="es">Pregunte quién, qué, dónde, cuándo, por qué y cómo sobre cualquier cosa que lean o vean juntos.</p></div></li><li><div class="bi "><p class="en" lang="en">Read both stories and true books each week. Third grade tests both.</p><p class="es" lang="es">Lean cuentos y libros de información cada semana. En tercer grado se evalúan los dos.</p></div></li></ol></div>
+      </div>
+      <aside class="tmove tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Teaching this to a bilingual student</span><span class="es" lang="es">Cómo enseñárselo a un estudiante bilingüe</span></h4><div class="bi "><p class="en" lang="en">Many families know this fable as El cuervo y la jarra. Ask students to tell it at home in Spanish, then compare versions in class. That is RL.2.9 done for real.</p><p class="es" lang="es">Muchas familias conocen esta fábula como El cuervo y la jarra. Pide a los estudiantes que la cuenten en casa en español y luego comparen versiones en clase. Eso es RL.2.9 de verdad.</p></div></aside>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <h2 class="hd "><span class="en" lang="en">Sources and fine print</span><span class="es" lang="es">Fuentes y letra pequeña</span></h2>
+  <div class="bi "><p class="en" lang="en">Percentages, item counts, points, and testing times come from the Mississippi Department of Education’s MAAP English Language Arts Updated Blueprints (starting with the 2021–2022 school year). Standards are the Mississippi College- and Career-Readiness Standards for English Language Arts. Confirm the current year’s blueprint with your district test coordinator or the MDE Office of Student Assessment before planning instruction around it.</p><p class="es" lang="es">Los porcentajes, el número de ítems, los puntos y los tiempos provienen de los Planos actualizados de ELA del MAAP del Departamento de Educación de Mississippi (vigentes desde el año escolar 2021–2022). Los estándares son los Mississippi College- and Career-Readiness Standards de ELA. Confirma el plano del año en curso con el coordinador de exámenes de tu distrito o con la Oficina de Evaluación Estudiantil del MDE antes de planificar la instrucción.</p></div>
+  <div class="bi "><p class="en" lang="en">Review log: blueprint figures checked line by line against the MDE document on September 19, 2026. Practice passages, questions, and sample responses are original to this magazine and written in the style of the standards. They are not released MAAP items, and sample responses have not been officially scored.</p><p class="es" lang="es">Registro de revisión: las cifras del plano se verificaron línea por línea con el documento del MDE el 19 de septiembre de 2026. Los pasajes, las preguntas y las respuestas de muestra son originales de esta revista y están escritos al estilo de los estándares. No son ítems publicados del MAAP, y las respuestas de muestra no han sido calificadas oficialmente.</p></div>
+  <div class="bi "><p class="en" lang="en">Accessibility: every page works with a keyboard, offers text to speech at two speeds, respects reduced-motion settings, reflows on a phone without sideways scrolling, and prints with answer keys. If something does not work for you, tell us and we will fix it.</p><p class="es" lang="es">Accesibilidad: todas las páginas funcionan con el teclado, ofrecen lectura en voz alta a dos velocidades, respetan la configuración de movimiento reducido, se adaptan al teléfono sin desplazamiento lateral y se imprimen con las claves de respuestas. Si algo no te funciona, avísanos y lo corregiremos.</p></div>
+  <div class="bi "><p class="en" lang="en">Video links open a YouTube search for the skill in each language. Preview any video before showing it to a class. The Blueprint is an independent EL Publishing magazine. It is not issued or endorsed by the Mississippi Department of Education.</p><p class="es" lang="es">Los enlaces de video abren una búsqueda en YouTube de la destreza en cada idioma. Revisa cualquier video antes de mostrarlo a una clase. El Plano es una revista independiente de EL Publishing. No es emitida ni avalada por el Departamento de Educación de Mississippi.</p></div>
+  <p class="links"><a href="https://mdek12.org/studentassessment/maap/" target="_blank" rel="noopener">MDE · MAAP</a><a href="#top"><span class="inl "><span class="en" lang="en">Back to top</span><span class="es" lang="es">Volver arriba</span></span></a></p>
+  <p class="motto">Many Voices · One Storm</p>
+</footer>
+</main>
+<div class="player" id="player" hidden role="region" aria-label="Text to speech / Lectura en voz alta">
+  <button type="button" id="pl-pause"><span class="inl "><span class="en" lang="en">Pause</span><span class="es" lang="es">Pausa</span></span></button>
+  <button type="button" id="pl-stop"><span class="inl "><span class="en" lang="en">Stop</span><span class="es" lang="es">Detener</span></span></button>
+  <button type="button" id="pl-speed" aria-pressed="false"><span class="inl "><span class="en" lang="en">Slow</span><span class="es" lang="es">Lento</span></span></button>
+</div>
+<script>/* language + navigation */
+(function(){
+  var b=document.body, btns=document.querySelectorAll('.lang button');
+  function set(l){ b.setAttribute('data-lang',l); document.documentElement.lang = l==='es'?'es':'en';
+    btns.forEach(function(x){x.setAttribute('aria-pressed', x.dataset.set===l?'true':'false');});
+    try{localStorage.setItem('blueprint-lang',l);}catch(e){} }
+  btns.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.set);});});
+  try{var s=localStorage.getItem('blueprint-lang'); if(s==='en'||s==='es'||s==='both') set(s);}catch(e){}
+  var links=document.querySelectorAll('.gstrip a[href^="#"]');
+  if(links.length && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){
+      links.forEach(function(t){t.classList.toggle('here', t.getAttribute('href')==='#'+e.target.id);}); }});},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var t=document.querySelector(a.getAttribute('href')); if(t)io.observe(t);});
+  }
+  var bar=document.querySelector('.progress i');
+  if(bar){var tick=false; function upd(){var h=document.documentElement; var max=h.scrollHeight-innerHeight; bar.style.transform='scaleX('+(max>0?Math.min(1,h.scrollTop/max):0)+')'; tick=false;}
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true}); upd();}
+  var rm=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!rm && 'IntersectionObserver' in window){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.15});
+    document.querySelectorAll('.sheet,.lanes,.rungs').forEach(function(s){s.classList.add('reveal');ro.observe(s);});
+  }
+  document.querySelectorAll('.printbtn').forEach(function(p){p.addEventListener('click',function(){
+    var sec=p.closest('.grade'); b.classList.add('print-one'); sec.classList.add('print-me');
+    function done(){b.classList.remove('print-one');sec.classList.remove('print-me');removeEventListener('afterprint',done);}
+    addEventListener('afterprint',done); print(); });});
+})();
+
+/* practice engine: single answer, two-part, select-two, with saved progress */
+(function(){
+  var KEY='blueprint-answers-v1', store={};
+  try{store=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){store={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){}}
+  var LET='ABCDE';
+  function say(v,right,key){ v.innerHTML = right ? '<span class="inl"><span class="en" lang="en">Correct.</span><span class="es" lang="es">Correcto.</span></span>'
+    : '<span class="inl"><span class="en" lang="en">Not quite. The answer is '+key+'.</span><span class="es" lang="es">Casi. La respuesta es '+key+'.</span></span>'; }
+  function bump(el,right){ if(!right)return; var s=el.closest('.practice').querySelector('.score b'); s.textContent=(+s.textContent)+1; }
+  function lock(opts){opts.forEach(function(x){x.setAttribute('aria-disabled','true');});}
+
+  function finishSimple(q,i,record){
+    if(q.classList.contains('done'))return; var ans=+q.dataset.ans, opts=q.querySelectorAll('.opt'), right=i===ans;
+    q.classList.add('done'); opts[ans].classList.add('ok'); if(!right&&opts[i])opts[i].classList.add('no'); lock(opts);
+    say(q.querySelector('.verdict'),right,LET[ans]); bump(q,right);
+    if(record){store[q.dataset.id]=i;save();}
+  }
+  function partState(part){ var sel=[]; part.querySelectorAll('.opt').forEach(function(o,i){if(o.classList.contains('sel'))sel.push(i);}); return sel; }
+  function ready(qx){ var ok=true; qx.querySelectorAll('.part').forEach(function(p){ if(partState(p).length!==+p.dataset.n)ok=false; }); qx.querySelector('.check').disabled=!ok; }
+  function finishComplex(qx,record){
+    if(qx.classList.contains('done'))return; var all=true, keys=[], saved=[];
+    qx.querySelectorAll('.part').forEach(function(p){
+      var ans=p.dataset.ans.split(',').map(Number), sel=partState(p), opts=p.querySelectorAll('.opt'); saved.push(sel);
+      var right=sel.length===ans.length&&sel.every(function(s){return ans.indexOf(s)>-1;}); if(!right)all=false;
+      ans.forEach(function(a){opts[a].classList.add('ok');}); sel.forEach(function(s){if(ans.indexOf(s)<0)opts[s].classList.add('no');});
+      keys.push(ans.map(function(a){return LET[a];}).join(' + ')); lock(opts); opts.forEach(function(o){o.classList.remove('sel');});
+    });
+    qx.classList.add('done'); qx.querySelector('.check').disabled=true;
+    say(qx.querySelector('.verdict'),all,keys.join(' · ')); bump(qx,all);
+    if(record){store[qx.dataset.id]=saved;save();}
+  }
+  document.querySelectorAll('.q').forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(o){o.addEventListener('click',function(){finishSimple(q,+o.dataset.i,true);});});
+    var s=store[q.dataset.id]; if(typeof s==='number')finishSimple(q,s,false);
+  });
+  document.querySelectorAll('.qx').forEach(function(qx){
+    qx.querySelectorAll('.part').forEach(function(p){ var n=+p.dataset.n, opts=p.querySelectorAll('.opt');
+      opts.forEach(function(o){ o.setAttribute('aria-pressed','false'); o.addEventListener('click',function(){
+        if(qx.classList.contains('done'))return;
+        if(n===1){opts.forEach(function(x){x.classList.remove('sel');x.setAttribute('aria-pressed','false');}); o.classList.add('sel');o.setAttribute('aria-pressed','true');}
+        else{ if(o.classList.contains('sel')){o.classList.remove('sel');o.setAttribute('aria-pressed','false');}
+              else if(partState(p).length<n){o.classList.add('sel');o.setAttribute('aria-pressed','true');} }
+        ready(qx); });});
+    });
+    qx.querySelector('.check').addEventListener('click',function(){finishComplex(qx,true);});
+    var s=store[qx.dataset.id];
+    if(Array.isArray(s)){ qx.querySelectorAll('.part').forEach(function(p,pi){ var opts=p.querySelectorAll('.opt'); (s[pi]||[]).forEach(function(i){if(opts[i])opts[i].classList.add('sel');}); }); finishComplex(qx,false); }
+  });
+  document.querySelectorAll('.reset').forEach(function(r){r.addEventListener('click',function(){
+    var pr=r.closest('.practice');
+    pr.querySelectorAll('.q,.qx').forEach(function(q){ delete store[q.dataset.id]; q.classList.remove('done');
+      q.querySelectorAll('.opt').forEach(function(o){o.classList.remove('ok','no','sel');o.removeAttribute('aria-disabled'); if(o.hasAttribute('aria-pressed'))o.setAttribute('aria-pressed','false');});
+      var v=q.querySelector('.verdict'); if(v)v.innerHTML=''; var c=q.querySelector('.check'); if(c)c.disabled=true; });
+    pr.querySelector('.score b').textContent='0'; save(); });});
+})();
+
+/* ladder tabs */
+(function(){
+  var tabs=document.querySelectorAll('.ld-tabs [role="tab"]'); if(!tabs.length)return;
+  function pick(t){ tabs.forEach(function(x){var on=x===t; x.setAttribute('aria-selected',on?'true':'false'); x.tabIndex=on?0:-1;
+      var p=document.getElementById('ld-'+x.dataset.strand); p.hidden=!on; if(on){p.classList.remove('in'); void p.offsetWidth; p.classList.add('in');} }); }
+  tabs.forEach(function(t,i){ t.tabIndex=i?-1:0; t.addEventListener('click',function(){pick(t);});
+    t.addEventListener('keydown',function(e){ var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(!d)return; e.preventDefault(); var n=tabs[(i+d+tabs.length)%tabs.length]; n.focus(); pick(n); }); });
+})();
+
+/* points calculator */
+(function(){
+  var app=document.getElementById('calc-app'); if(!app)return;
+  var plans=JSON.parse(app.dataset.plans), sel=document.getElementById('c-grade'), bars=app.querySelector('.c-bars'), total=app.querySelector('.c-total'), msg=app.querySelector('.c-msg');
+  var NAMES={rl:['Reading literature','Lectura literaria'],ri:['Reading informational text','Lectura de texto informativo'],l:['Language','Lenguaje'],w:['Writing task','Tarea de escritura']};
+  function inl(en,es){return '<span class="inl"><span class="en" lang="en">'+en+'</span><span class="es" lang="es">'+es+'</span></span>';}
+  function fmt(n){return (Math.round(n*10)/10).toString();}
+  function draw(){
+    var p=plans[sel.value], rows=[], earned=0, avail=0, worst=null;
+    ['rl','ri','l','w'].forEach(function(k){ var inp=document.getElementById('c-'+k), pct=+inp.value; inp.parentNode.querySelector('output').textContent=pct+'%';
+      var pts=p[k][1], got=pts*pct/100, left=pts-got; earned+=got; avail+=pts; var r={k:k,pts:pts,got:got,left:left,range:p[k][0]}; rows.push(r); if(!worst||left>worst.left)worst=r; });
+    bars.innerHTML=rows.map(function(r){ var w=r.pts/ (p.pts+12) *100, g=r.pts?r.got/r.pts*100:0;
+      return '<div class="cb'+(r===worst?' top':'')+'"><div class="cb-l"><b>'+inl(NAMES[r.k][0],NAMES[r.k][1])+'</b><span>'+r.range+' · '+fmt(r.pts)+' pts</span></div>'+
+        '<div class="cb-track" style="width:'+Math.max(w,12)+'%"><i style="width:'+g+'%"></i></div><div class="cb-n">'+inl(fmt(r.left)+' points still available',fmt(r.left)+' puntos por ganar')+'</div></div>'; }).join('');
+    total.innerHTML=inl('Estimated class average: '+fmt(earned)+' of '+fmt(avail)+' points ('+Math.round(earned/avail*100)+'%).','Promedio estimado de la clase: '+fmt(earned)+' de '+fmt(avail)+' puntos ('+Math.round(earned/avail*100)+'%).');
+    msg.innerHTML=inl('Biggest opportunity: '+NAMES[worst.k][0]+'. It holds '+fmt(worst.left)+' unearned points, more than any other category.','Mayor oportunidad: '+NAMES[worst.k][1]+'. Tiene '+fmt(worst.left)+' puntos sin ganar, más que cualquier otra categoría.');
+  }
+  app.addEventListener('input',draw); sel.addEventListener('change',draw); draw();
+})();
+
+/* text to speech */
+(function(){
+  var S=window.speechSynthesis, root=document.documentElement;
+  if(!S||!window.SpeechSynthesisUtterance){root.classList.add('no-tts');return;}
+  var player=document.getElementById('player'), bPause=document.getElementById('pl-pause'), bStop=document.getElementById('pl-stop'), bSpeed=document.getElementById('pl-speed');
+  var queue=[], idx=0, run=0, slow=false, cur=null, btnOn=null, voices=[];
+  function loadVoices(){voices=S.getVoices()||[];} loadVoices(); if(S.addEventListener)S.addEventListener('voiceschanged',loadVoices);
+  function pickVoice(lang){
+    var pref=lang==='es'?['es-US','es-MX','es-419','es-ES']:['en-US','en-GB'];
+    for(var i=0;i<pref.length;i++){for(var j=0;j<voices.length;j++){if((voices[j].lang||'').replace('_','-')===pref[i])return voices[j];}}
+    for(var k=0;k<voices.length;k++){if((voices[k].lang||'').toLowerCase().indexOf(lang)===0)return voices[k];}
+    return null;
+  }
+  var BLOCK='p,h1,h2,h3,h4,li,dt,dd,td,th,button,figcaption';
+  function collect(scope){
+    var out=[], w=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT,null), n, last=null;
+    while((n=w.nextNode())){
+      var t=n.nodeValue.replace(/\s+/g,' ').trim(); if(!t)continue;
+      var el=n.parentElement; if(!el||el.closest('.chip,.std,.tts,.score,.verdict,.key,.check,.reset,.printbtn,script,style'))continue;
+      if(el.offsetParent===null)continue;
+      var inner=el.closest('.tts-scope'); if(inner!==scope)continue;
+      var l=el.closest('[lang]'), lang=((l&&l.getAttribute('lang'))||'en').slice(0,2);
+      var block=el.closest(BLOCK)||el;
+      if(el.tagName==='B'&&el.closest('.opt'))t+='.';
+      if(last&&last.block===block&&last.lang===lang){last.text+=' '+t;}
+      else{last={block:block,lang:lang,text:t};out.push(last);}
+    }
+    var parts=[];
+    out.forEach(function(o){
+      if(o.text.length<=220){parts.push(o);return;}
+      var ss=o.text.match(/[^.!?]+[.!?]+[”"’)]*\s*|[^.!?]+$/g)||[o.text], buf='';
+      ss.forEach(function(s){ if((buf+s).length>220&&buf){parts.push({block:o.block,lang:o.lang,text:buf.trim()});buf='';} buf+=s; });
+      if(buf.trim())parts.push({block:o.block,lang:o.lang,text:buf.trim()});
+    });
+    return parts;
+  }
+  function clearMark(){if(cur){cur.classList.remove('speaking');cur=null;}}
+  function stop(){run++;S.cancel();clearMark();queue=[];player.hidden=true;if(btnOn){btnOn.classList.remove('on');btnOn=null;}setPauseLabel(false);}
+  function setPauseLabel(p){bPause.innerHTML=p?'<span class="inl"><span class="en" lang="en">Resume</span><span class="es" lang="es">Continuar</span></span>':'<span class="inl"><span class="en" lang="en">Pause</span><span class="es" lang="es">Pausa</span></span>';bPause.dataset.p=p?'1':'';}
+  function next(my){
+    if(my!==run)return; if(idx>=queue.length){stop();return;}
+    var q=queue[idx++], u=new SpeechSynthesisUtterance(q.text);
+    u.lang=q.lang==='es'?'es-US':'en-US'; var v=pickVoice(q.lang); if(v){u.voice=v;u.lang=v.lang;}
+    u.rate=slow?0.75:1;
+    u.onstart=function(){if(my!==run)return;clearMark();cur=q.block;cur.classList.add('speaking');
+      var r=cur.getBoundingClientRect(); if(r.top<70||r.bottom>innerHeight-70){cur.scrollIntoView({block:'center',behavior:'smooth'});}};
+    u.onend=function(){next(my);}; u.onerror=function(e){if(e&&(e.error==='canceled'||e.error==='interrupted'))return;next(my);};
+    S.speak(u);
+  }
+  function start(btn){
+    var scope=btn.closest('.tts-scope'); if(!scope)return;
+    var same=(btnOn===btn); stop(); if(same)return;
+    if(!voices.length)loadVoices();
+    queue=collect(scope); if(!queue.length)return; idx=0; btnOn=btn; btn.classList.add('on'); player.hidden=false; next(run);
+  }
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.tts'); if(b){e.preventDefault();start(b);}});
+  bStop.addEventListener('click',stop);
+  bPause.addEventListener('click',function(){ if(bPause.dataset.p){S.resume();setPauseLabel(false);} else {S.pause();setPauseLabel(true);} });
+  bSpeed.addEventListener('click',function(){ slow=!slow; bSpeed.setAttribute('aria-pressed',slow?'true':'false');
+    if(queue.length&&!bPause.dataset.p){var my=++run; S.cancel(); idx=Math.max(0,idx-1); next(my);} });
+  document.querySelectorAll('.lang button').forEach(function(x){x.addEventListener('click',stop);});
+  window.addEventListener('pagehide',function(){S.cancel();});
+})();
+</script>
+</body></html>

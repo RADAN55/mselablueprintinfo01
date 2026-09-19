@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Blueprint / El Plano · Teacher’s companion</title><meta name="description" content="Guides for bilingual learners and special education, four lanes, writing rubric and samples, points calculator and PLC agenda.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>:root{--navy:#1E2761;--deep:#131A45;--gold:#C9A227;--gold-l:#E8CE6E;--paper:#F6F9FE;--rule:#C7D6EF;--margin:#D4574E;--ink:#17204D;--mute:#56608A;--line:rgba(255,255,255,.82);--gc:#C9A227;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#E9EEF8;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:99}
+h1,h2,h3,h4{font-family:var(--serif);margin:0;line-height:1.1;font-weight:600}p{margin:0}
+
+/* language switching */
+body[data-lang="en"] .es,body[data-lang="en"] [lang="es"].h1-es{display:none!important}
+body[data-lang="es"] .en{display:none!important}
+body[data-lang="es"] h1 [lang="en"]{display:none}
+.bi{display:grid;gap:10px 28px}
+body[data-lang="both"] .bi{grid-template-columns:1fr 1fr}
+body[data-lang="both"] .bi .es{color:var(--mute);border-left:2px solid var(--gold);padding-left:14px}
+body[data-lang="both"] .inl .es::before{content:" / ";opacity:.6}
+.hd span{display:block}
+body[data-lang="both"] .hd .es{font-style:italic;font-weight:400;font-size:.62em;color:var(--mute);margin-top:.25em}
+@media (max-width:760px){body[data-lang="both"] .bi{grid-template-columns:1fr}}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:8px clamp(12px,3vw,28px);background:var(--deep);color:#fff;border-bottom:3px solid var(--gold)}
+.bar-brand{font-family:var(--serif);font-weight:600;text-decoration:none;white-space:nowrap;font-size:17px}.bar-brand span{color:var(--gold-l);font-style:italic;font-weight:400}
+.tabs{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tabs a{position:relative;min-width:36px;height:36px;display:grid;place-items:center;text-decoration:none;font-weight:700;font-size:14px;border-radius:6px 6px 0 0;background:rgba(255,255,255,.08);border-bottom:4px solid var(--gc)}
+.tabs a.t-on::after{content:"";position:absolute;top:4px;right:4px;width:5px;height:5px;border-radius:50%;background:var(--gold-l)}
+.tabs a:hover,.tabs a.here{background:var(--gc);color:#fff}
+.lang{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;flex:none}
+.lang button{all:unset;cursor:pointer;padding:6px 12px;font:600 12.5px var(--sans);color:#fff}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--deep)}
+@media (max-width:700px){html{scroll-padding-top:112px}.bar{flex-wrap:wrap}.bar-brand{flex:1}.tabs{order:3;width:100%;margin:0}.tabs a{flex:1}}
+
+/* blueprint surface */
+.cover,.sheet{background-color:var(--navy);background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* cover */
+.cover{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:end;padding:clamp(48px,9vw,120px) clamp(20px,6vw,88px) clamp(40px,6vw,80px)}
+.issue{font-size:14px;color:var(--gold-l);font-weight:500;margin-bottom:clamp(20px,4vw,48px)}
+.cover h1{font-size:clamp(64px,13vw,184px);font-weight:800;letter-spacing:-.035em;line-height:.86}
+.cover h1 span{display:block}.cover h1 .h1-es{font-style:italic;font-weight:400;color:var(--gold);font-size:.6em;letter-spacing:-.02em;margin-top:.12em}
+body[data-lang="es"] .cover h1 .h1-es{font-size:1em;font-weight:800;font-style:normal;color:#fff}
+.cover-dek{margin-top:clamp(24px,4vw,44px);max-width:70ch;font-size:clamp(16px,1.5vw,19px)}
+.cover .bi .es{color:#C9D2F2!important}
+.motto{font-family:var(--serif);font-style:italic;color:var(--gold);margin-top:28px;font-size:18px}
+.cover-plan{font-size:13px;color:var(--line)}
+.cp-dim,.dim{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--gold-l);font-size:12.5px}
+.cp-dim>span,.dim>span{flex:1;height:1px;background:var(--gold-l);position:relative}
+.cp-dim>span::before,.dim>span::before{content:"";position:absolute;top:-5px;width:1px;height:11px;background:var(--gold-l)}
+.cp-dim>span:first-child::before,.dim>span:first-child::before{left:0}.cp-dim>span:last-child::before,.dim>span:last-child::before{right:0}
+.cp-dim em,.dim em{font-style:normal;text-align:center}
+.cp-rooms{display:flex;height:clamp(150px,20vw,230px);border:3px solid var(--line)}
+.cp-rooms div{flex-basis:0;padding:10px;border-right:2px solid var(--line);min-width:0}.cp-rooms div:last-child{border:0}
+.cp-rooms b,.cp-annex b{display:block;font:800 clamp(22px,3vw,40px) var(--serif);color:#fff}
+.cp-annex{border:3px solid var(--line);border-top:0;width:46%;padding:8px 10px}.cp-annex b{display:inline;font-size:22px;margin-right:6px}
+@media (max-width:860px){.cover{grid-template-columns:1fr}}
+
+/* letter + contents */
+.letter{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,72px);padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff}
+.letter h2,.howto h2,.colophon h2{font-size:clamp(28px,3.4vw,44px);margin-bottom:24px}
+.letter .bi{margin-bottom:18px}.letter .bi:first-of-type p.en::first-letter,body[data-lang="es"] .letter .bi:first-of-type p.es::first-letter{font:800 3.6em/.8 var(--serif);float:left;padding:.08em .1em 0 0;color:var(--navy)}
+.toc{list-style:none;margin:0;padding:0;align-self:start;border-top:3px solid var(--navy)}
+.toc a{display:grid;grid-template-columns:52px 1fr;align-items:baseline;gap:0 8px;padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.toc b{grid-row:span 2;font:800 34px/1 var(--serif);color:var(--gc)}.toc span{font-weight:600}.toc i{font-style:normal;font-size:13px;color:var(--mute)}
+.toc a:hover span{text-decoration:underline}
+@media (max-width:900px){.letter{grid-template-columns:1fr}}
+
+.howto{padding:clamp(40px,6vw,80px) clamp(20px,6vw,88px);background:var(--paper);border-top:1px solid var(--rule)}
+.how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 56px}
+.how h3{font-size:21px;margin-bottom:8px;padding-top:14px;border-top:3px solid var(--gold)}
+@media (max-width:900px){.how-grid{grid-template-columns:1fr}}
+
+/* grade spreads */
+.grade{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff;border-top:10px solid var(--gc)}
+.grade:nth-of-type(even){background:var(--paper)}
+.g-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,3vw,44px);align-items:center;margin-bottom:clamp(24px,4vw,44px)}
+.g-num{font:800 clamp(110px,19vw,260px)/.8 var(--serif);color:var(--gc);letter-spacing:-.05em}
+.g-title h2{font-size:clamp(30px,4.2vw,56px);margin:10px 0 14px}
+.dek{font-size:clamp(16px,1.4vw,18.5px);max-width:none}
+.badge{display:inline-block;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px}
+.badge.on{background:var(--navy);color:#fff}.badge.off{border:1.5px dashed var(--mute);color:var(--mute)}
+@media (max-width:640px){.g-head{grid-template-columns:1fr}.g-num{font-size:120px}}
+
+.g-plan{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start;margin-bottom:clamp(28px,4vw,48px)}
+.g-plan .facts{grid-column:1}.g-plan .insight{grid-column:2;grid-row:1/span 2}
+.sheet{margin:0;padding:clamp(16px,2.5vw,28px);border-radius:4px;position:relative;box-shadow:0 0 0 1px var(--deep),6px 6px 0 var(--gc)}
+.plan{display:flex;min-height:380px;border:3px solid var(--line)}
+.room{flex-basis:0;min-width:0;display:flex;flex-direction:column;border-right:3px solid var(--line)}.room:last-child{border-right:0}
+.room-h{padding:10px 12px;border-bottom:2px solid var(--line);background:rgba(19,26,69,.55)}
+.room-n{font:600 clamp(14px,1.35vw,18px)/1.2 var(--serif)}.room-n .inl span,.sub-t .inl span{display:block}
+body[data-lang="both"] .room-n .es,body[data-lang="both"] .sub-t .es{font-style:italic;font-weight:400;opacity:.78;font-size:.9em}
+body[data-lang="both"] .room .inl .es::before,body[data-lang="both"] .froom .inl .es::before{content:none}
+.room-p{font:800 clamp(20px,2.4vw,32px)/1.1 var(--serif);color:var(--gold-l);margin-top:4px}
+.subs{flex:1;display:flex;flex-direction:column}
+.sub{flex-basis:0;padding:8px 12px;border-bottom:1px dashed rgba(255,255,255,.5);display:flex;flex-direction:column;justify-content:space-between;gap:4px;font-size:13px}
+.sub:last-child{border-bottom:0}.sub-m{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}.sub-m b{color:var(--gold-l);font-size:14px}
+.std{font-size:12px;letter-spacing:.01em;opacity:.85;font-variant-numeric:tabular-nums}
+.annex{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;border:3px solid var(--line);border-top:0;width:min(100%,520px);padding:10px 12px;background:rgba(201,162,39,.16)}
+.annex b{display:block;font:600 16px var(--serif)}.annex-m{color:var(--gold-l);font-weight:600;font-size:14px}
+.sheet figcaption{margin-top:12px;font-size:12.5px;opacity:.75}
+.stamp{display:inline-block;margin-bottom:14px;padding:5px 12px;border:2px solid var(--gold-l);color:var(--gold-l);font-weight:600;font-size:13px;transform:rotate(-1.5deg)}
+.fplan{display:grid;grid-template-columns:repeat(6,1fr);border:3px solid var(--line)}
+.froom{grid-column:span 2;padding:14px;min-height:120px;border-right:2px solid var(--line);border-bottom:2px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.froom:nth-child(n+4){grid-column:span 3;border-bottom:0}.froom:nth-child(3),.froom:nth-child(5){border-right:0}
+.froom .room-n .inl span{display:block}
+@media (max-width:720px){.sheet figcaption{display:none}.plan{flex-direction:column;min-height:0}.room{border-right:0;border-bottom:3px solid var(--line);flex:none}.room:last-child{border-bottom:0}.sub{flex:none}
+ .fplan{grid-template-columns:1fr}.froom,.froom:nth-child(n+4){grid-column:auto;border-right:0;border-bottom:2px solid var(--line);min-height:0}.froom:last-child{border-bottom:0}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px 0 0;border-top:3px solid var(--navy)}
+.facts div{padding:12px 14px 0 0}.facts dt{font-size:13px;color:var(--mute);line-height:1.3}.facts dd{margin:4px 0 0;font:800 clamp(30px,3.4vw,46px)/1 var(--serif);color:var(--navy)}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}}
+.insight{border-left:6px solid var(--gc);padding:4px 0 4px 20px}.insight h3{font-size:22px;margin-bottom:12px}
+.insight .bi{grid-template-columns:1fr!important;font-size:17px}
+@media (max-width:1000px){.g-plan{grid-template-columns:1fr}.g-plan .insight{grid-column:1;grid-row:auto}}
+
+.g-cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,3vw,44px);align-items:start}
+@media (max-width:1000px){.g-cols{grid-template-columns:1fr}}
+.paper{background:#FFFEF9 radial-gradient(circle at 22px 50%,#E9EEF8 0 9px,transparent 10px) 0 0/44px 33.33% repeat-y;border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 10px 24px -18px rgba(23,32,77,.5);padding:28px clamp(18px,3vw,36px) 28px 72px;position:relative}
+.grade .paper{background-color:#FFFEF9}
+.paper::before{content:"";position:absolute;top:0;bottom:0;left:54px;width:2px;background:var(--margin);opacity:.7}
+.paper h3,.side h3{font-size:26px;margin-bottom:14px}
+.notes{list-style:none;margin:0;padding:0}.notes li{padding:14px 0;border-bottom:1px solid var(--rule)}
+.chip{display:inline-block;font-size:12.5px;font-weight:700;color:var(--navy);background:color-mix(in srgb,var(--gc) 18%,#fff);border:1px solid color-mix(in srgb,var(--gc) 55%,#fff);border-radius:4px;padding:2px 8px;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.wr{margin-top:22px;padding:16px 18px;background:var(--navy);color:#fff}.wr h4{font-size:19px;margin-bottom:8px;color:var(--gold-l)}
+.wr .hd .es{color:#C9D2F2!important}.wr .bi .es{color:#C9D2F2!important}
+@media (max-width:560px){.paper{padding-left:48px;background-image:none}.paper::before{left:32px}}
+.side{display:grid;gap:32px}
+.sm{font-size:14px;color:var(--mute);margin:-6px 0 12px}
+.cogs{list-style:none;margin:0;padding:0;border-top:2px solid var(--navy)}
+.cogs li{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule);font-weight:500}
+.cogs li span:last-child{font-family:var(--serif);font-style:italic;font-size:17px}
+.cogs i{height:2px;background:var(--gc);position:relative}.cogs i::before,.cogs i::after{content:"";position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--gc)}.cogs i::before{left:-2px}.cogs i::after{right:-2px}
+.cogs li span:last-child{padding-left:12px}
+.fn{font-size:13px;color:var(--mute);margin-top:10px}
+.vids{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.vid{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;padding:12px;background:#fff;border:1px solid var(--rule);border-left:5px solid var(--gc)}
+.vid-ic{width:48px;height:36px;border-radius:8px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.vid-t{font-weight:600;line-height:1.3}.vid-l{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:6px;font-size:14px}
+.vid-l a{color:var(--navy);text-underline-offset:3px}.vid-l a:hover{color:var(--gc)}
+body[data-lang="en"] .vid-l a[lang="es"],body[data-lang="es"] .vid-l a[lang="en"]{display:none}
+
+.colophon{padding:clamp(40px,6vw,80px) clamp(20px,6vw,88px);background:var(--deep);color:#E6EAFA}
+.colophon .bi{margin-bottom:16px;font-size:15px;max-width:1100px}.colophon .bi .es,.colophon .hd .es{color:#AEB9E6!important}
+.links{display:flex;gap:24px;margin-top:24px}.links a{color:var(--gold-l)}
+
+@media print{.bar,.skip{display:none}body{background:#fff;font-size:11pt}.grade{break-before:page;padding:24px 0}.cover{min-height:90vh}.vid-l a::after{content:""}.sheet{box-shadow:none}}
+
+/* teach section */
+.teach{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:#fff;border-top:10px solid var(--gold)}
+.teach h2{font-size:clamp(30px,4vw,54px);margin-bottom:24px;max-width:22ch}
+.teach-lede{font-size:clamp(17px,1.5vw,20px);margin-bottom:40px}
+.sub-h{font-size:clamp(24px,2.6vw,34px);margin:56px 0 24px}
+.bands{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.band{background:var(--paper);border:1px solid var(--rule);padding:24px;position:relative}
+.band-k{font:800 44px/1 var(--serif);color:var(--gold);margin-bottom:6px}
+.band h3{font-size:21px;margin-bottom:12px}.band .bi{grid-template-columns:1fr!important;font-size:15px}
+@media (max-width:900px){.bands{grid-template-columns:1fr}}
+.tbl{overflow-x:auto;border:1px solid var(--rule)}
+.tbl table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:10px 14px;font-weight:600}
+.tbl td{padding:10px 14px;border-top:1px solid var(--rule);vertical-align:top}.tbl td:nth-child(2){font-family:var(--serif);font-style:italic}
+.tbl tr:nth-child(even) td{background:var(--paper)}
+.tbl td .inl span{display:block}body[data-lang="both"] .tbl td .inl .es::before{content:none}body[data-lang="both"] .tbl td .inl .es{color:var(--mute)}
+.accom{margin-top:48px;padding:24px;background:var(--navy);color:#fff}.accom h3{font-size:22px;margin-bottom:12px;color:var(--gold-l)}
+.accom .bi .es,.accom .hd .es{color:#C9D2F2!important}
+.tabs a.t-teach{min-width:auto;padding:0 12px;border-bottom-color:var(--gold);font-size:13px;white-space:nowrap}
+.tabs a.t-teach:hover{background:var(--gold);color:var(--deep)}
+@media (max-width:700px){.tabs a{flex:none}}
+
+/* practice */
+.practice{margin-top:clamp(32px,4vw,56px);padding-top:clamp(24px,3vw,40px);border-top:3px solid var(--navy)}
+.pr-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.pr-head h3{font-size:clamp(24px,2.6vw,32px)}
+.score{font:600 15px var(--sans);color:var(--mute);white-space:nowrap;padding:6px 14px;border:2px solid var(--gc);border-radius:999px}.score b{font:800 22px var(--serif);color:var(--navy)}
+.pr-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px);align-items:start}
+@media (max-width:1000px){.pr-grid{grid-template-columns:1fr}}
+.passage{background:#fff;border:1px solid var(--rule);border-top:6px solid var(--gc);padding:clamp(20px,2.5vw,32px);position:sticky;top:72px}
+@media (max-width:1000px){.passage{position:static}}
+.passage .kind{font-size:13px;color:var(--mute);font-weight:600;margin-bottom:6px}
+.passage h4{font-size:clamp(24px,2.4vw,30px);margin-bottom:16px}
+.passage>p:not(.kind):not(.pnote){font-family:var(--serif);font-size:clamp(17px,1.35vw,19px);line-height:1.7;margin-bottom:.9em;max-width:62ch}
+#gK .passage>p:not(.kind):not(.pnote),#g1 .passage>p:not(.kind):not(.pnote),#g2 .passage>p:not(.kind):not(.pnote){font-size:clamp(20px,1.8vw,24px);line-height:1.8}
+.gloss{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding-top:16px;border-top:1px dashed var(--rule)}
+.gloss div{display:flex;gap:6px;font-size:14px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:3px 10px}
+.gloss dt{font-weight:600}.gloss dd{margin:0;font-family:var(--serif);font-style:italic;color:var(--mute)}
+.pnote{font-size:13px;color:var(--mute);margin-top:12px}
+.qs{list-style:none;margin:0;padding:0;display:grid;gap:28px}
+.stem{font-weight:600;font-size:17px;line-height:1.4}.stem-es{font-family:var(--serif);font-style:italic;color:var(--mute);margin-top:4px}
+.opts{display:grid;gap:8px;margin-top:12px}
+.opt{all:unset;box-sizing:border-box;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;width:100%;padding:10px 12px;border:1.5px solid var(--rule);border-radius:6px;background:#fff;cursor:pointer;font:400 15.5px/1.45 var(--sans);color:var(--ink)}
+.opt b{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--navy);display:grid;place-items:center;font-size:13px;color:var(--navy)}
+.opt:hover{border-color:var(--navy)}.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.q.done .opt{cursor:default}.q.done .opt:hover{border-color:var(--rule)}
+.opt.ok{border-color:#1E7A46!important;background:#E8F5EC}.opt.ok b{background:#1E7A46;border-color:#1E7A46;color:#fff}
+.opt.no{border-color:#B3261E!important;background:#FBEAE9}.opt.no b{background:#B3261E;border-color:#B3261E;color:#fff}
+.why{display:none;margin-top:12px;padding:12px 14px;border-left:4px solid var(--gc);background:var(--paper);font-size:15px}
+.q.done .why{display:block}.why .bi{grid-template-columns:1fr!important}
+.verdict{font-weight:700;margin-bottom:4px}.key{display:none;font-weight:700;margin-bottom:4px}
+.tmove{margin-top:clamp(24px,3vw,40px);padding:20px 24px;background:color-mix(in srgb,var(--gc) 10%,#fff);border:1px solid color-mix(in srgb,var(--gc) 45%,#fff)}
+.tmove h4{font-size:20px;margin-bottom:10px}
+@media print{.passage{position:static}.why{display:block}.key{display:block}.verdict{display:none}.score{display:none}.practice{break-before:page}}
+
+/* text to speech */
+.tts{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font:600 13px var(--sans);color:var(--navy);background:#fff;border:1.5px solid var(--navy);border-radius:999px;padding:5px 12px;float:right;margin:0 0 8px 12px}
+.tts:hover,.tts.on{background:var(--navy);color:#fff}.tts:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.tts-s{padding:5px 7px}.q .tts-s{margin-top:-2px}
+.teach>.tts,.howto>.tts,.letter-in>.tts{margin-top:6px}
+.no-tts .tts,.no-tts .player{display:none!important}
+.speaking{background:rgba(201,162,39,.28)!important;box-shadow:0 0 0 4px rgba(201,162,39,.28);border-radius:2px}
+.sheet .speaking,.accom .speaking,.wr .speaking{background:rgba(232,206,110,.3)!important}
+.player{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;gap:6px;padding:8px;background:var(--deep);border:2px solid var(--gold);border-radius:999px;box-shadow:0 8px 24px rgba(19,26,69,.35)}
+.player[hidden]{display:none}
+.player button{all:unset;cursor:pointer;font:600 13px var(--sans);color:#fff;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12)}
+.player button:hover{background:rgba(255,255,255,.25)}.player button[aria-pressed="true"]{background:var(--gold);color:var(--deep)}
+.player button:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+/* special ed */
+.sped{border-top-color:#1F9488}
+.two-box{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+@media (max-width:900px){.two-box{grid-template-columns:1fr}}
+.box{background:var(--paper);border:1px solid var(--rule);border-top:6px solid #1F9488;padding:24px}
+.box h3{font-size:22px;margin-bottom:14px}.box h4{font-size:18px;margin:22px 0 10px}
+.plain{list-style:none;margin:0;padding:0}.plain li{padding:12px 0;border-top:1px solid var(--rule)}.plain li:first-child{border-top:0;padding-top:0}
+.plain .bi{grid-template-columns:1fr!important;font-size:15.5px}
+.ask li{font-weight:600}.ask .es{font-weight:400}
+@media print{.tts,.player{display:none!important}}
+
+/* ===== site additions ===== */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:30;pointer-events:none}.progress i{display:block;height:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0)}
+.tabs.pages a{min-width:auto;padding:0 12px;font-size:13.5px;white-space:nowrap;border-bottom-color:rgba(255,255,255,.25)}
+.tabs.pages a.here,.tabs.pages a:hover{background:var(--gold);color:var(--deep);border-bottom-color:var(--gold)}
+body[data-lang="both"] .tabs.pages .inl .es{display:none}
+.band-hero{display:block;padding-bottom:0}.band-hero .cover-in{max-width:1100px;padding-bottom:clamp(28px,4vw,48px)}
+.band-hero h1{font-size:clamp(72px,12vw,160px)}.band-hero h1{letter-spacing:-.02em}
+.band-t{font-size:clamp(26px,3.2vw,42px);margin-top:12px;color:var(--gold-l)}.band-hero .band-t .es{color:#C9D2F2!important}
+.t-h1{font-size:clamp(44px,7vw,96px)!important;letter-spacing:-.03em}.t-h1 .es{color:var(--gold)!important}
+.gstrip{display:flex;gap:6px;flex-wrap:wrap;margin:0 calc(-1*clamp(20px,6vw,88px));padding:12px clamp(20px,6vw,88px);background:rgba(19,26,69,.6);border-top:1px solid rgba(255,255,255,.2)}
+.gstrip a{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:#fff;padding:8px 14px;border-radius:6px;border-bottom:4px solid var(--gc,var(--gold));background:rgba(255,255,255,.08);font-size:14px;font-weight:500}
+.gstrip a b{font:800 22px/1 var(--serif)}.gstrip a:hover,.gstrip a.here{background:var(--gc,var(--gold));color:#fff}
+.gstrip a:not([style]):hover{color:var(--deep)}
+.sec-h{margin-bottom:8px}.how-grid.three{grid-template-columns:repeat(3,1fr)}@media (max-width:1000px){.how-grid.three{grid-template-columns:1fr}}
+.inside{background:#fff}
+/* ladder */
+.ladder{padding:clamp(40px,6vw,88px) clamp(20px,6vw,88px);background:var(--navy);color:#fff;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px}
+.ladder h2{font-size:clamp(30px,4vw,54px);margin-bottom:20px;max-width:24ch}.ladder .hd .es,.ladder .bi .es{color:#C9D2F2!important}
+.ld-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.ld-tabs button{all:unset;box-sizing:border-box;cursor:pointer;padding:10px 16px;border:1.5px solid rgba(255,255,255,.45);border-radius:8px;font:600 15px var(--sans);display:flex;flex-direction:column;gap:2px}
+.ld-tabs button small{font-weight:400;font-size:12px;opacity:.75}.ld-tabs button .inl .es{font-weight:400}
+.ld-tabs button[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:var(--deep)}.ld-tabs button:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+.rungs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column-reverse;gap:6px}.rungs[hidden]{display:none}
+.rungs li{margin-left:calc(var(--i)*2.4%);transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .5s;transition-delay:calc(var(--i)*35ms)}
+.rungs.reveal:not(.in) li{opacity:0;transform:translateY(14px)}
+.rungs a{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:#fff;border-left:8px solid var(--gc);padding:10px 16px 10px 0;border-radius:0 6px 6px 0}
+.ladder .rungs .bi .es{color:var(--mute)!important}
+.rungs a b{font:800 28px/1 var(--serif);color:var(--gc);text-align:center}.rungs a:hover{background:var(--gold-l)}.rungs .bi{font-size:15px;gap:4px 24px}
+@media (max-width:760px){.rungs li{margin-left:0}}
+/* sheet reveal */
+.sheet.reveal .room,.sheet.reveal .froom,.sheet.reveal .annex{transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1)}
+.sheet.reveal:not(.in) .room,.sheet.reveal:not(.in) .froom,.sheet.reveal:not(.in) .annex{opacity:0;transform:scale(.96)}
+.sheet.reveal .room:nth-child(2),.sheet.reveal .froom:nth-child(2){transition-delay:.12s}.sheet.reveal .room:nth-child(3),.sheet.reveal .froom:nth-child(3){transition-delay:.24s}
+.sheet.reveal .froom:nth-child(4){transition-delay:.36s}.sheet.reveal .froom:nth-child(5),.sheet.reveal .annex{transition-delay:.48s}
+.lanes.reveal .lane{transition:opacity .5s,transform .5s}.lanes.reveal:not(.in) .lane{opacity:0;transform:translateY(12px)}
+.lanes.reveal .lane:nth-child(2){transition-delay:.08s}.lanes.reveal .lane:nth-child(3){transition-delay:.16s}.lanes.reveal .lane:nth-child(4){transition-delay:.24s}
+/* practice additions */
+.pr-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.reset,.printbtn,.check{all:unset;box-sizing:border-box;cursor:pointer;font:600 13px var(--sans);color:var(--navy);border:1.5px solid var(--navy);border-radius:999px;padding:6px 14px;background:#fff}
+.reset:hover,.printbtn:hover{background:var(--navy);color:#fff}.reset:focus-visible,.printbtn:focus-visible,.check:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.printbtn{float:right;margin-left:12px}
+.check{margin-top:14px;background:var(--navy);color:#fff;padding:9px 18px;font-size:14px}.check[disabled]{opacity:.4;cursor:not-allowed}.qx.done .check{display:none}
+.dok{margin-left:6px;background:#fff!important;border-color:var(--rule)!important;color:var(--mute)!important}.kind-chip{margin-left:6px;background:var(--navy)!important;border-color:var(--navy)!important;color:#fff!important}
+.part+.part{margin-top:18px;padding-top:16px;border-top:1px dashed var(--rule)}
+.opt.sel{border-color:var(--navy);background:#EEF2FB}.opt.sel b{background:var(--navy);color:#fff}
+.qx.done .opt{cursor:default}.qx.done .why{display:block}
+.qx[data-id] .part[data-n="2"] .opt b{border-radius:6px}
+.paired{margin-top:clamp(28px,4vw,48px);padding-top:clamp(24px,3vw,40px);border-top:1px dashed var(--navy)}
+.supports{margin-top:clamp(28px,4vw,48px);display:grid;gap:24px}
+.lanes-wrap h4,.wprompt h4,.family h4{font-size:22px;margin-bottom:6px}
+.lanes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+@media (max-width:1000px){.lanes{grid-template-columns:repeat(2,1fr)}}@media (max-width:560px){.lanes{grid-template-columns:1fr}}
+.lane{background:#fff;border:1px solid var(--rule);border-top:6px solid var(--lc);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.lane-0{--lc:#D7263D}.lane-1{--lc:#DB9A12}.lane-2{--lc:#2F7FC1}.lane-3{--lc:#3F9B55}
+.lane-h{display:flex;flex-direction:column;gap:2px}.lane-h b{font:600 18px var(--serif)}.lane-h span{font-size:12px;color:var(--mute);font-weight:600}
+.lane-d{font-size:13px;color:var(--mute)}.lane-d .inl span{display:block}body[data-lang="both"] .lane-d .inl .es::before{content:none}body[data-lang="both"] .lane-d .inl .es{font-style:italic}
+.lane-t{font-size:15px;font-weight:500;border-top:1px dashed var(--rule);padding-top:8px;margin-top:auto}
+.sup-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media (max-width:900px){.sup-2{grid-template-columns:1fr}}
+.wprompt,.family{background:#fff;border:1px solid var(--rule);padding:20px 24px}.wprompt{border-left:6px solid var(--navy)}.family{border-left:6px solid var(--gold)}
+.wprompt .bi,.family .bi{grid-template-columns:1fr!important}.wprompt .chip{margin:6px 0 10px}.wprompt .sm{margin:12px 0 0}
+.fam{margin:10px 0 0;padding-left:22px}.fam li{padding:6px 0}.fam li::marker{font:800 18px var(--serif);color:var(--gold)}
+.after{margin-top:28px}
+/* teachers */
+.sample{margin-top:40px}.sample .band-k{font:800 30px/1 var(--serif);color:var(--gold);margin-bottom:6px}.sample .two-box{margin-top:14px}
+.resp{font-family:var(--serif);font-size:16.5px;line-height:1.65;background:#fff;border:1px solid var(--rule);padding:14px 16px;margin:10px 0 16px}
+.box.dev{border-top-color:#DB9A12}.box h4{clear:none}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;background:var(--paper);border:1px solid var(--rule);padding:clamp(18px,3vw,32px);margin-bottom:12px}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+.c-row{display:grid;grid-template-columns:1fr;gap:4px;margin-bottom:16px;position:relative}.c-row label{font-weight:600;font-size:15px}
+.c-row input[type=range]{width:100%;accent-color:var(--navy)}.c-row output{position:absolute;right:0;top:0;font:800 18px var(--serif);color:var(--navy)}
+.c-row select{font:600 16px var(--sans);padding:8px 10px;border:1.5px solid var(--navy);border-radius:6px;background:#fff;color:var(--ink)}
+.cb{margin-bottom:16px}.cb-l{display:flex;justify-content:space-between;gap:12px;font-size:14px;flex-wrap:wrap}.cb-l span{color:var(--mute)}
+.cb-track{height:22px;background:#fff;border:1.5px solid var(--navy);border-radius:4px;overflow:hidden;margin:4px 0;transition:width .4s}.cb-track i{display:block;height:100%;background:var(--navy);transition:width .3s}
+.cb.top .cb-track{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,39,.35)}.cb.top .cb-track i{background:var(--gold)}.cb-n{font-size:13px;color:var(--mute)}.cb.top .cb-n{color:var(--ink);font-weight:600}
+.c-total{font-weight:600;margin-top:20px}.c-msg{margin-top:8px;padding:12px 14px;background:#fff;border-left:5px solid var(--gold)}
+.agenda{list-style:none;margin:0;padding:0;border-top:3px solid var(--navy)}.agenda li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.ag-t{font:800 20px/1.2 var(--serif);color:var(--gold)}.agenda h4{font-size:20px;margin-bottom:8px}@media (max-width:600px){.agenda li{grid-template-columns:1fr;gap:6px}}
+@media (max-width:700px){.tabs.pages a{flex:none}}
+@media (prefers-reduced-motion:reduce){.reveal *{transition:none!important;opacity:1!important;transform:none!important}}
+@media print{.progress,.gstrip,.reset,.printbtn,.check,.ld-tabs{display:none!important}.rungs[hidden]{display:flex!important}.rungs li{margin-left:0}
+ .reveal *{opacity:1!important;transform:none!important}
+ body.print-one .cover,body.print-one main>*:not(.print-me){display:none!important}.ladder{background:#fff;color:var(--ink)}.ladder .bi .es,.ladder .hd .es{color:var(--mute)!important}}
+</style>
+</head>
+<body data-lang="both" data-page="teachers.html">
+<a class="skip" href="#main">Skip to content / Saltar al contenido</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<nav class="bar" aria-label="Magazine navigation / Navegación">
+  <a class="bar-brand" href="index.html">The Blueprint <span>/ El Plano</span></a>
+  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="teachers.html" class="pg here" aria-current="page"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
+  <div class="lang" role="group" aria-label="Language / Idioma">
+    <button data-set="en" aria-pressed="false">EN</button><button data-set="both" aria-pressed="true">EN + ES</button><button data-set="es" aria-pressed="false">ES</button>
+  </div>
+</nav>
+<div id="top"></div>
+<header class="cover band-hero"><div class="cover-in"><p class="issue"><span class="inl "><span class="en" lang="en">The Blueprint · teacher’s companion</span><span class="es" lang="es">El Plano · guía para docentes</span></span></p>
+  <h1 class="hd t-h1"><span class="en" lang="en">Teach it on Monday</span><span class="es" lang="es">Enséñalo el lunes</span></h1><div class="bi cover-dek"><p class="en" lang="en">Guides for bilingual learners and students with disabilities, the four-lane model, the writing rubric with sample responses, a points calculator, and a 45-minute agenda for your team.</p><p class="es" lang="es">Guías para estudiantes bilingües y estudiantes con discapacidades, el modelo de cuatro carriles, la rúbrica de escritura con respuestas de muestra, una calculadora de puntos y una agenda de 45 minutos para tu equipo.</p></div></div>
+  <nav class="gstrip" aria-label="Sections / Secciones"><a href="#teach"><span><span class="inl "><span class="en" lang="en">Bilingual learners</span><span class="es" lang="es">Estudiantes bilingües</span></span></span></a><a href="#sped"><span><span class="inl "><span class="en" lang="en">Special education</span><span class="es" lang="es">Educación especial</span></span></span></a><a href="#lanes"><span><span class="inl "><span class="en" lang="en">Four lanes</span><span class="es" lang="es">Cuatro carriles</span></span></span></a><a href="#writing"><span><span class="inl "><span class="en" lang="en">Writing</span><span class="es" lang="es">Escritura</span></span></span></a><a href="#calc"><span><span class="inl "><span class="en" lang="en">Calculator</span><span class="es" lang="es">Calculadora</span></span></span></a><a href="#plc"><span><span class="inl "><span class="en" lang="en">PLC agenda</span><span class="es" lang="es">Agenda del equipo</span></span></span></a></nav></header>
+<main id="main">
+
+<section class="teach tts-scope" id="teach">
+  <button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+  <h2 class="hd "><span class="en" lang="en">How do I teach this to a bilingual student?</span><span class="es" lang="es">¿Cómo le enseño esto a un estudiante bilingüe?</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">The blueprint measures reading, not English proficiency, but a student has to get through the English to show the reading. Your work is to keep the thinking at grade level while you lower the language barrier around it. Six moves do most of that work.</p><p class="es" lang="es">El plano mide la lectura, no el dominio del inglés, pero el estudiante tiene que atravesar el inglés para demostrar la lectura. Tu trabajo es mantener el pensamiento al nivel del grado mientras bajas la barrera del idioma que lo rodea. Seis estrategias hacen la mayor parte de ese trabajo.</p></div>
+  <div class="how-grid"><div class="how"><h3 class="hd "><span class="en" lang="en">Separate the skill from the language</span><span class="es" lang="es">Separa la destreza del idioma</span></h3><div class="bi "><p class="en" lang="en">A student who cannot find the theme in English may find it easily in Spanish. Check the skill in the stronger language first. If it is there, your job is vocabulary and sentence structure, not comprehension. Post a content objective and a language objective for every lesson so both jobs stay visible.</p><p class="es" lang="es">Un estudiante que no encuentra el tema en inglés puede encontrarlo fácilmente en español. Comprueba primero la destreza en el idioma más fuerte. Si está ahí, tu trabajo es vocabulario y estructura de oraciones, no comprensión. Publica un objetivo de contenido y uno de lenguaje en cada lección para que las dos tareas sigan a la vista.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Preview, view, review</span><span class="es" lang="es">Anticipar, ver, repasar</span></h3><div class="bi "><p class="en" lang="en">Preview the topic and key ideas in Spanish for three to five minutes. Teach the lesson and read the passage in English. Review in Spanish to confirm what was understood. The test is in English, so the middle must be too, but the bookends make the middle possible.</p><p class="es" lang="es">Anticipa el tema y las ideas clave en español de tres a cinco minutos. Enseña la lección y lee el pasaje en inglés. Repasa en español para confirmar lo que se entendió. El examen es en inglés, así que la parte central también debe serlo, pero el inicio y el cierre la hacen posible.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Teach cognates on purpose</span><span class="es" lang="es">Enseña los cognados a propósito</span></h3><div class="bi "><p class="en" lang="en">Academic English leans on Latin, which is good news for Spanish speakers: evidence, infer, analyze, structure. Students do not notice cognates automatically, so point, say both words, and mark what changed. Teach the false friends just as openly: resumen means summary, not resume, and the Spanish word actual means current, not actual.</p><p class="es" lang="es">El inglés académico se apoya en el latín, y eso favorece a los hispanohablantes: evidence, infer, analyze, structure. Los estudiantes no notan los cognados de forma automática, así que señala, di las dos palabras y marca lo que cambió. Enseña los falsos amigos con la misma claridad: resumen no es resume, y actual en español significa current, no actual.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Teach the language of the questions</span><span class="es" lang="es">Enseña el lenguaje de las preguntas</span></h3><div class="bi "><p class="en" lang="en">Many wrong answers come from the question, not the passage. Words such as best, most strongly, primarily, and contributes to decide the answer, and they are rarely taught. Use the stem bank below until students can restate any stem in their own words, in either language.</p><p class="es" lang="es">Muchas respuestas incorrectas vienen de la pregunta, no del pasaje. Palabras como best, most strongly, primarily y contributes to deciden la respuesta y casi nunca se enseñan. Usa el banco de consignas de abajo hasta que los estudiantes puedan reformular cualquier consigna con sus propias palabras, en cualquiera de los dos idiomas.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Talk before writing</span><span class="es" lang="es">Hablar antes de escribir</span></h3><div class="bi "><p class="en" lang="en">For the 12-point writing task, let students plan in any language, rehearse the argument aloud with a partner, and then draft in English. Give sentence frames matched to proficiency. Emerging: The text says ___. Progressing: The author states ___, which shows ___.</p><p class="es" lang="es">Para la tarea de escritura de 12 puntos, deja que los estudiantes planifiquen en cualquier idioma, ensayen el argumento en voz alta con un compañero y luego redacten en inglés. Da marcos de oración según el nivel. Emergente: The text says ___. En progreso: The author states ___, which shows ___.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Build knowledge before the passage</span><span class="es" lang="es">Construye conocimiento antes del pasaje</span></h3><div class="bi "><p class="en" lang="en">Test passages assume background that newcomers may not have: levees, spelling bees, school boards. Two minutes with a photo, a map, or a short video in Spanish removes a barrier that has nothing to do with reading ability. Then chunk the text and annotate one paragraph at a time.</p><p class="es" lang="es">Los pasajes del examen dan por sentado un conocimiento que los recién llegados quizá no tengan: diques, concursos de deletreo, juntas escolares. Dos minutos con una foto, un mapa o un video corto en español quitan una barrera que no tiene que ver con la capacidad de leer. Luego divide el texto y anota un párrafo a la vez.</p></div></div></div>
+  <h3 class="hd sub-h"><span class="en" lang="en">What changes by grade band</span><span class="es" lang="es">Qué cambia según la banda de grados</span></h3>
+  <div class="bands"><div class="band"><div class="band-k">K–2</div><h3 class="hd "><span class="en" lang="en">Sounds and print</span><span class="es" lang="es">Sonidos y letra impresa</span></h3><div class="bi "><p class="en" lang="en">Spanish has five steady vowel sounds; English has many more, so short vowels (sit, set, sat) need ear training. Expect an extra vowel before s-blends (eschool) and dropped final consonants. Reading skills learned in Spanish, such as syllables, print direction, and story structure, transfer directly. Count them as assets.</p><p class="es" lang="es">El español tiene cinco sonidos vocálicos estables; el inglés tiene muchos más, así que las vocales cortas (sit, set, sat) requieren entrenar el oído. Espera una vocal extra antes de las combinaciones con s (eschool) y consonantes finales omitidas. Las destrezas aprendidas en español, como las sílabas, la dirección de la lectura y la estructura del cuento, se transfieren directamente. Cuéntalas como fortalezas.</p></div></div><div class="band"><div class="band-k">3–5</div><h3 class="hd "><span class="en" lang="en">Words that carry the test</span><span class="es" lang="es">Las palabras que sostienen el examen</span></h3><div class="bi "><p class="en" lang="en">This is where the MAAP begins and where vocabulary is worth the most. Teach roots and affixes as a bilingual system: tele-, photo-, -tion/-ción, -ly/-mente. Figurative language does not transfer, so teach idioms, adages, and proverbs directly, and pair each with a Spanish saying when one exists.</p><p class="es" lang="es">Aquí empieza el MAAP y aquí el vocabulario vale más. Enseña raíces y afijos como un sistema bilingüe: tele-, photo-, -tion/-ción, -ly/-mente. El lenguaje figurado no se transfiere, así que enseña modismos, adagios y proverbios de forma directa, y acompaña cada uno con un dicho en español cuando exista.</p></div></div><div class="band"><div class="band-k">6–8</div><h3 class="hd "><span class="en" lang="en">Evidence and argument</span><span class="es" lang="es">Evidencia y argumento</span></h3><div class="bi "><p class="en" lang="en">Informational text is about half the test. Build stamina with short daily nonfiction. Teach students to rank evidence, not only find it, using a simple scale: true but weak, relevant, strongest. Connotation and tone are hard in a second language; compare word families side by side (thin, slim, skinny / delgado, esbelto, flaco).</p><p class="es" lang="es">El texto informativo es cerca de la mitad del examen. Desarrolla resistencia con no ficción breve todos los días. Enseña a clasificar la evidencia, no solo a encontrarla, con una escala sencilla: cierta pero débil, pertinente, la más fuerte. La connotación y el tono son difíciles en un segundo idioma; compara familias de palabras lado a lado (thin, slim, skinny / delgado, esbelto, flaco).</p></div></div><div class="band"><div class="band-k">9–12</div><h3 class="hd "><span class="en" lang="en">Rhetoric and dense text</span><span class="es" lang="es">Retórica y textos densos</span></h3><div class="bi "><p class="en" lang="en">English II rewards students who can follow long sentences. Teach them to find the subject and main verb first and set the rest aside. Many newcomers studied rhetoric, essays, and literary analysis in their home country; ask, and build on it. Seminal U.S. documents need historical background more than they need simplification.</p><p class="es" lang="es">Inglés II premia a quienes pueden seguir oraciones largas. Enséñales a encontrar primero el sujeto y el verbo principal y a dejar lo demás a un lado. Muchos recién llegados estudiaron retórica, ensayos y análisis literario en su país; pregunta y construye sobre eso. Los documentos fundamentales de EE. UU. necesitan contexto histórico más que simplificación.</p></div></div></div>
+  <h3 class="hd sub-h"><span class="en" lang="en">Stem bank: the language of the questions</span><span class="es" lang="es">Banco de consignas: el lenguaje de las preguntas</span></h3>
+  <div class="tbl"><table><thead><tr><th>English</th><th>Español</th><th><span class="inl "><span class="en" lang="en">What it is really asking</span><span class="es" lang="es">Lo que realmente pregunta</span></span></th></tr></thead><tbody><tr><td lang="en">Which sentence best states the central idea?</td><td lang="es">¿Qué oración expresa mejor la idea central?</td><td><span class="inl "><span class="en" lang="en">Best means more than one choice may be true.</span><span class="es" lang="es">Best significa que más de una opción puede ser cierta.</span></span></td></tr><tr><td lang="en">Which detail most strongly supports…?</td><td lang="es">¿Qué detalle apoya con más fuerza…?</td><td><span class="inl "><span class="en" lang="en">Rank the evidence; pick the strongest.</span><span class="es" lang="es">Clasifica la evidencia; elige la más fuerte.</span></span></td></tr><tr><td lang="en">What does the word ___ mean as it is used in paragraph 2?</td><td lang="es">¿Qué significa la palabra ___ según se usa en el párrafo 2?</td><td><span class="inl "><span class="en" lang="en">Go back to the paragraph; the common meaning may be wrong.</span><span class="es" lang="es">Vuelve al párrafo; el significado común puede ser incorrecto.</span></span></td></tr><tr><td lang="en">How does paragraph 3 contribute to the development of ideas?</td><td lang="es">¿Cómo contribuye el párrafo 3 al desarrollo de las ideas?</td><td><span class="inl "><span class="en" lang="en">Ask what job the paragraph does: example, cause, counterclaim.</span><span class="es" lang="es">Pregunta qué función cumple el párrafo: ejemplo, causa, contraargumento.</span></span></td></tr><tr><td lang="en">What can the reader infer about…?</td><td lang="es">¿Qué puede inferir el lector sobre…?</td><td><span class="inl "><span class="en" lang="en">The answer is not stated, but the clues are.</span><span class="es" lang="es">La respuesta no está escrita, pero las pistas sí.</span></span></td></tr><tr><td lang="en">What is the author’s purpose / point of view?</td><td lang="es">¿Cuál es el propósito / punto de vista del autor?</td><td><span class="inl "><span class="en" lang="en">Why was this written, and what does the author think?</span><span class="es" lang="es">¿Para qué se escribió y qué piensa el autor?</span></span></td></tr><tr><td lang="en">Part A … Part B: Which evidence supports the answer to Part A?</td><td lang="es">Parte A … Parte B: ¿Qué evidencia apoya la respuesta de la Parte A?</td><td><span class="inl "><span class="en" lang="en">Answer A, find the proof, then check that they match.</span><span class="es" lang="es">Responde A, busca la prueba y comprueba que coincidan.</span></span></td></tr><tr><td lang="en">Select two answers.</td><td lang="es">Selecciona dos respuestas.</td><td><span class="inl "><span class="en" lang="en">Exactly two. Read every choice before you pick.</span><span class="es" lang="es">Exactamente dos. Lee todas las opciones antes de elegir.</span></span></td></tr></tbody></table></div>
+  <div class="accom"><h3 class="hd "><span class="en" lang="en">Accommodations</span><span class="es" lang="es">Acomodaciones</span></h3>
+  <div class="bi "><p class="en" lang="en">English learners may be eligible for specific supports on the MAAP. Which ones are allowed is set by the current Mississippi Testing Accommodations Manual and recorded in each student’s language service plan. Read the current manual, then use the same supports in daily practice all year. A support a student meets for the first time on test day is not a support.</p><p class="es" lang="es">Los estudiantes de inglés pueden tener derecho a apoyos específicos en el MAAP. Cuáles se permiten lo define el Manual de Acomodaciones para Exámenes de Mississippi vigente y se registra en el plan de servicios lingüísticos de cada estudiante. Lee el manual actual y usa los mismos apoyos en la práctica diaria todo el año. Un apoyo que el estudiante conoce por primera vez el día del examen no es un apoyo.</p></div></div>
+</section>
+
+<section class="teach sped tts-scope" id="sped">
+  <button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button>
+  <h2 class="hd "><span class="en" lang="en">Special education and the blueprint</span><span class="es" lang="es">La educación especial y el plano</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">Students with disabilities are held to the same reading standards as everyone else, and they have a legal right to the supports that make those standards reachable. This section is for teachers and for families. It explains who takes which test, what an accommodation is, and how to teach the blueprint to a student with an IEP or a 504 plan.</p><p class="es" lang="es">A los estudiantes con discapacidades se les exige lo mismo en lectura que a todos los demás, y tienen el derecho legal a los apoyos que hacen alcanzables esos estándares. Esta sección es para maestros y para familias. Explica quién toma cada examen, qué es una acomodación y cómo enseñar el plano a un estudiante con un IEP o un plan 504.</p></div>
+  <div class="how-grid"><div class="how"><h3 class="hd "><span class="en" lang="en">Same standards, different access</span><span class="es" lang="es">Los mismos estándares, distinto acceso</span></h3><div class="bi "><p class="en" lang="en">An IEP does not lower the grade-level standards. Most students with disabilities take the same MAAP described in this magazine, with the accommodations written in their IEP or 504 plan. A small number of students with the most significant cognitive disabilities take the alternate assessment, the MAAP-A, when their IEP team decides it is appropriate. Federal law limits alternate assessment to about 1% of tested students statewide, so it is a team decision made carefully and not a default.</p><p class="es" lang="es">Un IEP no baja los estándares del grado. La mayoría de los estudiantes con discapacidades toman el mismo MAAP que describe esta revista, con las acomodaciones escritas en su IEP o plan 504. Un número pequeño de estudiantes con las discapacidades cognitivas más significativas toma la evaluación alternativa, el MAAP-A, cuando su equipo del IEP decide que es lo apropiado. La ley federal limita la evaluación alternativa a cerca del 1% de los estudiantes evaluados en el estado, así que es una decisión del equipo que se toma con cuidado y no una opción automática.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Accommodation or modification?</span><span class="es" lang="es">¿Acomodación o modificación?</span></h3><div class="bi "><p class="en" lang="en">An accommodation changes how a student reaches the standard: more time, a small group, a different way to respond. A modification changes what is expected, such as a shorter text or fewer answer choices. Modifications can help in class, but only accommodations that are written in the plan and allowed by the state manual can be used on the test. Accommodations come in four kinds: presentation, response, timing, and setting.</p><p class="es" lang="es">Una acomodación cambia cómo el estudiante alcanza el estándar: más tiempo, un grupo pequeño, otra forma de responder. Una modificación cambia lo que se espera, como un texto más corto o menos opciones de respuesta. Las modificaciones pueden ayudar en clase, pero en el examen solo se pueden usar las acomodaciones que están escritas en el plan y que permite el manual estatal. Hay cuatro tipos de acomodaciones: presentación, respuesta, tiempo y lugar.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Find the barrier before you teach</span><span class="es" lang="es">Encuentra la barrera antes de enseñar</span></h3><div class="bi "><p class="en" lang="en">Use the Listen buttons in this magazine as a quick check. If a student answers correctly after hearing a passage but not after reading it alone, the barrier is decoding, not comprehension, and the two call for different instruction. Be careful on test day: having reading passages read aloud on the state ELA test is tightly restricted. Check the current accommodations manual and the student’s IEP before you promise it.</p><p class="es" lang="es">Usa los botones Escuchar de esta revista como una comprobación rápida. Si un estudiante responde bien después de oír un pasaje pero no después de leerlo solo, la barrera es la decodificación, no la comprensión, y cada una requiere una enseñanza distinta. Ten cuidado el día del examen: la lectura en voz alta de los pasajes en el examen estatal de ELA está muy restringida. Consulta el manual de acomodaciones vigente y el IEP del estudiante antes de prometerla.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Lower the load, keep the rigor</span><span class="es" lang="es">Baja la carga, mantén el rigor</span></h3><div class="bi "><p class="en" lang="en">Break a passage into sections and ask one question after each. Show one question at a time. Model your thinking aloud, then let the student try with a partner before working alone. Give a graphic organizer that matches the standard: two columns for compare and contrast, a chain for cause and effect. Have students highlight the evidence before they choose an answer.</p><p class="es" lang="es">Divide el pasaje en secciones y haz una pregunta después de cada una. Muestra una pregunta a la vez. Modela tu pensamiento en voz alta y luego deja que el estudiante lo intente con un compañero antes de trabajar solo. Da un organizador gráfico que corresponda al estándar: dos columnas para comparar y contrastar, una cadena para causa y efecto. Pide a los estudiantes que resalten la evidencia antes de elegir una respuesta.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Support the writing task</span><span class="es" lang="es">Apoya la tarea de escritura</span></h3><div class="bi "><p class="en" lang="en">The essay is typed on a computer, so keyboarding is part of test preparation. Teach one planning organizer and use it every time. Offer sentence frames and a personal checklist for capitals, end marks, and paragraphs. If the IEP lists speech-to-text or a scribe, the student should use it in class long before the test.</p><p class="es" lang="es">El ensayo se escribe en computadora, así que la mecanografía es parte de la preparación. Enseña un solo organizador de planificación y úsalo siempre. Ofrece marcos de oración y una lista personal de verificación para mayúsculas, puntuación final y párrafos. Si el IEP incluye dictado por voz o un escribiente, el estudiante debe usarlo en clase mucho antes del examen.</p></div></div><div class="how"><h3 class="hd "><span class="en" lang="en">Practice the test itself</span><span class="es" lang="es">Practica el examen mismo</span></h3><div class="bi "><p class="en" lang="en">Session 1 allows up to 180 minutes. Build stamina gradually and teach students how to take a break and come back. Use the state’s online practice tests so the screen, the tools, and the question types are familiar. A student should never meet a tool or a support for the first time on test day.</p><p class="es" lang="es">La Sesión 1 permite hasta 180 minutos. Desarrolla la resistencia poco a poco y enseña a los estudiantes a tomar un descanso y volver. Usa los exámenes de práctica en línea del estado para que la pantalla, las herramientas y los tipos de pregunta resulten conocidos. Un estudiante nunca debe encontrarse con una herramienta o un apoyo por primera vez el día del examen.</p></div></div></div>
+  <div class="two-box">
+    <div class="box"><h3 class="hd "><span class="en" lang="en">English learners with disabilities</span><span class="es" lang="es">Estudiantes de inglés con discapacidades</span></h3><ul class="plain"><li><div class="bi "><p class="en" lang="en">Learning English is not a disability. Do not refer a student for special education only because of limited English. Do not delay an evaluation because a student is an English learner, either. Both mistakes deny services.</p><p class="es" lang="es">Aprender inglés no es una discapacidad. No refieras a un estudiante a educación especial solo por su inglés limitado. Tampoco retrases una evaluación porque el estudiante está aprendiendo inglés. Los dos errores niegan servicios.</p></div></li><li><div class="bi "><p class="en" lang="en">Evaluate in the languages the student uses, with trained evaluators and interpreters, so the results show the disability and not the language gap.</p><p class="es" lang="es">Evalúa en los idiomas que usa el estudiante, con evaluadores e intérpretes capacitados, para que los resultados muestren la discapacidad y no la brecha de idioma.</p></div></li><li><div class="bi "><p class="en" lang="en">Both plans apply at the same time. English language services do not end when an IEP begins, and the IEP team should include someone who understands second language acquisition.</p><p class="es" lang="es">Los dos planes se aplican al mismo tiempo. Los servicios de inglés no terminan cuando empieza un IEP, y el equipo del IEP debe incluir a alguien que entienda la adquisición de un segundo idioma.</p></div></li><li><div class="bi "><p class="en" lang="en">The student may be eligible for accommodations from both plans. List them together so the test coordinator sees one clear set.</p><p class="es" lang="es">El estudiante puede tener derecho a acomodaciones de los dos planes. Anótalas juntas para que el coordinador de exámenes vea un solo conjunto claro.</p></div></li></ul></div>
+    <div class="box"><h3 class="hd "><span class="en" lang="en">For families: your rights</span><span class="es" lang="es">Para las familias: sus derechos</span></h3><ul class="plain"><li><div class="bi "><p class="en" lang="en">You are a member of your child’s IEP team, and the school must take steps so you can understand the meeting, including providing an interpreter.</p><p class="es" lang="es">Usted es miembro del equipo del IEP de su hijo, y la escuela debe tomar medidas para que usted entienda la reunión, incluido un intérprete.</p></div></li><li><div class="bi "><p class="en" lang="en">Written notices should come in a language you understand. Your consent is required before a first evaluation and before services begin.</p><p class="es" lang="es">Los avisos por escrito deben llegar en un idioma que usted entienda. Se requiere su consentimiento antes de una primera evaluación y antes de que empiecen los servicios.</p></div></li><li><div class="bi "><p class="en" lang="en">You may ask for an evaluation in writing at any time, and you may bring someone you trust to the meeting.</p><p class="es" lang="es">Usted puede pedir una evaluación por escrito en cualquier momento y puede llevar a la reunión a una persona de su confianza.</p></div></li></ul>
+      <h4 class="hd "><span class="en" lang="en">Questions to ask at the meeting</span><span class="es" lang="es">Preguntas para hacer en la reunión</span></h4><ul class="plain ask"><li><div class="bi "><p class="en" lang="en">Which test will my child take, and why?</p><p class="es" lang="es">¿Qué examen tomará mi hijo y por qué?</p></div></li><li><div class="bi "><p class="en" lang="en">Which accommodations are in the plan, and does my child use them every day in class?</p><p class="es" lang="es">¿Qué acomodaciones están en el plan y las usa mi hijo todos los días en clase?</p></div></li><li><div class="bi "><p class="en" lang="en">How do you measure my child’s reading progress, and how often will I hear about it?</p><p class="es" lang="es">¿Cómo miden el progreso de mi hijo en lectura y con qué frecuencia me informarán?</p></div></li><li><div class="bi "><p class="en" lang="en">For third grade: does a good cause exemption apply to my child?</p><p class="es" lang="es">Para tercer grado: ¿se aplica a mi hijo una exención por causa justificada?</p></div></li></ul></div>
+  </div>
+  <div class="accom"><h3 class="hd "><span class="en" lang="en">Words to know</span><span class="es" lang="es">Palabras que conviene saber</span></h3>
+  <div class="bi "><p class="en" lang="en">IEP: Individualized Education Program, the written plan for a student who receives special education. 504 plan: a plan of accommodations for a student with a disability who does not need special education. MAAP-A: the alternate state assessment. This section is general information, not legal advice. Follow the student’s plan, your district’s special education office, and the current Mississippi Department of Education manuals.</p><p class="es" lang="es">IEP: Programa de Educación Individualizado, el plan escrito para un estudiante que recibe educación especial. Plan 504: un plan de acomodaciones para un estudiante con una discapacidad que no necesita educación especial. MAAP-A: la evaluación estatal alternativa. Esta sección es información general, no asesoría legal. Sigue el plan del estudiante, la oficina de educación especial de tu distrito y los manuales vigentes del Departamento de Educación de Mississippi.</p></div></div>
+</section>
+<section class="teach" id="lanes">
+  <div class="tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h2 class="hd "><span class="en" lang="en">Four lanes, one text</span><span class="es" lang="es">Cuatro carriles, un texto</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">Differentiation does not mean four different lessons. Every student reads the same grade-level passage and works toward the same standard. What changes is how much language support surrounds the task, and how far the thinking is extended. Each grade in this magazine shows the four lanes applied to its practice passage.</p><p class="es" lang="es">Diferenciar no significa dar cuatro lecciones distintas. Todos los estudiantes leen el mismo pasaje del grado y trabajan hacia el mismo estándar. Lo que cambia es cuánto apoyo lingüístico rodea la tarea y hasta dónde se amplía el pensamiento. Cada grado de esta revista muestra los cuatro carriles aplicados a su pasaje de práctica.</p></div></div>
+  <div class="lanes"><div class="lane lane-0"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Newcomer</span><span class="es" lang="es">Recién llegado</span></span></b><span>ELPA21 Level 1</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Point, match, draw, or answer with a word. Spanish is welcome.</span><span class="es" lang="es">Señalar, relacionar, dibujar o responder con una palabra. El español es bienvenido.</span></span></p></div><div class="lane lane-1"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Emerging</span><span class="es" lang="es">Emergente</span></span></b><span>ELPA21 Levels 1–2</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Complete a short sentence frame with a word bank.</span><span class="es" lang="es">Completar un marco de oración corto con un banco de palabras.</span></span></p></div><div class="lane lane-2"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Progressing</span><span class="es" lang="es">En progreso</span></span></b><span>ELPA21 Levels 3–4</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Answer in full sentences with evidence and a reason.</span><span class="es" lang="es">Responder con oraciones completas, evidencia y una razón.</span></span></p></div><div class="lane lane-3"><div class="lane-h"><b><span class="inl "><span class="en" lang="en">Challenge</span><span class="es" lang="es">Desafío</span></span></b><span>ELPA21 Levels 4–5 and proficient</span></div><p class="lane-d"><span class="inl "><span class="en" lang="en">Extend the thinking: compare, evaluate, or create.</span><span class="es" lang="es">Ampliar el pensamiento: comparar, evaluar o crear.</span></span></p></div></div>
+  <div class="bi after"><p class="en" lang="en">The ELPA21 levels shown are a planning guide, not a placement rule. Move a student up a lane as soon as the frame is no longer needed, and post the Mississippi ELP standard and language objective beside the ELA standard.</p><p class="es" lang="es">Los niveles de ELPA21 que se muestran son una guía de planificación, no una regla de ubicación. Sube a un estudiante de carril en cuanto el marco ya no haga falta, y publica el estándar ELP de Mississippi y el objetivo de lenguaje junto al estándar de ELA.</p></div>
+</section>
+<section class="teach" id="writing">
+  <div class="tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h2 class="hd "><span class="en" lang="en">The writing task: 12 points, four traits</span><span class="es" lang="es">La tarea de escritura: 12 puntos, cuatro criterios</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">Session 2 is one-sixth of the score at grades 6 through English II and one-fifth at grades 3 through 5. MDE scores it with one analytic rubric across all tested grades. The summary below paraphrases the four traits; use MDE’s published rubric for the official descriptors.</p><p class="es" lang="es">La Sesión 2 es una sexta parte de la calificación de 6.º grado a Inglés II y una quinta parte de 3.º a 5.º. El MDE la califica con una sola rúbrica analítica en todos los grados evaluados. El resumen de abajo parafrasea los cuatro criterios; usa la rúbrica publicada por el MDE para los descriptores oficiales.</p></div></div>
+  <div class="tbl"><table><thead><tr><th><span class="inl "><span class="en" lang="en">Trait</span><span class="es" lang="es">Criterio</span></span></th><th><span class="inl "><span class="en" lang="en">Points</span><span class="es" lang="es">Puntos</span></span></th><th><span class="inl "><span class="en" lang="en">Standards</span><span class="es" lang="es">Estándares</span></span></th><th><span class="inl "><span class="en" lang="en">The question a scorer asks</span><span class="es" lang="es">La pregunta que se hace quien califica</span></span></th></tr></thead><tbody><tr><td><b><span class="inl "><span class="en" lang="en">Development of ideas</span><span class="es" lang="es">Desarrollo de las ideas</span></span></b></td><td>0–4</td><td>W.1–3</td><td><span class="inl "><span class="en" lang="en">Is the writing focused on the task, and are the ideas developed with relevant evidence from the text?</span><span class="es" lang="es">¿El escrito se centra en la tarea y desarrolla las ideas con evidencia pertinente del texto?</span></span></td></tr><tr><td><b><span class="inl "><span class="en" lang="en">Writing organization</span><span class="es" lang="es">Organización del escrito</span></span></b></td><td>0–4</td><td>W.1–3</td><td><span class="inl "><span class="en" lang="en">Is there a clear beginning, a logical order, transitions, and a conclusion?</span><span class="es" lang="es">¿Hay un inicio claro, un orden lógico, transiciones y una conclusión?</span></span></td></tr><tr><td><b><span class="inl "><span class="en" lang="en">Grammar and usage</span><span class="es" lang="es">Gramática y uso</span></span></b></td><td>0–2</td><td>L.1, L.3</td><td><span class="inl "><span class="en" lang="en">Are sentences complete and varied, with correct verb forms and word choice?</span><span class="es" lang="es">¿Las oraciones son completas y variadas, con formas verbales y vocabulario correctos?</span></span></td></tr><tr><td><b><span class="inl "><span class="en" lang="en">Mechanics</span><span class="es" lang="es">Mecánica</span></span></b></td><td>0–2</td><td>L.2</td><td><span class="inl "><span class="en" lang="en">Are capitalization, punctuation, and spelling controlled?</span><span class="es" lang="es">¿Se controlan las mayúsculas, la puntuación y la ortografía?</span></span></td></tr></tbody></table></div>
+  <h3 class="hd sub-h"><span class="en" lang="en">Sample responses, annotated</span><span class="es" lang="es">Respuestas de muestra, comentadas</span></h3>
+  <div class="bi "><p class="en" lang="en">These samples answer prompts from this magazine. They are illustrations for teaching, not officially scored papers.</p><p class="es" lang="es">Estas muestras responden a consignas de esta revista. Son ilustraciones para enseñar, no trabajos calificados oficialmente.</p></div>
+  <div class="sample"><div class="band-k"><span class="inl "><span class="en" lang="en">Grades 3–5</span><span class="es" lang="es">Grados 3–5</span></span></div><p class="sm" lang="en">Grade 5 · Explain why bats matter to farmers and what threatens them.</p>
+  <div class="two-box"><div class="box tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Stronger response</span><span class="es" lang="es">Respuesta más sólida</span></h4><p class="resp" lang="en">Bats matter to farmers because they protect crops for free. According to “The Night Shift,” a single bat can eat hundreds of insects in an hour, and many of those insects are moths whose caterpillars eat corn and cotton. This means farmers lose fewer crops and spray fewer chemicals. However, bats are in danger. White-nose syndrome has killed millions of them, and in “Bat Count Night” the count fell from 1,900 to 1,146 in one year. If bats keep disappearing, farmers will lose their best night workers.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">Names the source and uses exact evidence from both texts.</p><p class="es" lang="es">Nombra la fuente y usa evidencia exacta de los dos textos.</p></div></li><li><div class="bi "><p class="en" lang="en">“This means” explains the evidence instead of only listing it.</p><p class="es" lang="es">“This means” explica la evidencia en lugar de solo enumerarla.</p></div></li><li><div class="bi "><p class="en" lang="en">“However” marks the turn from help to threat; the last sentence concludes.</p><p class="es" lang="es">“However” marca el giro de la ayuda a la amenaza; la última oración concluye.</p></div></li></ul></div>
+  <div class="box dev tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Developing response</span><span class="es" lang="es">Respuesta en desarrollo</span></h4><p class="resp" lang="en">Bats are good. They eat bugs and bugs are bad for farms. Bats are sick to and some die. I seen a bat one time at my uncle house it was scary. People should help bats because they are good.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">On topic, but the evidence is general. No numbers, no source named.</p><p class="es" lang="es">Se mantiene en el tema, pero la evidencia es general. Sin cifras ni fuente.</p></div></li><li><div class="bi "><p class="en" lang="en">The personal story does not answer the prompt.</p><p class="es" lang="es">La anécdota personal no responde a la consigna.</p></div></li><li><div class="bi "><p class="en" lang="en">Next step for an English learner: one frame, “According to the text, ___. This shows ___.”</p><p class="es" lang="es">Siguiente paso para un estudiante de inglés: un marco, “According to the text, ___. This shows ___.”</p></div></li></ul></div></div></div><div class="sample"><div class="band-k"><span class="inl "><span class="en" lang="en">Grades 6–8</span><span class="es" lang="es">Grados 6–8</span></span></div><p class="sm" lang="en">Grade 7 · Should your school start later? Use both texts and acknowledge an opposing claim.</p>
+  <div class="two-box"><div class="box tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Stronger response</span><span class="es" lang="es">Respuesta más sólida</span></h4><p class="resp" lang="en">Our school should start at 8:30 because the current schedule works against students’ bodies. “Let Them Sleep” explains that during adolescence the brain releases melatonin later at night, so a teenager who wakes at six has slept seven hours or fewer. Districts that changed their schedules reported better attendance and fewer car crashes. The author of “Not So Fast” is right that families would face real costs, such as child care and bus routes. Still, a schedule can be redesigned, and a tired brain cannot learn. The district should phase in the change and ask families to help plan it.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">Clear claim in the first sentence, with a reason.</p><p class="es" lang="es">Afirmación clara en la primera oración, con una razón.</p></div></li><li><div class="bi "><p class="en" lang="en">Acknowledges the opposing text fairly, then answers it.</p><p class="es" lang="es">Reconoce el texto contrario con justicia y luego le responde.</p></div></li><li><div class="bi "><p class="en" lang="en">Ends with a specific proposal, not a repeated claim.</p><p class="es" lang="es">Termina con una propuesta concreta, no con la afirmación repetida.</p></div></li></ul></div>
+  <div class="box dev tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Developing response</span><span class="es" lang="es">Respuesta en desarrollo</span></h4><p class="resp" lang="en">I think school should start later because everybody is tired. My friends are all tired in first period and we can’t think. The article says teenagers need sleep. Some people say no but they are wrong. School should start at 10.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">Has a claim, but the evidence is personal, and the text is mentioned without detail.</p><p class="es" lang="es">Tiene una afirmación, pero la evidencia es personal y el texto se menciona sin detalles.</p></div></li><li><div class="bi "><p class="en" lang="en">“They are wrong” dismisses the other side instead of answering it.</p><p class="es" lang="es">“They are wrong” descarta a la otra parte en lugar de responderle.</p></div></li><li><div class="bi "><p class="en" lang="en">Next step: “The author of ___ argues ___. However, ___.”</p><p class="es" lang="es">Siguiente paso: “The author of ___ argues ___. However, ___.”</p></div></li></ul></div></div></div><div class="sample"><div class="band-k"><span class="inl "><span class="en" lang="en">English II</span><span class="es" lang="es">Inglés II</span></span></div><p class="sm" lang="en">Grade 10 · Should the county keep the library open on Saturdays? Use the speech and the memo and answer a counterclaim.</p>
+  <div class="two-box"><div class="box tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Stronger response</span><span class="es" lang="es">Respuesta más sólida</span></h4><p class="resp" lang="en">The county should keep Saturday hours because the memo’s numbers, though accurate, measure the wrong thing. The budget office reports that Saturday accounts for 9 percent of weekly visits and costs $40,000 a year. The speech does not dispute this. Instead, it asks who those visitors are: a man applying for jobs on “the only free computers in town,” children with “no books at home.” For these residents Saturday is not the least important day; it may be the only possible one. The memo answers that e-books remain available, but one household in four lacks a connection. A service that reaches people with no alternative is worth more than its share of the visit count.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">The claim concedes the memo’s accuracy and reframes the question.</p><p class="es" lang="es">La afirmación concede que el memorando es exacto y replantea la pregunta.</p></div></li><li><div class="bi "><p class="en" lang="en">Short quotations are woven into the writer’s own sentences.</p><p class="es" lang="es">Las citas breves se integran en las oraciones del propio autor.</p></div></li><li><div class="bi "><p class="en" lang="en">The counterclaim (e-books) is answered with evidence from the other text.</p><p class="es" lang="es">El contraargumento (libros electrónicos) se responde con evidencia del otro texto.</p></div></li></ul></div>
+  <div class="box dev tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h4 class="hd "><span class="en" lang="en">Developing response</span><span class="es" lang="es">Respuesta en desarrollo</span></h4><p class="resp" lang="en">The library should stay open. The girl in the speech makes a lot of good points about people who need it. The memo says it costs $40,000 which is a lot of money but libraries are important. In conclusion the library should stay open on Saturdays because it is important to the community.</p><ul class="plain"><li><div class="bi "><p class="en" lang="en">Takes a position and refers to both texts, but summarizes instead of arguing.</p><p class="es" lang="es">Toma una postura y menciona los dos textos, pero resume en vez de argumentar.</p></div></li><li><div class="bi "><p class="en" lang="en">“Important” is repeated without saying why or to whom.</p><p class="es" lang="es">“Important” se repite sin decir por qué ni para quién.</p></div></li><li><div class="bi "><p class="en" lang="en">Next step: choose one quotation and explain what it proves.</p><p class="es" lang="es">Siguiente paso: elegir una cita y explicar qué demuestra.</p></div></li></ul></div></div></div>
+</section>
+<section class="teach" id="calc">
+  <h2 class="hd "><span class="en" lang="en">Points calculator: where are your points?</span><span class="es" lang="es">Calculadora de puntos: ¿dónde están tus puntos?</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">Choose a grade and slide each bar to your class’s average percent correct in that reporting category, from a benchmark or last year’s report. The calculator weights each category by the blueprint and shows where the most points are still available.</p><p class="es" lang="es">Elige un grado y mueve cada barra hasta el porcentaje promedio de aciertos de tu clase en esa categoría de informe, según una evaluación de referencia o el informe del año pasado. La calculadora pondera cada categoría según el plano y muestra dónde quedan más puntos por ganar.</p></div>
+  <div class="calc" id="calc-app" data-plans='{&quot;3&quot;: {&quot;label&quot;: &quot;Grade 3&quot;, &quot;pts&quot;: 48, &quot;rl&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;ri&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;l&quot;: [&quot;15\u201319%&quot;, 8.0], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;4&quot;: {&quot;label&quot;: &quot;Grade 4&quot;, &quot;pts&quot;: 48, &quot;rl&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;ri&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;l&quot;: [&quot;15\u201319%&quot;, 8.0], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;5&quot;: {&quot;label&quot;: &quot;Grade 5&quot;, &quot;pts&quot;: 48, &quot;rl&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;ri&quot;: [&quot;38\u201346%&quot;, 20.0], &quot;l&quot;: [&quot;15\u201319%&quot;, 8.0], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;6&quot;: {&quot;label&quot;: &quot;Grade 6&quot;, &quot;pts&quot;: 60, &quot;rl&quot;: [&quot;33\u201340%&quot;, 21.9], &quot;ri&quot;: [&quot;47\u201353%&quot;, 30.0], &quot;l&quot;: [&quot;12\u201315%&quot;, 8.1], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;7&quot;: {&quot;label&quot;: &quot;Grade 7&quot;, &quot;pts&quot;: 60, &quot;rl&quot;: [&quot;33\u201340%&quot;, 21.9], &quot;ri&quot;: [&quot;47\u201353%&quot;, 30.0], &quot;l&quot;: [&quot;12\u201315%&quot;, 8.1], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;8&quot;: {&quot;label&quot;: &quot;Grade 8&quot;, &quot;pts&quot;: 60, &quot;rl&quot;: [&quot;33\u201340%&quot;, 21.9], &quot;ri&quot;: [&quot;47\u201353%&quot;, 30.0], &quot;l&quot;: [&quot;12\u201315%&quot;, 8.1], &quot;w&quot;: [&quot;100%&quot;, 12]}, &quot;E2&quot;: {&quot;label&quot;: &quot;English II&quot;, &quot;pts&quot;: 60, &quot;rl&quot;: [&quot;30\u201337%&quot;, 20.0], &quot;ri&quot;: [&quot;52\u201355%&quot;, 31.9], &quot;l&quot;: [&quot;12\u201315%&quot;, 8.1], &quot;w&quot;: [&quot;100%&quot;, 12]}}'>
+    <div class="c-in"><div class="c-row"><label for="c-grade"><span class="inl "><span class="en" lang="en">Grade</span><span class="es" lang="es">Grado</span></span></label><select id="c-grade"><option value="3">Grade 3</option><option value="4">Grade 4</option><option value="5">Grade 5</option><option value="6">Grade 6</option><option value="7">Grade 7</option><option value="8">Grade 8</option><option value="E2">English II</option></select></div>
+      <div class="c-row" data-k="rl"><label for="c-rl"><span class="inl "><span class="en" lang="en">Reading literature</span><span class="es" lang="es">Lectura literaria</span></span></label><input id="c-rl" type="range" min="0" max="100" value="50" step="1"><output>50%</output></div><div class="c-row" data-k="ri"><label for="c-ri"><span class="inl "><span class="en" lang="en">Reading informational text</span><span class="es" lang="es">Lectura de texto informativo</span></span></label><input id="c-ri" type="range" min="0" max="100" value="50" step="1"><output>50%</output></div><div class="c-row" data-k="l"><label for="c-l"><span class="inl "><span class="en" lang="en">Language (vocabulary)</span><span class="es" lang="es">Lenguaje (vocabulario)</span></span></label><input id="c-l" type="range" min="0" max="100" value="50" step="1"><output>50%</output></div><div class="c-row" data-k="w"><label for="c-w"><span class="inl "><span class="en" lang="en">Writing task</span><span class="es" lang="es">Tarea de escritura</span></span></label><input id="c-w" type="range" min="0" max="100" value="50" step="1"><output>50%</output></div></div>
+    <div class="c-out" aria-live="polite"><div class="c-bars"></div><p class="c-total"></p><p class="c-msg"></p></div>
+  </div>
+  <p class="sm"><span class="inl "><span class="en" lang="en">Points per category use the midpoint of each official range, so treat results as estimates for planning.</span><span class="es" lang="es">Los puntos por categoría usan el punto medio de cada rango oficial, así que trata los resultados como estimaciones para planificar.</span></span></p>
+</section>
+<section class="teach" id="plc">
+  <div class="tts-scope"><button type="button" class="tts"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span class="inl "><span class="en" lang="en">Listen</span><span class="es" lang="es">Escuchar</span></span></button><h2 class="hd "><span class="en" lang="en">A 45-minute team meeting</span><span class="es" lang="es">Una reunión de equipo de 45 minutos</span></h2>
+  <div class="bi teach-lede"><p class="en" lang="en">Use this agenda to turn the magazine into professional learning. It works for a grade-level team, a vertical team, or a whole faculty split by band. Bring devices and one recent set of class results.</p><p class="es" lang="es">Usa esta agenda para convertir la revista en aprendizaje profesional. Funciona para un equipo de grado, un equipo vertical o todo el profesorado dividido por bandas. Lleven dispositivos y un conjunto reciente de resultados de la clase.</p></div>
+  <ol class="agenda"><li><div class="ag-t">0–5 min</div><div><h4 class="hd "><span class="en" lang="en">Read the plan</span><span class="es" lang="es">Leer el plano</span></h4><div class="bi "><p class="en" lang="en">Each teacher opens their grade and writes down the two largest rooms and their point share.</p><p class="es" lang="es">Cada maestro abre su grado y anota los dos salones más grandes y su proporción de puntos.</p></div></div></li><li><div class="ag-t">5–15 min</div><div><h4 class="hd "><span class="en" lang="en">Take the test</span><span class="es" lang="es">Tomar la prueba</span></h4><div class="bi "><p class="en" lang="en">Everyone answers their grade’s practice set as a student would, including the two-part and select-two items. Note which item felt hardest and why.</p><p class="es" lang="es">Todos responden el conjunto de práctica de su grado como lo haría un estudiante, incluidos los ítems de dos partes y de seleccionar dos. Anoten qué ítem resultó más difícil y por qué.</p></div></div></li><li><div class="ag-t">15–25 min</div><div><h4 class="hd "><span class="en" lang="en">Walk the ladder</span><span class="es" lang="es">Recorrer la escalera</span></h4><div class="bi "><p class="en" lang="en">In vertical teams, pick one strand on the ladder. Each teacher reads their rung aloud in order. Ask: where do our students fall off?</p><p class="es" lang="es">En equipos verticales, elijan una línea de la escalera. Cada maestro lee su peldaño en voz alta, en orden. Pregunten: ¿dónde se caen nuestros estudiantes?</p></div></div></li><li><div class="ag-t">25–35 min</div><div><h4 class="hd "><span class="en" lang="en">Plan the lanes</span><span class="es" lang="es">Planificar los carriles</span></h4><div class="bi "><p class="en" lang="en">Choose next week’s text. Write one Newcomer, Emerging, Progressing, and Challenge task for it, using the grade’s lane examples as a model.</p><p class="es" lang="es">Elijan el texto de la próxima semana. Escriban una tarea de Recién llegado, Emergente, En progreso y Desafío, usando como modelo los ejemplos de carriles del grado.</p></div></div></li><li><div class="ag-t">35–45 min</div><div><h4 class="hd "><span class="en" lang="en">Run the numbers</span><span class="es" lang="es">Hacer las cuentas</span></h4><div class="bi "><p class="en" lang="en">Enter the most recent class results in the points calculator. Agree on one reporting category to target for the next three weeks and one way to check progress.</p><p class="es" lang="es">Ingresen los resultados más recientes de la clase en la calculadora de puntos. Acuerden una categoría de informe para trabajar durante las próximas tres semanas y una manera de comprobar el avance.</p></div></div></li></ol></div>
+</section>
+
+<footer class="colophon">
+  <h2 class="hd "><span class="en" lang="en">Sources and fine print</span><span class="es" lang="es">Fuentes y letra pequeña</span></h2>
+  <div class="bi "><p class="en" lang="en">Percentages, item counts, points, and testing times come from the Mississippi Department of Education’s MAAP English Language Arts Updated Blueprints (starting with the 2021–2022 school year). Standards are the Mississippi College- and Career-Readiness Standards for English Language Arts. Confirm the current year’s blueprint with your district test coordinator or the MDE Office of Student Assessment before planning instruction around it.</p><p class="es" lang="es">Los porcentajes, el número de ítems, los puntos y los tiempos provienen de los Planos actualizados de ELA del MAAP del Departamento de Educación de Mississippi (vigentes desde el año escolar 2021–2022). Los estándares son los Mississippi College- and Career-Readiness Standards de ELA. Confirma el plano del año en curso con el coordinador de exámenes de tu distrito o con la Oficina de Evaluación Estudiantil del MDE antes de planificar la instrucción.</p></div>
+  <div class="bi "><p class="en" lang="en">Review log: blueprint figures checked line by line against the MDE document on September 19, 2026. Practice passages, questions, and sample responses are original to this magazine and written in the style of the standards. They are not released MAAP items, and sample responses have not been officially scored.</p><p class="es" lang="es">Registro de revisión: las cifras del plano se verificaron línea por línea con el documento del MDE el 19 de septiembre de 2026. Los pasajes, las preguntas y las respuestas de muestra son originales de esta revista y están escritos al estilo de los estándares. No son ítems publicados del MAAP, y las respuestas de muestra no han sido calificadas oficialmente.</p></div>
+  <div class="bi "><p class="en" lang="en">Accessibility: every page works with a keyboard, offers text to speech at two speeds, respects reduced-motion settings, reflows on a phone without sideways scrolling, and prints with answer keys. If something does not work for you, tell us and we will fix it.</p><p class="es" lang="es">Accesibilidad: todas las páginas funcionan con el teclado, ofrecen lectura en voz alta a dos velocidades, respetan la configuración de movimiento reducido, se adaptan al teléfono sin desplazamiento lateral y se imprimen con las claves de respuestas. Si algo no te funciona, avísanos y lo corregiremos.</p></div>
+  <div class="bi "><p class="en" lang="en">Video links open a YouTube search for the skill in each language. Preview any video before showing it to a class. The Blueprint is an independent EL Publishing magazine. It is not issued or endorsed by the Mississippi Department of Education.</p><p class="es" lang="es">Los enlaces de video abren una búsqueda en YouTube de la destreza en cada idioma. Revisa cualquier video antes de mostrarlo a una clase. El Plano es una revista independiente de EL Publishing. No es emitida ni avalada por el Departamento de Educación de Mississippi.</p></div>
+  <p class="links"><a href="https://mdek12.org/studentassessment/maap/" target="_blank" rel="noopener">MDE · MAAP</a><a href="#top"><span class="inl "><span class="en" lang="en">Back to top</span><span class="es" lang="es">Volver arriba</span></span></a></p>
+  <p class="motto">Many Voices · One Storm</p>
+</footer>
+</main>
+<div class="player" id="player" hidden role="region" aria-label="Text to speech / Lectura en voz alta">
+  <button type="button" id="pl-pause"><span class="inl "><span class="en" lang="en">Pause</span><span class="es" lang="es">Pausa</span></span></button>
+  <button type="button" id="pl-stop"><span class="inl "><span class="en" lang="en">Stop</span><span class="es" lang="es">Detener</span></span></button>
+  <button type="button" id="pl-speed" aria-pressed="false"><span class="inl "><span class="en" lang="en">Slow</span><span class="es" lang="es">Lento</span></span></button>
+</div>
+<script>/* language + navigation */
+(function(){
+  var b=document.body, btns=document.querySelectorAll('.lang button');
+  function set(l){ b.setAttribute('data-lang',l); document.documentElement.lang = l==='es'?'es':'en';
+    btns.forEach(function(x){x.setAttribute('aria-pressed', x.dataset.set===l?'true':'false');});
+    try{localStorage.setItem('blueprint-lang',l);}catch(e){} }
+  btns.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.set);});});
+  try{var s=localStorage.getItem('blueprint-lang'); if(s==='en'||s==='es'||s==='both') set(s);}catch(e){}
+  var links=document.querySelectorAll('.gstrip a[href^="#"]');
+  if(links.length && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){
+      links.forEach(function(t){t.classList.toggle('here', t.getAttribute('href')==='#'+e.target.id);}); }});},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var t=document.querySelector(a.getAttribute('href')); if(t)io.observe(t);});
+  }
+  var bar=document.querySelector('.progress i');
+  if(bar){var tick=false; function upd(){var h=document.documentElement; var max=h.scrollHeight-innerHeight; bar.style.transform='scaleX('+(max>0?Math.min(1,h.scrollTop/max):0)+')'; tick=false;}
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true}); upd();}
+  var rm=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!rm && 'IntersectionObserver' in window){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.15});
+    document.querySelectorAll('.sheet,.lanes,.rungs').forEach(function(s){s.classList.add('reveal');ro.observe(s);});
+  }
+  document.querySelectorAll('.printbtn').forEach(function(p){p.addEventListener('click',function(){
+    var sec=p.closest('.grade'); b.classList.add('print-one'); sec.classList.add('print-me');
+    function done(){b.classList.remove('print-one');sec.classList.remove('print-me');removeEventListener('afterprint',done);}
+    addEventListener('afterprint',done); print(); });});
+})();
+
+/* practice engine: single answer, two-part, select-two, with saved progress */
+(function(){
+  var KEY='blueprint-answers-v1', store={};
+  try{store=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){store={};}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){}}
+  var LET='ABCDE';
+  function say(v,right,key){ v.innerHTML = right ? '<span class="inl"><span class="en" lang="en">Correct.</span><span class="es" lang="es">Correcto.</span></span>'
+    : '<span class="inl"><span class="en" lang="en">Not quite. The answer is '+key+'.</span><span class="es" lang="es">Casi. La respuesta es '+key+'.</span></span>'; }
+  function bump(el,right){ if(!right)return; var s=el.closest('.practice').querySelector('.score b'); s.textContent=(+s.textContent)+1; }
+  function lock(opts){opts.forEach(function(x){x.setAttribute('aria-disabled','true');});}
+
+  function finishSimple(q,i,record){
+    if(q.classList.contains('done'))return; var ans=+q.dataset.ans, opts=q.querySelectorAll('.opt'), right=i===ans;
+    q.classList.add('done'); opts[ans].classList.add('ok'); if(!right&&opts[i])opts[i].classList.add('no'); lock(opts);
+    say(q.querySelector('.verdict'),right,LET[ans]); bump(q,right);
+    if(record){store[q.dataset.id]=i;save();}
+  }
+  function partState(part){ var sel=[]; part.querySelectorAll('.opt').forEach(function(o,i){if(o.classList.contains('sel'))sel.push(i);}); return sel; }
+  function ready(qx){ var ok=true; qx.querySelectorAll('.part').forEach(function(p){ if(partState(p).length!==+p.dataset.n)ok=false; }); qx.querySelector('.check').disabled=!ok; }
+  function finishComplex(qx,record){
+    if(qx.classList.contains('done'))return; var all=true, keys=[], saved=[];
+    qx.querySelectorAll('.part').forEach(function(p){
+      var ans=p.dataset.ans.split(',').map(Number), sel=partState(p), opts=p.querySelectorAll('.opt'); saved.push(sel);
+      var right=sel.length===ans.length&&sel.every(function(s){return ans.indexOf(s)>-1;}); if(!right)all=false;
+      ans.forEach(function(a){opts[a].classList.add('ok');}); sel.forEach(function(s){if(ans.indexOf(s)<0)opts[s].classList.add('no');});
+      keys.push(ans.map(function(a){return LET[a];}).join(' + ')); lock(opts); opts.forEach(function(o){o.classList.remove('sel');});
+    });
+    qx.classList.add('done'); qx.querySelector('.check').disabled=true;
+    say(qx.querySelector('.verdict'),all,keys.join(' · ')); bump(qx,all);
+    if(record){store[qx.dataset.id]=saved;save();}
+  }
+  document.querySelectorAll('.q').forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(o){o.addEventListener('click',function(){finishSimple(q,+o.dataset.i,true);});});
+    var s=store[q.dataset.id]; if(typeof s==='number')finishSimple(q,s,false);
+  });
+  document.querySelectorAll('.qx').forEach(function(qx){
+    qx.querySelectorAll('.part').forEach(function(p){ var n=+p.dataset.n, opts=p.querySelectorAll('.opt');
+      opts.forEach(function(o){ o.setAttribute('aria-pressed','false'); o.addEventListener('click',function(){
+        if(qx.classList.contains('done'))return;
+        if(n===1){opts.forEach(function(x){x.classList.remove('sel');x.setAttribute('aria-pressed','false');}); o.classList.add('sel');o.setAttribute('aria-pressed','true');}
+        else{ if(o.classList.contains('sel')){o.classList.remove('sel');o.setAttribute('aria-pressed','false');}
+              else if(partState(p).length<n){o.classList.add('sel');o.setAttribute('aria-pressed','true');} }
+        ready(qx); });});
+    });
+    qx.querySelector('.check').addEventListener('click',function(){finishComplex(qx,true);});
+    var s=store[qx.dataset.id];
+    if(Array.isArray(s)){ qx.querySelectorAll('.part').forEach(function(p,pi){ var opts=p.querySelectorAll('.opt'); (s[pi]||[]).forEach(function(i){if(opts[i])opts[i].classList.add('sel');}); }); finishComplex(qx,false); }
+  });
+  document.querySelectorAll('.reset').forEach(function(r){r.addEventListener('click',function(){
+    var pr=r.closest('.practice');
+    pr.querySelectorAll('.q,.qx').forEach(function(q){ delete store[q.dataset.id]; q.classList.remove('done');
+      q.querySelectorAll('.opt').forEach(function(o){o.classList.remove('ok','no','sel');o.removeAttribute('aria-disabled'); if(o.hasAttribute('aria-pressed'))o.setAttribute('aria-pressed','false');});
+      var v=q.querySelector('.verdict'); if(v)v.innerHTML=''; var c=q.querySelector('.check'); if(c)c.disabled=true; });
+    pr.querySelector('.score b').textContent='0'; save(); });});
+})();
+
+/* ladder tabs */
+(function(){
+  var tabs=document.querySelectorAll('.ld-tabs [role="tab"]'); if(!tabs.length)return;
+  function pick(t){ tabs.forEach(function(x){var on=x===t; x.setAttribute('aria-selected',on?'true':'false'); x.tabIndex=on?0:-1;
+      var p=document.getElementById('ld-'+x.dataset.strand); p.hidden=!on; if(on){p.classList.remove('in'); void p.offsetWidth; p.classList.add('in');} }); }
+  tabs.forEach(function(t,i){ t.tabIndex=i?-1:0; t.addEventListener('click',function(){pick(t);});
+    t.addEventListener('keydown',function(e){ var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(!d)return; e.preventDefault(); var n=tabs[(i+d+tabs.length)%tabs.length]; n.focus(); pick(n); }); });
+})();
+
+/* points calculator */
+(function(){
+  var app=document.getElementById('calc-app'); if(!app)return;
+  var plans=JSON.parse(app.dataset.plans), sel=document.getElementById('c-grade'), bars=app.querySelector('.c-bars'), total=app.querySelector('.c-total'), msg=app.querySelector('.c-msg');
+  var NAMES={rl:['Reading literature','Lectura literaria'],ri:['Reading informational text','Lectura de texto informativo'],l:['Language','Lenguaje'],w:['Writing task','Tarea de escritura']};
+  function inl(en,es){return '<span class="inl"><span class="en" lang="en">'+en+'</span><span class="es" lang="es">'+es+'</span></span>';}
+  function fmt(n){return (Math.round(n*10)/10).toString();}
+  function draw(){
+    var p=plans[sel.value], rows=[], earned=0, avail=0, worst=null;
+    ['rl','ri','l','w'].forEach(function(k){ var inp=document.getElementById('c-'+k), pct=+inp.value; inp.parentNode.querySelector('output').textContent=pct+'%';
+      var pts=p[k][1], got=pts*pct/100, left=pts-got; earned+=got; avail+=pts; var r={k:k,pts:pts,got:got,left:left,range:p[k][0]}; rows.push(r); if(!worst||left>worst.left)worst=r; });
+    bars.innerHTML=rows.map(function(r){ var w=r.pts/ (p.pts+12) *100, g=r.pts?r.got/r.pts*100:0;
+      return '<div class="cb'+(r===worst?' top':'')+'"><div class="cb-l"><b>'+inl(NAMES[r.k][0],NAMES[r.k][1])+'</b><span>'+r.range+' · '+fmt(r.pts)+' pts</span></div>'+
+        '<div class="cb-track" style="width:'+Math.max(w,12)+'%"><i style="width:'+g+'%"></i></div><div class="cb-n">'+inl(fmt(r.left)+' points still available',fmt(r.left)+' puntos por ganar')+'</div></div>'; }).join('');
+    total.innerHTML=inl('Estimated class average: '+fmt(earned)+' of '+fmt(avail)+' points ('+Math.round(earned/avail*100)+'%).','Promedio estimado de la clase: '+fmt(earned)+' de '+fmt(avail)+' puntos ('+Math.round(earned/avail*100)+'%).');
+    msg.innerHTML=inl('Biggest opportunity: '+NAMES[worst.k][0]+'. It holds '+fmt(worst.left)+' unearned points, more than any other category.','Mayor oportunidad: '+NAMES[worst.k][1]+'. Tiene '+fmt(worst.left)+' puntos sin ganar, más que cualquier otra categoría.');
+  }
+  app.addEventListener('input',draw); sel.addEventListener('change',draw); draw();
+})();
+
+/* text to speech */
+(function(){
+  var S=window.speechSynthesis, root=document.documentElement;
+  if(!S||!window.SpeechSynthesisUtterance){root.classList.add('no-tts');return;}
+  var player=document.getElementById('player'), bPause=document.getElementById('pl-pause'), bStop=document.getElementById('pl-stop'), bSpeed=document.getElementById('pl-speed');
+  var queue=[], idx=0, run=0, slow=false, cur=null, btnOn=null, voices=[];
+  function loadVoices(){voices=S.getVoices()||[];} loadVoices(); if(S.addEventListener)S.addEventListener('voiceschanged',loadVoices);
+  function pickVoice(lang){
+    var pref=lang==='es'?['es-US','es-MX','es-419','es-ES']:['en-US','en-GB'];
+    for(var i=0;i<pref.length;i++){for(var j=0;j<voices.length;j++){if((voices[j].lang||'').replace('_','-')===pref[i])return voices[j];}}
+    for(var k=0;k<voices.length;k++){if((voices[k].lang||'').toLowerCase().indexOf(lang)===0)return voices[k];}
+    return null;
+  }
+  var BLOCK='p,h1,h2,h3,h4,li,dt,dd,td,th,button,figcaption';
+  function collect(scope){
+    var out=[], w=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT,null), n, last=null;
+    while((n=w.nextNode())){
+      var t=n.nodeValue.replace(/\s+/g,' ').trim(); if(!t)continue;
+      var el=n.parentElement; if(!el||el.closest('.chip,.std,.tts,.score,.verdict,.key,.check,.reset,.printbtn,script,style'))continue;
+      if(el.offsetParent===null)continue;
+      var inner=el.closest('.tts-scope'); if(inner!==scope)continue;
+      var l=el.closest('[lang]'), lang=((l&&l.getAttribute('lang'))||'en').slice(0,2);
+      var block=el.closest(BLOCK)||el;
+      if(el.tagName==='B'&&el.closest('.opt'))t+='.';
+      if(last&&last.block===block&&last.lang===lang){last.text+=' '+t;}
+      else{last={block:block,lang:lang,text:t};out.push(last);}
+    }
+    var parts=[];
+    out.forEach(function(o){
+      if(o.text.length<=220){parts.push(o);return;}
+      var ss=o.text.match(/[^.!?]+[.!?]+[”"’)]*\s*|[^.!?]+$/g)||[o.text], buf='';
+      ss.forEach(function(s){ if((buf+s).length>220&&buf){parts.push({block:o.block,lang:o.lang,text:buf.trim()});buf='';} buf+=s; });
+      if(buf.trim())parts.push({block:o.block,lang:o.lang,text:buf.trim()});
+    });
+    return parts;
+  }
+  function clearMark(){if(cur){cur.classList.remove('speaking');cur=null;}}
+  function stop(){run++;S.cancel();clearMark();queue=[];player.hidden=true;if(btnOn){btnOn.classList.remove('on');btnOn=null;}setPauseLabel(false);}
+  function setPauseLabel(p){bPause.innerHTML=p?'<span class="inl"><span class="en" lang="en">Resume</span><span class="es" lang="es">Continuar</span></span>':'<span class="inl"><span class="en" lang="en">Pause</span><span class="es" lang="es">Pausa</span></span>';bPause.dataset.p=p?'1':'';}
+  function next(my){
+    if(my!==run)return; if(idx>=queue.length){stop();return;}
+    var q=queue[idx++], u=new SpeechSynthesisUtterance(q.text);
+    u.lang=q.lang==='es'?'es-US':'en-US'; var v=pickVoice(q.lang); if(v){u.voice=v;u.lang=v.lang;}
+    u.rate=slow?0.75:1;
+    u.onstart=function(){if(my!==run)return;clearMark();cur=q.block;cur.classList.add('speaking');
+      var r=cur.getBoundingClientRect(); if(r.top<70||r.bottom>innerHeight-70){cur.scrollIntoView({block:'center',behavior:'smooth'});}};
+    u.onend=function(){next(my);}; u.onerror=function(e){if(e&&(e.error==='canceled'||e.error==='interrupted'))return;next(my);};
+    S.speak(u);
+  }
+  function start(btn){
+    var scope=btn.closest('.tts-scope'); if(!scope)return;
+    var same=(btnOn===btn); stop(); if(same)return;
+    if(!voices.length)loadVoices();
+    queue=collect(scope); if(!queue.length)return; idx=0; btnOn=btn; btn.classList.add('on'); player.hidden=false; next(run);
+  }
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.tts'); if(b){e.preventDefault();start(b);}});
+  bStop.addEventListener('click',stop);
+  bPause.addEventListener('click',function(){ if(bPause.dataset.p){S.resume();setPauseLabel(false);} else {S.pause();setPauseLabel(true);} });
+  bSpeed.addEventListener('click',function(){ slow=!slow; bSpeed.setAttribute('aria-pressed',slow?'true':'false');
+    if(queue.length&&!bPause.dataset.p){var my=++run; S.cancel(); idx=Math.max(0,idx-1); next(my);} });
+  document.querySelectorAll('.lang button').forEach(function(x){x.addEventListener('click',stop);});
+  window.addEventListener('pagehide',function(){S.cancel();});
+})();
+</script>
+</body></html>
