@@ -410,6 +410,13 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 .nt-stats{display:flex;justify-content:space-between;margin-top:18px;font-weight:600;color:#DCE2FA}.nt-stats b{font:800 22px var(--serif);color:var(--gold-l);margin-left:6px}
 .nt-final{margin-top:20px;font-size:clamp(18px,2vw,24px);font-weight:600;color:var(--gold-l)}
 @media print{.nt,.nt-play{display:none!important}}
+.hub-grid{list-style:none;margin:0 0 32px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.hub-grid a{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;text-decoration:none;background:#fff;border:1px solid var(--rule);border-left:8px solid var(--gc);padding:14px 16px;min-height:88px}
+.hub-grid a:hover{background:var(--paper);box-shadow:4px 4px 0 var(--gc)}.hub-grid b{font:800 40px/1 var(--serif);color:var(--gc);text-align:center}
+.hub-grid span{font-weight:600}.hub-grid small{display:block;font-weight:400;font-size:13px;color:var(--mute);margin-top:3px}
+.hub h2{margin-top:48px}
+.beat{min-width:0}.beat *{min-width:0}.song-h{flex-wrap:wrap}.nt-sample li{flex-wrap:wrap}.nt-sample b{white-space:normal}.chant,.nt-line,.frame,.lyrics{overflow-wrap:anywhere}
+@media (max-width:560px){.beat{padding:18px 16px}.bt-top{margin-right:40px}}
 </style>
 </head>
 <body data-lang="both" data-page="teachers.html">
@@ -417,7 +424,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 <div class="progress" aria-hidden="true"><i></i></div>
 <nav class="bar" aria-label="Magazine navigation / Navegación">
   <a class="bar-brand" href="index.html">The Blueprint <span>/ El Plano</span></a>
-  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="teachers.html" class="pg here" aria-current="page"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
+  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="beats.html" class="pg"><span class="inl "><span class="en" lang="en">Beats</span><span class="es" lang="es">Ritmos</span></span></a><a href="teachers.html" class="pg here" aria-current="page"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
   <div class="lang" role="group" aria-label="Language / Idioma">
     <button data-set="en" aria-pressed="false">EN</button><button data-set="both" aria-pressed="true">EN + ES</button><button data-set="es" aria-pressed="false">ES</button>
   </div>
