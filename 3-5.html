@@ -410,6 +410,13 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 .nt-stats{display:flex;justify-content:space-between;margin-top:18px;font-weight:600;color:#DCE2FA}.nt-stats b{font:800 22px var(--serif);color:var(--gold-l);margin-left:6px}
 .nt-final{margin-top:20px;font-size:clamp(18px,2vw,24px);font-weight:600;color:var(--gold-l)}
 @media print{.nt,.nt-play{display:none!important}}
+.hub-grid{list-style:none;margin:0 0 32px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.hub-grid a{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;text-decoration:none;background:#fff;border:1px solid var(--rule);border-left:8px solid var(--gc);padding:14px 16px;min-height:88px}
+.hub-grid a:hover{background:var(--paper);box-shadow:4px 4px 0 var(--gc)}.hub-grid b{font:800 40px/1 var(--serif);color:var(--gc);text-align:center}
+.hub-grid span{font-weight:600}.hub-grid small{display:block;font-weight:400;font-size:13px;color:var(--mute);margin-top:3px}
+.hub h2{margin-top:48px}
+.beat{min-width:0}.beat *{min-width:0}.song-h{flex-wrap:wrap}.nt-sample li{flex-wrap:wrap}.nt-sample b{white-space:normal}.chant,.nt-line,.frame,.lyrics{overflow-wrap:anywhere}
+@media (max-width:560px){.beat{padding:18px 16px}.bt-top{margin-right:40px}}
 </style>
 </head>
 <body data-lang="both" data-page="3-5.html">
@@ -417,7 +424,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 <div class="progress" aria-hidden="true"><i></i></div>
 <nav class="bar" aria-label="Magazine navigation / Navegación">
   <a class="bar-brand" href="index.html">The Blueprint <span>/ El Plano</span></a>
-  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg here" aria-current="page">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="teachers.html" class="pg"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
+  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg here" aria-current="page">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="beats.html" class="pg"><span class="inl "><span class="en" lang="en">Beats</span><span class="es" lang="es">Ritmos</span></span></a><a href="teachers.html" class="pg"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
   <div class="lang" role="group" aria-label="Language / Idioma">
     <button data-set="en" aria-pressed="false">EN</button><button data-set="both" aria-pressed="true">EN + ES</button><button data-set="es" aria-pressed="false">ES</button>
   </div>
@@ -432,7 +439,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
   <header class="g-head">
     <div class="g-num" aria-hidden="true">3</div>
     <div class="g-title">
-      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><a class="printbtn beatlink" href="grade3-beats.html"><span class="inl "><span class="en" lang="en">Grammar Beats</span><span class="es" lang="es">Ritmos de gramática</span></span></a><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
       <h2 class="hd "><span class="en" lang="en">Grade 3 ELA</span><span class="es" lang="es">ELA de 3.er grado</span></h2>
       <div class="bi dek"><p class="en" lang="en">The first MAAP blueprint, and the most consequential year in elementary reading. Under Mississippi&#x27;s Literacy-Based Promotion Act, the grade 3 reading result is tied to promotion to fourth grade.</p><p class="es" lang="es">El primer plano MAAP y el año más decisivo de la lectura en primaria. Según la Ley de Promoción Basada en la Lectoescritura de Mississippi, el resultado de lectura de 3.er grado está ligado a la promoción a cuarto grado.</p></div>
     </div>
@@ -532,7 +539,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
   <header class="g-head">
     <div class="g-num" aria-hidden="true">4</div>
     <div class="g-title">
-      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><a class="printbtn beatlink" href="grade4-beats.html"><span class="inl "><span class="en" lang="en">Grammar Beats</span><span class="es" lang="es">Ritmos de gramática</span></span></a><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
       <h2 class="hd "><span class="en" lang="en">Grade 4 ELA</span><span class="es" lang="es">ELA de 4.º grado</span></h2>
       <div class="bi dek"><p class="en" lang="en">Same floor plan as grade 3, with a new demand: say what the text means and summarize it. Theme, inference, and the difference between poems, plays, and prose arrive this year.</p><p class="es" lang="es">El mismo plano que 3.er grado, con una exigencia nueva: decir qué significa el texto y resumirlo. Este año llegan el tema, la inferencia y la diferencia entre poemas, obras de teatro y prosa.</p></div>
     </div>
@@ -632,7 +639,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
   <header class="g-head">
     <div class="g-num" aria-hidden="true">5</div>
     <div class="g-title">
-      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><a class="printbtn beatlink" href="grade5-beats.html"><span class="inl "><span class="en" lang="en">Grade 5 Grammar Beats</span><span class="es" lang="es">Ritmos de gramática de 5.º</span></span></a><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
+      <button type="button" class="printbtn"><span class="inl "><span class="en" lang="en">Print this grade</span><span class="es" lang="es">Imprimir este grado</span></span></button><a class="printbtn beatlink" href="grade5-beats.html"><span class="inl "><span class="en" lang="en">Grammar Beats</span><span class="es" lang="es">Ritmos de gramática</span></span></a><div class="badge on"><span class="inl "><span class="en" lang="en">MAAP tested</span><span class="es" lang="es">Con examen MAAP</span></span></div>
       <h2 class="hd "><span class="en" lang="en">Grade 5 ELA</span><span class="es" lang="es">ELA de 5.º grado</span></h2>
       <div class="bi dek"><p class="en" lang="en">The last year of the elementary blueprint: literature and informational text carry equal weight, and vocabulary counts more here than it ever will again.</p><p class="es" lang="es">El último año del plano de primaria: la literatura y el texto informativo pesan lo mismo, y el vocabulario cuenta más aquí que en cualquier otro grado.</p></div>
     </div>
