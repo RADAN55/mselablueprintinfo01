@@ -1,0 +1,24 @@
+{
+ "name": "The Blueprint / El Plano",
+ "short_name": "El Plano",
+ "description": "Bilingual Mississippi ELA blueprints, K–12: practice, Grammar Beats, albums and Monday Moves.",
+ "start_url": "today.html",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#131A45",
+ "theme_color": "#131A45",
+ "lang": "en",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

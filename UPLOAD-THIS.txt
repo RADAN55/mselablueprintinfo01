@@ -1,0 +1,22 @@
+THE BLUEPRINT / EL PLANO — UPDATE PACKAGE (September 21, 2026)
+
+What this is
+  Every file that changed when Today, Search, Projector mode, My progress, the Lesson builder,
+  the new game modes, Record yourself, and the install/offline support were added.
+  All 32 pages are here because each page carries its own scripts, so every page changed.
+
+How to upload
+  1. Open your repository on GitHub.
+  2. Add file -> Upload files.
+  3. Drag in EVERYTHING in this folder (38 files, one drag). GitHub replaces the old pages.
+  4. Commit. Wait a minute, then open the site and press Ctrl+Shift+R (or Cmd+Shift+R) once.
+
+What is NOT in here, because it did not change
+  audio/  audio-g3/  audio-g4/  audio-g6/  audio-g7/  audio-g8/  audio-g10/
+  monday-moves-quarter-1.pdf ... monday-moves-quarter-4.pdf
+  If any of those are not in your repository yet, take them from the full package
+  (blueprint-k12-github.zip). Without an audio folder, that album plays band only.
+
+New files to notice
+  today.html  search.html  progress.html  builder.html
+  sw.js  manifest.webmanifest  icon-192.png  icon-512.png   (these four make the site installable and usable offline)

@@ -12,6 +12,8 @@ A bilingual (English and Spanish) magazine on the Mississippi ELA standards and 
 | `k-2.html`, `3-5.html`, `6-8.html`, `9-12.html` | One issue per grade band. Each grade has its floor plan or focus map, review notes, word bridge, video shelf, a practice set, four-lane supports, a writing task, a family page, and a link to its Grammar Beats |
 | `today.html` | Today: pick a grade and get a five-minute opener (beat of the day, question of the day, Monday Move of the week). Advances one step each school day |
 | `search.html` | Search and standards finder across the whole site. The search box in the top bar sends you here |
+| `progress.html` | My progress: practice answered and correct by strand and standard, Grammar Beats played, eleven badges, a printable certificate, and a results code a student can send to a teacher (the teacher pastes codes on the same page to see a table). Saved on the device only |
+| `builder.html` | Lesson builder: pick any beats, album tracks, practice questions, passages and Monday Moves, order them, add notes, then share one link or print one page |
 | `beats.html` | Grammar Beats hub: one card per grade, K–12 |
 | `gradeK-beats.html`, `grade1-beats.html` … `grade12-beats.html` | Grammar Beats for each grade: five-minute chant sessions, a "Name That …" projector game for every beat, a click-track metronome, and Spanish transfer notes. Every grade has one beat per standard: 26 for grades 3–11 (every beat in every grade has a song with a playable melody and a Latin groove; grade 5 also has the recorded album), 28 or 29 for K–2 (which add foundational skills), and 28 for grade 12 (which adds two college-writing standards) |
 | `grade3-album.html` … `grade8-album.html`, `grade10-album.html` | Ritmos de gramática, Vols. 1–7: 26 grammar tracks for each MAAP-tested grade (3, 4, 5, 6, 7, 8 and 10) over salsa, cumbia, merengue, reggaetón and bachata. "With guide voice" plays the MP3s in that album's audio folder; "Band only" generates the backing track in the browser |
@@ -19,6 +21,7 @@ A bilingual (English and Spanish) magazine on the Mississippi ELA standards and 
 | `monday-moves.html` | Monday Moves: thirty-six weekly five-minute moves for classroom teachers of any subject, by quarter, each with three steps, examples by department, and four-lane versions |
 | `monday-moves-quarter-1.pdf` … `-4.pdf` | Four designed nine-page PDF packets, one per quarter. They sit beside the pages, not in a folder. The page can also print any quarter by itself |
 | `teachers.html` | Teacher's companion: bilingual learners, special education, four lanes, writing rubric with annotated samples, points calculator, 45-minute PLC agenda |
+| `manifest.webmanifest`, `sw.js`, `icon-192.png`, `icon-512.png` | Make the site installable as an app and usable offline. **Upload these with the pages.** Offline covers every page, game, song and groove after the first visit; album voice tracks still need a connection (Band only works offline) |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Publish on GitHub Pages
@@ -33,6 +36,8 @@ Every page carries its own styles and scripts, so there is no assets folder. Kee
 ## Classroom tools
 
 Every page has a **Projector** button in the top bar. It enlarges the page, hides the navigation, and opens a dock with a countdown timer and a random student picker (the class list you type is stored only on that device). On any Grammar Beats page, **Present** on a card shows that one beat by itself, with arrows to move to the next.
+
+Every Name That game has four modes: classic, two teams with buzzers (keys A and L), a 60-second sprint with a personal best, and a missed-it review of the clues that device got wrong. Every groove has a **Record yourself** button that records the student's voice over the band and offers the file to download; it needs microphone permission and the https address, so it will not work from a saved file. Every printout made from the live site carries a QR code back to that page.
 
 ## Before you promote it
 
