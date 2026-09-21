@@ -424,6 +424,22 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 .gv-sec b{display:block;font:600 11.5px var(--sans);color:var(--gold-l);margin-bottom:2px}.gv-sec.on{opacity:1;background:rgba(201,162,39,.2);border-left-color:var(--gold)}
 @media print{.groove-play{display:none!important}}
 .gv .groove-play .inl .es{color:inherit}
+/* monday moves */
+.mvq .bt-gh{align-items:center}
+.mv{background:#fff;border:1px solid var(--rule);border-left:8px solid var(--gc);margin-bottom:10px}
+.mv summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:64px 1fr 28px;gap:12px;align-items:center;padding:14px 18px}.mv summary::-webkit-details-marker{display:none}
+.mv summary::after{content:"+";font:800 26px/1 var(--serif);color:var(--gc);text-align:center}.mv[open] summary::after{content:"–"}
+.mv summary>b{font:800 38px/1 var(--serif);color:var(--gc);text-align:center}.mv summary:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}.mv summary:hover{background:var(--paper)}
+.mv-t h3{font-size:clamp(19px,2vw,24px)}.mv-tag{display:block;font-family:var(--serif);font-style:italic;color:var(--mute);margin-top:3px;font-size:15.5px}
+.mv-body{padding:6px clamp(16px,2.5vw,28px) 24px;border-top:1px solid var(--rule)}.mv-body h4{font:700 17px var(--serif);color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:3px;margin:20px 0 10px}
+.mv-top{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(18px,3vw,40px)}@media (max-width:800px){.mv-top{grid-template-columns:1fr;gap:0}}
+.mv-steps{list-style:none;counter-reset:s;margin:0;padding:0}.mv-steps li{counter-increment:s;display:grid;grid-template-columns:30px 1fr;gap:8px;margin-bottom:10px}.mv-steps li::before{content:counter(s);font:800 24px/1 var(--serif);color:var(--gold)}.mv-steps b{display:block}.mv-steps span{color:var(--mute)}
+.mv-tbl{min-width:0!important}.mv-tbl td:first-child{font-weight:700;color:var(--navy);width:11em}.mv-tbl td:nth-child(2){font-family:var(--sans)!important;font-style:normal!important}
+@media (max-width:640px){.mv-tbl td{display:block;width:auto!important}.mv-tbl td:first-child{border-top:1px solid var(--rule);padding-bottom:0}.mv-tbl td:nth-child(2){border-top:0;padding-top:2px}.mv summary{grid-template-columns:44px 1fr 22px;padding:12px}.mv summary>b{font-size:28px}}
+.mv .lane{border-top-color:var(--lc)}.mv .lane-t{border-top:0;padding-top:0;margin-top:0;font-weight:400}
+.mv-two{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-top:20px}@media (max-width:800px){.mv-two{grid-template-columns:1fr}}
+.mv-try{background:var(--navy);color:#fff;padding:12px 16px}.mv-look{background:#FBF4DD;border-left:5px solid var(--gold);padding:12px 16px}.mv-try b,.mv-look b{display:block;font:700 17px var(--serif);margin-bottom:4px}.mv-try b{color:var(--gold-l)}
+@media print{.mv-all{display:none!important}.mv{break-inside:avoid}}
 </style>
 </head>
 <body data-lang="both" data-page="index.html">
@@ -431,7 +447,7 @@ body[data-lang="both"] .nt-title .inl .es::before{content:" / "}
 <div class="progress" aria-hidden="true"><i></i></div>
 <nav class="bar" aria-label="Magazine navigation / Navegación">
   <a class="bar-brand" href="index.html">The Blueprint <span>/ El Plano</span></a>
-  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg here" aria-current="page"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="beats.html" class="pg"><span class="inl "><span class="en" lang="en">Beats</span><span class="es" lang="es">Ritmos</span></span></a><a href="teachers.html" class="pg"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
+  <div class="tabs pages" role="group" aria-label="Issues / Números"><a href="index.html" class="pg here" aria-current="page"><span class="inl "><span class="en" lang="en">Home</span><span class="es" lang="es">Inicio</span></span></a><a href="k-2.html" class="pg">K–2</a><a href="3-5.html" class="pg">3–5</a><a href="6-8.html" class="pg">6–8</a><a href="9-12.html" class="pg">9–12</a><a href="beats.html" class="pg"><span class="inl "><span class="en" lang="en">Beats</span><span class="es" lang="es">Ritmos</span></span></a><a href="monday-moves.html" class="pg"><span class="inl "><span class="en" lang="en">Moves</span><span class="es" lang="es">Estrategias</span></span></a><a href="teachers.html" class="pg"><span class="inl "><span class="en" lang="en">Teachers</span><span class="es" lang="es">Docentes</span></span></a></div>
   <div class="lang" role="group" aria-label="Language / Idioma">
     <button data-set="en" aria-pressed="false">EN</button><button data-set="both" aria-pressed="true">EN + ES</button><button data-set="es" aria-pressed="false">ES</button>
   </div>
@@ -698,6 +714,15 @@ document.addEventListener('DOMContentLoaded',function(){
       box.querySelectorAll('.gv-sec').forEach(function(s){s.classList.toggle('on',s.dataset.s===on);}); if(e>dur)stop(); },120); }
   btns.forEach(function(b){b.addEventListener('click',function(){var same=cur===b; stop(); if(!same)play(b);});});
   addEventListener('pagehide',stop);
+});
+
+/* Monday Moves: open or close every card; open the card named in the URL */
+document.addEventListener('DOMContentLoaded',function(){
+  var btn=document.querySelector('.mv-all'); if(!btn)return; var all=document.querySelectorAll('details.mv');
+  function lab(on){btn.innerHTML=on?'<span class="inl"><span class="en" lang="en">Close all</span><span class="es" lang="es">Cerrar todas</span></span>':'<span class="inl"><span class="en" lang="en">Open all 36</span><span class="es" lang="es">Abrir las 36</span></span>';btn.setAttribute('aria-pressed',on?'true':'false');}
+  btn.addEventListener('click',function(){var on=btn.getAttribute('aria-pressed')!=='true'; all.forEach(function(d){d.open=on;}); lab(on);});
+  function fromHash(){var t=location.hash&&document.querySelector(location.hash); if(t&&t.tagName==='DETAILS'){t.open=true;t.scrollIntoView();}} fromHash(); addEventListener('hashchange',fromHash);
+  addEventListener('beforeprint',function(){all.forEach(function(d){d.dataset.was=d.open?'1':'';d.open=true;});}); addEventListener('afterprint',function(){all.forEach(function(d){d.open=!!d.dataset.was;});});
 });
 
 /* text to speech */

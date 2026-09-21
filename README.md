@@ -14,17 +14,19 @@ A bilingual (English and Spanish) magazine on the Mississippi ELA standards and 
 | `gradeK-beats.html`, `grade1-beats.html` … `grade12-beats.html` | Grammar Beats for each grade: five-minute chant sessions, a "Name That …" projector game for every beat, a click-track metronome, and Spanish transfer notes. Every grade has one beat per standard: 26 for grades 3–11 (grade 5 also has songs), 28 or 29 for K–2 (which add foundational skills), and 28 for grade 12 (which adds two college-writing standards) |
 | `grade5-album.html` | Ritmos de gramática, Vol. 1: 26 grade 5 grammar tracks over salsa, cumbia, merengue, reggaetón and bachata. "With guide voice" plays the MP3s in `audio/`; "Band only" generates the backing track in the browser |
 | `audio/` | 26 MP3s (`01.mp3` to `26.mp3`) for the album. **Upload this folder with the site** or the album falls back to band only |
+| `monday-moves.html` | Monday Moves: thirty-six weekly five-minute moves for classroom teachers of any subject, by quarter, each with three steps, examples by department, and four-lane versions |
+| `monday-moves/` | Four printable nine-page PDF packets, one per quarter. **Upload this folder with the site** |
 | `teachers.html` | Teacher's companion: bilingual learners, special education, four lanes, writing rubric with annotated samples, points calculator, 45-minute PLC agenda |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Publish on GitHub Pages
 
 1. Create a new public repository (for example `elblueprintk12`).
-2. Unzip this package. On GitHub choose **Add file → Upload files** and drag in **all the `.html` files, `README.md`, `.nojekyll`, and the `audio` folder itself** (dragging the folder keeps it a folder). Commit.
+2. Unzip this package. On GitHub choose **Add file → Upload files** and drag in **all the `.html` files, `README.md`, `.nojekyll`, and the `audio` and `monday-moves` folders themselves** (dragging a folder keeps it a folder). Commit.
 3. Settings → Pages → Build and deployment → Source: "Deploy from a branch" → Branch `main`, folder `/ (root)` → Save.
 4. After a minute the site is live at `https://radan55.github.io/<repo-name>/`.
 
-Every page carries its own styles and scripts, so there is no assets folder. Keep the file names exactly as they are, because the pages link to each other by name. GitHub's web uploader accepts up to 100 files at a time; this package has about 50.
+Every page carries its own styles and scripts, so there is no assets folder. Keep the file names exactly as they are, because the pages link to each other by name. GitHub's web uploader accepts up to 100 files at a time; this package has about 55.
 
 ## Before you promote it
 
